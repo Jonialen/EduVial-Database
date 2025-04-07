@@ -1,0 +1,5 @@
+docker run --name eduvial_postgres \
+  --env-file .env \
+  -p 8000:5432 \
+  eduvialdb
+
