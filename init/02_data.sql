@@ -1,15 +1,9 @@
--- Insertar roles de usuario
-INSERT INTO USER_ROLE (role_id, role_name, description) VALUES
-(1, 'admin', 'Administrador del sistema'),
-(2, 'student', 'Usuario estudiante'),
-(3, 'teacher', 'Profesor');
-
--- Insertar usuarios
-INSERT INTO "USER" (user_id, name, email, password, role_id) VALUES
-(1, 'Juan Pérez', 'juan@example.com', 'hashed_password1', 2),
-(2, 'María Gómez', 'maria@example.com', 'hashed_password2', 2),
-(3, 'Carlos López', 'carlos@example.com', 'hashed_password3', 3),
-(4, 'Admin User', 'admin@example.com', 'hashed_password4', 1);
+-- Insertar usuarios con ENUM de rol
+INSERT INTO "USER" (name, email, password, role) VALUES
+('Juan Pérez', 'juan@example.com', 'hashed_password1', 'principiante'),
+('María Gómez', 'maria@example.com', 'hashed_password2', 'principiante'),
+('Carlos López', 'carlos@example.com', 'hashed_password3', 'avanzado'),
+('Admin User', 'admin@example.com', 'hashed_password4', 'admin');
 
 -- Insertar categorías de lecciones
 INSERT INTO LESSON_CATEGORY (category_id, category_name) VALUES

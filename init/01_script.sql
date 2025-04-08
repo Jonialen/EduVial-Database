@@ -6,26 +6,27 @@ BEGIN
     END IF;
 END$$;
 
--- Tabla de roles de usuario
-CREATE TABLE USER_ROLE (
-  role_id INT PRIMARY KEY,
-  role_name VARCHAR(50) NOT NULL UNIQUE,
-  description TEXT
-);
+-- Crear tipo ENUM para roles
+DO $$
+BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'user_role_enum') THEN
+        CREATE TYPE user_role_enum AS ENUM ('admin', 'principiante', 'avanzado');
+    END IF;
+END$$;
 
--- Tabla de usuarios
+-- Tabla de usuarios (rol directo como ENUM)
 CREATE TABLE "USER" (
-  user_id INT PRIMARY KEY,
+  user_id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL UNIQUE,
   password CHAR(60) NOT NULL,
-  role_id INT NOT NULL,
-  FOREIGN KEY (role_id) REFERENCES USER_ROLE(role_id)
+  role user_role_enum NOT NULL
 );
+
 
 -- Tabla de lecciones
 CREATE TABLE LESSON (
-  lesson_id INT PRIMARY KEY,
+  lesson_id SERIAL PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
   description TEXT,
   difficulty_level VARCHAR(50) NOT NULL CHECK (difficulty_level IN ('simple', 'advanced')),
@@ -34,7 +35,7 @@ CREATE TABLE LESSON (
 
 -- Tabla de categorías
 CREATE TABLE LESSON_CATEGORY (
-  category_id INT PRIMARY KEY,
+  category_id SERIAL PRIMARY KEY,
   category_name VARCHAR(100) NOT NULL UNIQUE
 );
 
@@ -49,7 +50,7 @@ CREATE TABLE LESSON_CATEGORY_REL (
 
 -- Tabla de exámenes
 CREATE TABLE EXAM (
-  exam_id INT PRIMARY KEY,
+  exam_id SERIAL PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
   description TEXT,
   difficulty_level VARCHAR(50) NOT NULL CHECK (difficulty_level IN ('simple', 'advanced')),
@@ -58,7 +59,7 @@ CREATE TABLE EXAM (
 
 -- Progreso de lecciones
 CREATE TABLE PROGRESS (
-  progress_id INT PRIMARY KEY,
+  progress_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   lesson_id INT NOT NULL,
   status VARCHAR(50) NOT NULL,
@@ -69,7 +70,7 @@ CREATE TABLE PROGRESS (
 
 -- Progreso de exámenes
 CREATE TABLE EXAM_PROGRESS (
-  exam_progress_id INT PRIMARY KEY,
+  exam_progress_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   exam_id INT NOT NULL,
   status VARCHAR(50) NOT NULL,
@@ -80,7 +81,7 @@ CREATE TABLE EXAM_PROGRESS (
 
 -- Resultados de exámenes
 CREATE TABLE EXAM_RESULT (
-  exam_result_id INT PRIMARY KEY,
+  exam_result_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   exam_id INT NOT NULL,
   score INT NOT NULL,
@@ -91,7 +92,7 @@ CREATE TABLE EXAM_RESULT (
 
 -- Resultados de lecciones
 CREATE TABLE LESSON_RESULT (
-  lesson_result_id INT PRIMARY KEY,
+  lesson_result_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   lesson_id INT NOT NULL,
   score INT NOT NULL,
@@ -102,7 +103,7 @@ CREATE TABLE LESSON_RESULT (
 
 -- Puntaje acumulado por usuario
 CREATE TABLE USER_SCORE (
-  score_id INT PRIMARY KEY,
+  score_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   total_points INT DEFAULT 0,
   FOREIGN KEY (user_id) REFERENCES "USER"(user_id)
@@ -110,7 +111,7 @@ CREATE TABLE USER_SCORE (
 
 -- Recompensas
 CREATE TABLE REWARD (
-  reward_id INT PRIMARY KEY,
+  reward_id SERIAL PRIMARY KEY,
   name VARCHAR(100),
   description TEXT,
   cost_points INT NOT NULL
@@ -118,7 +119,7 @@ CREATE TABLE REWARD (
 
 -- Canje de recompensas
 CREATE TABLE REWARD_REDEMPTION (
-  redemption_id INT PRIMARY KEY,
+  redemption_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   reward_id INT NOT NULL,
   date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -128,7 +129,7 @@ CREATE TABLE REWARD_REDEMPTION (
 
 -- Tabla de ranking
 CREATE TABLE LEADERBOARD (
-  leaderboard_id INT PRIMARY KEY,
+  leaderboard_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   position INT NOT NULL,
   total_points INT NOT NULL,
@@ -137,7 +138,7 @@ CREATE TABLE LEADERBOARD (
 
 -- Preguntas
 CREATE TABLE QUESTION (
-  question_id INT PRIMARY KEY,
+  question_id SERIAL PRIMARY KEY,
   question_text TEXT,
   question_type question_type_enum
 );
@@ -153,7 +154,7 @@ CREATE TABLE EXAM_QUESTION (
 
 -- Opciones de respuesta
 CREATE TABLE ANSWER_OPTION (
-  option_id INT PRIMARY KEY,
+  option_id SERIAL PRIMARY KEY,
   question_id INT NOT NULL,
   option_text TEXT,
   is_correct BOOLEAN,
@@ -162,7 +163,7 @@ CREATE TABLE ANSWER_OPTION (
 
 -- Historial de notificaciones
 CREATE TABLE NOTIFICATION_HISTORY (
-  notification_id INT PRIMARY KEY,
+  notification_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   message TEXT,
   sent_date TIMESTAMP,
@@ -171,10 +172,11 @@ CREATE TABLE NOTIFICATION_HISTORY (
 
 -- Logs del sistema
 CREATE TABLE LOG (
-  log_id INT PRIMARY KEY,
+  log_id SERIAL PRIMARY KEY,
   timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   username VARCHAR(100) NOT NULL,
   affected_table VARCHAR(100) NOT NULL,
   operation VARCHAR(50) NOT NULL,
   details TEXT
 );
+
