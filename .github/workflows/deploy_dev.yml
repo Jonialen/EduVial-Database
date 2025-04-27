@@ -1,4 +1,4 @@
-name: Deploy to DEV Oracle Cloud
+name: Deploy to DEV Database Oracle Cloud
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "."
-          target: "home/ubuntu/proyectoSoftwere/dev/database"
+          target: "/home/ubuntu/proyectoSoftwere/dev/database"
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.0.3
