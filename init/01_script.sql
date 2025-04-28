@@ -180,3 +180,25 @@ CREATE TABLE LOG (
   details TEXT
 );
 
+-- Tabla de articulos
+CREATE TABLE lawarticle (
+  id SERIAL PRIMARY KEY,
+  artnum VARCHAR(10) NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  descr TEXT NOT NULL,
+  sanc TEXT
+);
+
+--Tabla de relaciones
+CREATE TABLE lawcat (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+--Tabla de categoria de articulo
+CREATE TABLE lawartcat (
+  id SERIAL PRIMARY KEY,
+  artid INT REFERENCES lawarticle(id) ON DELETE CASCADE,
+  catid INT REFERENCES lawcat(id) ON DELETE CASCADE
+);
+
