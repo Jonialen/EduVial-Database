@@ -15,7 +15,7 @@ CREATE TABLE opt (
 
 CREATE TABLE ans (
   id SERIAL PRIMARY KEY,
-  uid INT REFERENCES "USER"(user_id),
+  uid INT REFERENCES app_user(user_id),
   qid INT REFERENCES quest(id),
   optid INT REFERENCES opt(id),
   correct BOOLEAN,
