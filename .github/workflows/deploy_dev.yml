@@ -73,7 +73,7 @@ jobs:
             # Borrar y recrear
             rm -rf database
             mkdir -p database
-            tar -xzf app.tar.gz -C backend
+            tar -xzf app.tar.gz -C database
             rm app.tar.gz
             
             # Restaurar archivos específicos
@@ -90,6 +90,6 @@ jobs:
             fi
             
             # Rebuilding and starting containers
-            docker compose down -v
-            docker compose build
-            docker compose up -d
+            docker-compose down -v
+            docker-compose build
+            docker-compose up -d
