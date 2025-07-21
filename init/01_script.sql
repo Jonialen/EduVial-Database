@@ -209,3 +209,7 @@ CREATE INDEX idxexamprogresslesson ON exam_progress(lesson_id);
 -- Tabla: lesson_category_rel
 CREATE INDEX idxlessoncatrelcat ON lesson_category_rel(category_id);
 CREATE INDEX idxlessoncatrellesson ON lesson_category_rel(lesson_id);
+
+-- Tabla: lesson_result
+CREATE INDEX idxlessonresultuser ON lesson_result(user_id);
+CREATE INDEX idxlessonresultlesson ON lesson_result(lesson_id);
