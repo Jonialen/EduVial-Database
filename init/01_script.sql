@@ -225,3 +225,6 @@ CREATE INDEX idxexamresultexam ON exam_result(exam_id);
 -- Tabla: exam_question
 CREATE INDEX idxexamquestionexam ON exam_question(exam_id);
 CREATE INDEX idxexamquestionquestion ON exam_question(question_id);
+
+-- Tabla: answer_option
+CREATE INDEX idxansoptquestion ON answer_option(question_id);
