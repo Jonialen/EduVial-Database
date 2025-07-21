@@ -196,3 +196,9 @@ CREATE TABLE lawartcat (
   artid INT REFERENCES lawarticle(id) ON DELETE CASCADE,
   catid INT REFERENCES lawcat(id) ON DELETE CASCADE
 );
+
+
+-- Índices para la tabla progress
+CREATE INDEX idxprogressuser ON progress(user_id);
+CREATE INDEX idxprogresslesson ON progress(lesson_id);
+
