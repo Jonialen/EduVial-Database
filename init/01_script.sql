@@ -205,3 +205,7 @@ CREATE INDEX idxprogresslesson ON progress(lesson_id);
 -- Índices para exam_progress
 CREATE INDEX idxexamprogressuser ON exam_progress(user_id);
 CREATE INDEX idxexamprogresslesson ON exam_progress(lesson_id);
+
+-- Tabla: lesson_category_rel
+CREATE INDEX idxlessoncatrelcat ON lesson_category_rel(category_id);
+CREATE INDEX idxlessoncatrellesson ON lesson_category_rel(lesson_id);
