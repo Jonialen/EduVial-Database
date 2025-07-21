@@ -221,3 +221,7 @@ CREATE INDEX idxredemptionreward ON reward_redemption(reward_id);
 -- Tabla: exam_result
 CREATE INDEX idxexamresultuser ON exam_result(user_id);
 CREATE INDEX idxexamresultexam ON exam_result(exam_id);
+
+-- Tabla: exam_question
+CREATE INDEX idxexamquestionexam ON exam_question(exam_id);
+CREATE INDEX idxexamquestionquestion ON exam_question(question_id);
