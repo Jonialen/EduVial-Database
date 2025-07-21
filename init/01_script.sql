@@ -202,3 +202,6 @@ CREATE TABLE lawartcat (
 CREATE INDEX idxprogressuser ON progress(user_id);
 CREATE INDEX idxprogresslesson ON progress(lesson_id);
 
+-- Índices para exam_progress
+CREATE INDEX idxexamprogressuser ON exam_progress(user_id);
+CREATE INDEX idxexamprogresslesson ON exam_progress(lesson_id);
