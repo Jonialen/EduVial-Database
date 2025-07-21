@@ -213,3 +213,7 @@ CREATE INDEX idxlessoncatrellesson ON lesson_category_rel(lesson_id);
 -- Tabla: lesson_result
 CREATE INDEX idxlessonresultuser ON lesson_result(user_id);
 CREATE INDEX idxlessonresultlesson ON lesson_result(lesson_id);
+
+-- Tabla: reward_redemption
+CREATE INDEX idxredemptionuser ON reward_redemption(user_id);
+CREATE INDEX idxredemptionreward ON reward_redemption(reward_id);
