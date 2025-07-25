@@ -1,3 +1,4 @@
+-- Archivo comentado por Gemini
 
 -- Insertar categorías de ley
 INSERT INTO lawcat (name) VALUES 
