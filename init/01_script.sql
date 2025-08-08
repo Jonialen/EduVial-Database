@@ -1,230 +1,184 @@
--- Crear tipo ENUM para question_type
-CREATE TYPE question_type_enum AS ENUM ('multiple_choice', 'true_false', 'short_answer');
+-- =========================
+-- 01_script.sql 
+-- =========================
+SET search_path TO public;
 
--- Crear tipo ENUM para roles
-CREATE TYPE user_role_enum AS ENUM ('admin', 'principiante', 'avanzado');
+-- Tipos ENUM
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname='question_type_enum') THEN
+    CREATE TYPE question_type_enum AS ENUM ('multiple_choice','true_false','short_answer');
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname='question_category_enum') THEN
+    CREATE TYPE question_category_enum AS ENUM ('Señales','Simulaciones','Escenarios');
+  END IF;
+  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname='user_role_enum') THEN
+    CREATE TYPE user_role_enum AS ENUM ('admin','student','instructor');
+  END IF;
+END$$;
 
--- Crear tipo ENUM para estado de progreso
-CREATE TYPE progress_status_enum AS ENUM ('no_completado', 'en_progreso', 'completado');
-
--- Crear tipo ENUM para dificultad de lecciones o examenes
-CREATE TYPE difficulty_level_enum AS ENUM ('simple', 'advanced');
-
--- Tabla de usuarios (rol directo como ENUM)
-CREATE TABLE app_user (
-  user_id SERIAL PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  email VARCHAR(100) NOT NULL UNIQUE,
-  password CHAR(60) NOT NULL,
-  role user_role_enum NOT NULL
+-- Usuarios (nombre real en producción: "USER")
+DROP TABLE IF EXISTS "USER" CASCADE;
+CREATE TABLE "USER" (
+  user_id  SERIAL PRIMARY KEY,
+  name     VARCHAR(100) NOT NULL,
+  email    VARCHAR(100) NOT NULL UNIQUE,
+  password CHAR(60)     NOT NULL,
+  role     user_role_enum NOT NULL
 );
 
--- Tabla de lecciones
-CREATE TABLE lesson (
-  lesson_id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  difficulty_level difficulty_level_enum not NULL,
-  points_awarded INT NOT NULL DEFAULT 0
-);
+-- Vista de compatibilidad (si algún código todavía usa app_user)
+DROP VIEW IF EXISTS app_user;
+CREATE VIEW app_user AS
+SELECT user_id, name, email, password, role
+FROM "USER";
 
--- Tabla de categorías
-CREATE TABLE lesson_category (
-  category_id SERIAL PRIMARY KEY,
-  category_name VARCHAR(100) NOT NULL UNIQUE
-);
-
--- Relación lección-categoría
-CREATE TABLE lesson_category_rel (
-  lesson_id INT NOT NULL,
-  category_id INT NOT NULL,
-  PRIMARY KEY (lesson_id, category_id),
-  FOREIGN KEY (lesson_id) REFERENCES lesson(lesson_id),
-  FOREIGN KEY (category_id) REFERENCES lesson_category(category_id)
-);
-
--- Tabla de exámenes
+-- Exámenes
+DROP TABLE IF EXISTS exam CASCADE;
 CREATE TABLE exam (
-  exam_id SERIAL PRIMARY KEY,
-  title VARCHAR(255) NOT NULL,
-  description TEXT,
-  difficulty_level difficulty_level_enum not NULL,
-  points_awarded INT NOT NULL DEFAULT 0
-);
-
--- Progreso de lecciones (usando el nuevo ENUM para estado)
-CREATE TABLE progress (
-  progress_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  lesson_id INT NOT NULL,
-  status progress_status_enum NOT NULL DEFAULT 'no_completado',
-  completion_date TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id),
-  FOREIGN KEY (lesson_id) REFERENCES lesson(lesson_id)
-);
-
--- Progreso de exámenes (usando el nuevo ENUM para estado)
-CREATE TABLE exam_progress (
-  exam_progress_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  exam_id INT NOT NULL,
-  status progress_status_enum NOT NULL DEFAULT 'no_completado',
-  completion_date TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id),
-  FOREIGN KEY (exam_id) REFERENCES exam(exam_id)
-);
-
--- Resultados de exámenes
-CREATE TABLE exam_result (
-  exam_result_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  exam_id INT NOT NULL,
-  score INT NOT NULL,
-  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id),
-  FOREIGN KEY (exam_id) REFERENCES exam(exam_id)
-);
-
--- Resultados de lecciones
-CREATE TABLE lesson_result (
-  lesson_result_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  lesson_id INT NOT NULL,
-  score INT NOT NULL,
-  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id),
-  FOREIGN KEY (lesson_id) REFERENCES lesson(lesson_id)
-);
-
--- Puntaje acumulado por usuario
-CREATE TABLE user_score (
-  score_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  total_points INT DEFAULT 0,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id)
-);
-
--- Recompensas
-CREATE TABLE reward (
-  reward_id SERIAL PRIMARY KEY,
-  name VARCHAR(100),
-  description TEXT,
-  cost_points INT NOT NULL
-);
-
--- Canje de recompensas
-CREATE TABLE reward_redemption (
-  redemption_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  reward_id INT NOT NULL,
-  date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id),
-  FOREIGN KEY (reward_id) REFERENCES reward(reward_id)
-);
-
--- Tabla de ranking
-CREATE TABLE leaderboard (
-  leaderboard_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  position INT NOT NULL,
-  total_points INT NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id)
+  exam_id          SERIAL PRIMARY KEY,
+  title            TEXT NOT NULL,
+  description      TEXT,
+  difficulty_level VARCHAR(50),
+  points_awarded   INT
 );
 
 -- Preguntas
+DROP TABLE IF EXISTS question CASCADE;
 CREATE TABLE question (
-  question_id SERIAL PRIMARY KEY,
+  question_id   SERIAL PRIMARY KEY,
   question_text TEXT,
-  question_type question_type_enum
-);
-
--- Relación examen-pregunta
-CREATE TABLE exam_question (
-  exam_id INT NOT NULL,
-  question_id INT NOT NULL,
-  PRIMARY KEY (exam_id, question_id),
-  FOREIGN KEY (exam_id) REFERENCES exam(exam_id),
-  FOREIGN KEY (question_id) REFERENCES question(question_id)
+  question_type question_type_enum NOT NULL DEFAULT 'multiple_choice',
+  category      question_category_enum
 );
 
 -- Opciones de respuesta
+DROP TABLE IF EXISTS answer_option CASCADE;
 CREATE TABLE answer_option (
-  option_id SERIAL PRIMARY KEY,
-  question_id INT NOT NULL,
-  option_text TEXT,
-  is_correct BOOLEAN,
-  FOREIGN KEY (question_id) REFERENCES question(question_id)
+  option_id    SERIAL PRIMARY KEY,
+  question_id  INT NOT NULL REFERENCES question(question_id) ON DELETE CASCADE,
+  option_text  TEXT NOT NULL,
+  is_correct   BOOLEAN NOT NULL DEFAULT FALSE
+);
+-- Índice parcial: como máximo 1 correcta por pregunta
+DROP INDEX IF EXISTS ux_answer_option_one_correct;
+CREATE UNIQUE INDEX ux_answer_option_one_correct
+  ON answer_option (question_id)
+  WHERE is_correct = TRUE;
+
+-- Relación examen-pregunta
+DROP TABLE IF EXISTS exam_question CASCADE;
+CREATE TABLE exam_question (
+  exam_id     INT NOT NULL REFERENCES exam(exam_id) ON DELETE CASCADE,
+  question_id INT NOT NULL REFERENCES question(question_id) ON DELETE CASCADE,
+  PRIMARY KEY (exam_id, question_id)
 );
 
--- Historial de notificaciones
-CREATE TABLE notification_history (
-  notification_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  message TEXT,
-  sent_date TIMESTAMP,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id)
+-- Intentos y respuestas del usuario
+DROP TABLE IF EXISTS exam_attempt CASCADE;
+CREATE TABLE exam_attempt (
+  attempt_id    SERIAL PRIMARY KEY,
+  user_id       INT NOT NULL REFERENCES "USER"(user_id),
+  exam_id       INT NOT NULL REFERENCES exam(exam_id),
+  started_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  completed_at  TIMESTAMP,
+  score         INT DEFAULT 0,
+  status        VARCHAR(50) NOT NULL CHECK (status IN ('in_progress','completed','abandoned'))
 );
 
--- Logs del sistema
-CREATE TABLE log (
-  log_id SERIAL PRIMARY KEY,
-  timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  username VARCHAR(100) NOT NULL,
-  affected_table VARCHAR(100) NOT NULL,
-  operation VARCHAR(50) NOT NULL,
-  details TEXT
+DROP TABLE IF EXISTS user_answer CASCADE;
+CREATE TABLE user_answer (
+  user_answer_id SERIAL PRIMARY KEY,
+  attempt_id     INT NOT NULL REFERENCES exam_attempt(attempt_id) ON DELETE CASCADE,
+  question_id    INT NOT NULL REFERENCES question(question_id) ON DELETE CASCADE,
+  option_id      INT REFERENCES answer_option(option_id) ON DELETE SET NULL,
+  answered_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Tabla de articulos
-CREATE TABLE lawarticle (
-  id SERIAL PRIMARY KEY,
-  artnum VARCHAR(10) NOT NULL,
-  title VARCHAR(255) NOT NULL,
-  descr TEXT NOT NULL,
-  sanc TEXT
+-- Lecciones, progreso, gamificación (tal cual tu BD)
+DROP TABLE IF EXISTS lesson CASCADE;
+CREATE TABLE lesson (
+  lesson_id        SERIAL PRIMARY KEY,
+  title            TEXT,
+  description      TEXT,
+  difficulty_level VARCHAR(50),
+  points_awarded   INT
 );
 
---Tabla de relaciones
+DROP TABLE IF EXISTS lesson_category CASCADE;
+CREATE TABLE lesson_category (
+  category_id   SERIAL PRIMARY KEY,
+  category_name TEXT
+);
+
+DROP TABLE IF EXISTS lesson_category_rel CASCADE;
+CREATE TABLE lesson_category_rel (
+  lesson_id   INT REFERENCES lesson(lesson_id) ON DELETE CASCADE,
+  category_id INT REFERENCES lesson_category(category_id) ON DELETE CASCADE,
+  PRIMARY KEY (lesson_id, category_id)
+);
+
+DROP TABLE IF EXISTS lesson_result CASCADE;
+CREATE TABLE lesson_result (
+  lesson_result_id SERIAL PRIMARY KEY,
+  user_id          INT REFERENCES "USER"(user_id),
+  lesson_id        INT REFERENCES lesson(lesson_id),
+  score            INT,
+  date             DATE
+);
+
+DROP TABLE IF EXISTS progress CASCADE;
+CREATE TABLE progress (
+  progress_id     SERIAL PRIMARY KEY,
+  user_id         INT REFERENCES "USER"(user_id),
+  lesson_id       INT REFERENCES lesson(lesson_id),
+  status          VARCHAR(50),
+  completion_date TIMESTAMP
+);
+
+DROP TABLE IF EXISTS leaderboard CASCADE;
+CREATE TABLE leaderboard (
+  leaderboard_id SERIAL PRIMARY KEY,
+  user_id        INT REFERENCES "USER"(user_id),
+  position       INT,
+  total_points   INT
+);
+
+DROP TABLE IF EXISTS reward CASCADE;
+CREATE TABLE reward (
+  reward_id   SERIAL PRIMARY KEY,
+  name        TEXT,
+  description TEXT,
+  cost_points INT
+);
+
+DROP TABLE IF EXISTS reward_redemption CASCADE;
+CREATE TABLE reward_redemption (
+  redemption_id SERIAL PRIMARY KEY,
+  user_id       INT REFERENCES "USER"(user_id),
+  reward_id     INT REFERENCES reward(reward_id),
+  date          DATE
+);
+
+-- Leyes (según 03_laws.sql)
+DROP TABLE IF EXISTS lawcat CASCADE;
 CREATE TABLE lawcat (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255) NOT NULL
+  id   SERIAL PRIMARY KEY,
+  name TEXT
 );
 
---Tabla de categoria de articulo
+DROP TABLE IF EXISTS lawarticle CASCADE;
+CREATE TABLE lawarticle (
+  id     SERIAL PRIMARY KEY,
+  artnum VARCHAR(10) NOT NULL,
+  title  VARCHAR(255) NOT NULL,
+  descr  TEXT NOT NULL,
+  sanc   TEXT
+);
+
+DROP TABLE IF EXISTS lawartcat CASCADE;
 CREATE TABLE lawartcat (
-  id SERIAL PRIMARY KEY,
-  artid INT REFERENCES lawarticle(id) ON DELETE CASCADE,
-  catid INT REFERENCES lawcat(id) ON DELETE CASCADE
+  id    SERIAL PRIMARY KEY,
+  artid INT NOT NULL REFERENCES lawarticle(id) ON DELETE CASCADE,
+  catid INT NOT NULL REFERENCES lawcat(id) ON DELETE CASCADE
 );
-
-
--- Índices para la tabla progress
-CREATE INDEX idxprogressuser ON progress(user_id);
-CREATE INDEX idxprogresslesson ON progress(lesson_id);
-
--- Índices para exam_progress
-CREATE INDEX idxexamprogressuser ON exam_progress(user_id);
-CREATE INDEX idxexamprogresslesson ON exam_progress(lesson_id);
-
--- Tabla: lesson_category_rel
-CREATE INDEX idxlessoncatrelcat ON lesson_category_rel(category_id);
-CREATE INDEX idxlessoncatrellesson ON lesson_category_rel(lesson_id);
-
--- Tabla: lesson_result
-CREATE INDEX idxlessonresultuser ON lesson_result(user_id);
-CREATE INDEX idxlessonresultlesson ON lesson_result(lesson_id);
-
--- Tabla: reward_redemption
-CREATE INDEX idxredemptionuser ON reward_redemption(user_id);
-CREATE INDEX idxredemptionreward ON reward_redemption(reward_id);
-
--- Tabla: exam_result
-CREATE INDEX idxexamresultuser ON exam_result(user_id);
-CREATE INDEX idxexamresultexam ON exam_result(exam_id);
-
--- Tabla: exam_question
-CREATE INDEX idxexamquestionexam ON exam_question(exam_id);
-CREATE INDEX idxexamquestionquestion ON exam_question(question_id);
-
--- Tabla: answer_option
-CREATE INDEX idxansoptquestion ON answer_option(question_id);

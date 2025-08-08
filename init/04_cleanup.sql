@@ -1,11 +1,27 @@
--- Eliminar tabla de puntaje duplicada
-DROP TABLE IF EXISTS user_score;
+-- =========================
+-- 04_cleanup.sql (solo legacy)
+-- =========================
+SET search_path TO public;
 
--- Eliminar tablas no incluidas en los scripts iniciales
-DROP TABLE IF EXISTS quest;
-DROP TABLE IF EXISTS ans;
-DROP TABLE IF EXISTS opt;
+-- Tablas legacy que ya no usamos
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='quest') THEN
+    EXECUTE 'DROP TABLE quest CASCADE';
+  END IF;
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='opt') THEN
+    EXECUTE 'DROP TABLE opt CASCADE';
+  END IF;
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='ans') THEN
+    EXECUTE 'DROP TABLE ans CASCADE';
+  END IF;
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='exam_result') THEN
+    EXECUTE 'DROP TABLE exam_result CASCADE';
+  END IF;
+  IF EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='exam_progress') THEN
+    EXECUTE 'DROP TABLE exam_progress CASCADE';
+  END IF;
+END$$;
 
--- Eliminar tablas no utilizadas por el backend
-DROP TABLE IF EXISTS log;
-DROP TABLE IF EXISTS notification_history;
+-- También puedes limpiar otras tablas basura si existieran:
+-- user_score, log, notification_history, etc. (solo si estás seguro)
