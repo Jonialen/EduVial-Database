@@ -1,6 +1,4 @@
--- =========================
--- 04_cleanup.sql (solo legacy)
--- =========================
+
 SET search_path TO public;
 
 -- Tablas legacy que ya no usamos
@@ -23,5 +21,4 @@ BEGIN
   END IF;
 END$$;
 
--- También puedes limpiar otras tablas basura si existieran:
--- user_score, log, notification_history, etc. (solo si estás seguro)
+

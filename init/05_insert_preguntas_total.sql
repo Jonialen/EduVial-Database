@@ -1,6 +1,4 @@
--- =========================
--- 05_insert_preguntas_total.sql (operativo con tu esquema real)
--- =========================
+
 SET search_path TO public;
 
 -- 0) Asegurar que existe un examen 1
@@ -8,8 +6,8 @@ INSERT INTO exam (exam_id, title, description, difficulty_level, points_awarded)
 VALUES (1, 'Examen Básico de Seguridad Vial', 'Evalúa conocimientos básicos de tránsito', 'simple', 20)
 ON CONFLICT (exam_id) DO NOTHING;
 
--- 1) Opciones por pregunta (1..15)
---    Cambia los textos cuando tengas los definitivos. Por ahora sirven para que el front/back funcionen.
+-- 1) Opciones por pregunta 
+--  Por ahora sirven para que el front/back funcionen.
 WITH upsert_opts AS (
   SELECT 1 AS question_id, 'Opción A' AS a, 'Opción B' AS b, 'Opción C' AS c, 'Opción D' AS d, 'B' AS correct UNION ALL
   SELECT 2,'Opción A','Opción B','Opción C','Opción D','B' UNION ALL
@@ -114,6 +112,7 @@ FROM question q
 LEFT JOIN exam_question eq ON eq.question_id = q.question_id
 LEFT JOIN exam e           ON e.exam_id      = eq.exam_id;
 
+
 -- 3) Validaciones 
 -- Preguntas con <2 opciones o !=1 correcta
 WITH c AS (
@@ -136,4 +135,25 @@ LEFT JOIN exam_question eq ON eq.exam_id = e.exam_id
 GROUP BY e.exam_id, e.title
 ORDER BY e.exam_id;
 
+-- Insertar preguntas
+INSERT INTO question (question_id, question_text, question_type, category) VALUES
+(1,  '¿Qué indica una señal triangular con borde rojo?',                                  'multiple_choice', 'Señales'),
+(2,  '¿Cuál es el significado de una señal de círculo rojo con fondo blanco?',            'multiple_choice', 'Señales'),
+(3,  '¿Qué acción corresponde ante una señal de alto (STOP)?',                            'multiple_choice', 'Señales'),
+(4,  '¿Qué representa una señal amarilla en forma de rombo?',                             'multiple_choice', 'Señales'),
+(5,  '¿Qué significa una señal azul con una “P” blanca?',                                 'multiple_choice', 'Señales'),
+(6,  '¿Qué debe hacer si un peatón cruza repentinamente en una zona sin paso de cebra?',  'multiple_choice', 'Simulaciones'),
+(7,  '¿Cómo debe actuar si un ciclista invade su carril?',                                'multiple_choice', 'Simulaciones'),
+(8,  'Si falla el semáforo en una intersección, ¿qué debe hacer?',                        'multiple_choice', 'Simulaciones'),
+(9,  '¿Qué se recomienda hacer si se revienta una llanta mientras conduce?',              'multiple_choice', 'Simulaciones'),
+(10, '¿Qué hacer si ve humo saliendo del motor mientras conduce?',                        'multiple_choice', 'Simulaciones'),
+(11, '¿Qué documentos debe portar obligatoriamente un conductor en Guatemala?',           'multiple_choice', 'Escenarios'),
+(12, '¿Cuál es la sanción por conducir sin licencia vigente?',                            'multiple_choice', 'Escenarios'),
+(13, '¿Quién tiene prioridad en una intersección sin señalización?',                      'multiple_choice', 'Escenarios'),
+(14, '¿Cuál es el límite de alcohol permitido en sangre para conducir legalmente?',       'multiple_choice', 'Escenarios'),
+(15, '¿Qué requisitos debe cumplir un vehículo para circular legalmente?',                'multiple_choice', 'Escenarios')
+ON CONFLICT (question_id) DO NOTHING;
+
+-- Ajustar la secuencia por si se insertó con IDs fijos
+SELECT setval('question_question_id_seq', (SELECT MAX(question_id) FROM question));
 

@@ -1,6 +1,4 @@
--- =========================
--- 01_script.sql 
--- =========================
+
 SET search_path TO public;
 
 -- Tipos ENUM
@@ -27,7 +25,7 @@ CREATE TABLE "USER" (
   role     user_role_enum NOT NULL
 );
 
--- Vista de compatibilidad (si algún código todavía usa app_user)
+-- Vista de compatibilidad 
 DROP VIEW IF EXISTS app_user;
 CREATE VIEW app_user AS
 SELECT user_id, name, email, password, role
@@ -95,7 +93,7 @@ CREATE TABLE user_answer (
   answered_at    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Lecciones, progreso, gamificación (tal cual tu BD)
+-- Lecciones, progreso, gamificación 
 DROP TABLE IF EXISTS lesson CASCADE;
 CREATE TABLE lesson (
   lesson_id        SERIAL PRIMARY KEY,
@@ -160,7 +158,7 @@ CREATE TABLE reward_redemption (
   date          DATE
 );
 
--- Leyes (según 03_laws.sql)
+-- Leyes 
 DROP TABLE IF EXISTS lawcat CASCADE;
 CREATE TABLE lawcat (
   id   SERIAL PRIMARY KEY,
