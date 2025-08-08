@@ -541,18 +541,20 @@ SELECT
   q.question_id AS id,
   q.question_text AS text,
   CASE
-    WHEN q.category = 'Señales'::question_category_enum THEN 'peatones'  -- alias legacy
-    ELSE LOWER(q.category::text)                                         -- 'simulaciones' | 'escenarios'
+    WHEN q.category = 'Señales'::question_category_enum      THEN 'señales'
+    WHEN q.category = 'Simulaciones'::question_category_enum THEN 'simulaciones'
+    WHEN q.category = 'Escenarios'::question_category_enum   THEN 'escenarios'
   END AS cat,
   CASE
     WHEN e.difficulty_level IN ('simple','basic','basico','básico') THEN 1
-    WHEN e.difficulty_level IN ('intermedio') THEN 2
-    WHEN e.difficulty_level IN ('advanced','avanzado') THEN 3
+    WHEN e.difficulty_level IN ('intermedio')                        THEN 2
+    WHEN e.difficulty_level IN ('advanced','avanzado')               THEN 3
     ELSE 0
   END AS lvl
 FROM question q
 LEFT JOIN exam_question eq ON eq.question_id = q.question_id
 LEFT JOIN exam e           ON e.exam_id      = eq.exam_id;
+
 
 -- =========================
 -- VALIDACIONES RÁPIDAS
