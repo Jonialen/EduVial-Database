@@ -182,3 +182,83 @@ CREATE TABLE lawartcat (
   artid INT NOT NULL REFERENCES lawarticle(id) ON DELETE CASCADE,
   catid INT NOT NULL REFERENCES lawcat(id) ON DELETE CASCADE
 );
+
+-- 1) Agregar 'intermedio' a public.user_role_enum 
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1 FROM pg_type t
+    WHERE t.typname = 'user_role_enum' AND t.typnamespace = 'public'::regnamespace
+  ) THEN
+    IF NOT EXISTS (
+      SELECT 1
+      FROM pg_enum e
+      JOIN pg_type t ON t.oid = e.enumtypid
+      WHERE t.typname = 'user_role_enum'
+        AND t.typnamespace = 'public'::regnamespace
+        AND e.enumlabel = 'intermedio'
+    ) THEN
+      ALTER TYPE public.user_role_enum
+        ADD VALUE 'intermedio' AFTER 'principiante';
+    END IF;
+  END IF;
+END$$;
+
+-- 2) Forzar que question_type_enum tenga SOLO 'multiple_choice'
+DO $$
+DECLARE
+  cnt_otros INT;
+BEGIN
+  -- ¿Hay valores distintos de 'multiple_choice' en el enum actual?
+  SELECT COUNT(*)
+    INTO cnt_otros
+  FROM pg_enum e
+  JOIN pg_type t ON t.oid = e.enumtypid
+  WHERE t.typname = 'question_type_enum'
+    AND t.typnamespace = 'public'::regnamespace
+    AND e.enumlabel <> 'multiple_choice';
+
+  IF cnt_otros > 0 THEN
+    -- Crear tipo nuevo si hiciera falta
+    IF NOT EXISTS (
+      SELECT 1 FROM pg_type
+      WHERE typname = 'question_type_enum_new'
+        AND typnamespace = 'public'::regnamespace
+    ) THEN
+      EXECUTE 'CREATE TYPE public.question_type_enum_new AS ENUM (''multiple_choice'')';
+    END IF;
+
+    -- Migrar la columna question.question_type al tipo nuevo (forzando 'multiple_choice')
+    IF EXISTS (
+      SELECT 1
+      FROM information_schema.columns
+      WHERE table_schema = 'public'
+        AND table_name = 'question'
+        AND column_name = 'question_type'
+    ) THEN
+      EXECUTE $SQL$
+        ALTER TABLE public.question
+          ALTER COLUMN question_type TYPE public.question_type_enum_new
+          USING 'multiple_choice'::public.question_type_enum_new;
+      $SQL$;
+    END IF;
+
+    -- Reemplazar el tipo antiguo por el nuevo
+    EXECUTE 'DROP TYPE public.question_type_enum';
+    EXECUTE 'ALTER TYPE public.question_type_enum_new RENAME TO question_type_enum';
+
+    -- Asegurar el DEFAULT en la columna 
+    IF EXISTS (
+      SELECT 1
+      FROM information_schema.columns
+      WHERE table_schema = 'public'
+        AND table_name = 'question'
+        AND column_name = 'question_type'
+    ) THEN
+      EXECUTE $SQL$
+        ALTER TABLE public.question
+          ALTER COLUMN question_type SET DEFAULT 'multiple_choice';
+      $SQL$;
+    END IF;
+  END IF;
+END$$;
