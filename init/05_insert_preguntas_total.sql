@@ -715,3 +715,53 @@ INSERT INTO opt (qid, txt, correct) VALUES
 (45, 'Mejor tracción', FALSE),
 (45, 'Gasto reducido', FALSE),
 (45, 'Mejor visibilidad', FALSE);
+
+--señales
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (1, '¿Qué indica una señal triangular con borde rojo?', 'multiple_choice', 'Señales');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (2, '¿Cuál es el significado de una señal de círculo rojo con fondo blanco?', 'multiple_choice', 'Señales');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (3, '¿Qué acción corresponde ante una señal de alto (STOP)?', 'multiple_choice', 'Señales');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (4, '¿Qué representa una señal amarilla en forma de rombo?', 'multiple_choice', 'Señales');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (5, '¿Qué significa una señal azul con una “P” blanca?', 'multiple_choice', 'Señales');
+
+--Simulaciones
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (6, '¿Qué debe hacer si un peatón cruza repentinamente en una zona sin paso de cebra?', 'multiple_choice', 'Simulaciones');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (7, '¿Cómo debe actuar si un ciclista invade su carril?', 'multiple_choice', 'Simulaciones');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (8, 'Si falla el semáforo en una intersección, ¿qué debe hacer?', 'multiple_choice', 'Simulaciones');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (9, '¿Qué se recomienda hacer si se revienta una llanta mientras conduce?', 'multiple_choice', 'Simulaciones');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (10, '¿Qué hacer si ve humo saliendo del motor mientras conduce?', 'multiple_choice', 'Simulaciones');
+
+
+--Escenarios
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (11, '¿Qué documentos debe portar obligatoriamente un conductor en Guatemala?', 'multiple_choice', 'Escenarios');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (12, '¿Cuál es la sanción por conducir sin licencia vigente?', 'multiple_choice', 'Escenarios');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (13, '¿Quién tiene prioridad en una intersección sin señalización?', 'multiple_choice', 'Escenarios');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (14, '¿Cuál es el límite de alcohol permitido en sangre para conducir legalmente?', 'multiple_choice', 'Escenarios');
+
+INSERT INTO question (question_id, question_text, question_type, category)
+VALUES (15, '¿Qué requisitos debe cumplir un vehículo para circular legalmente?', 'multiple_choice', 'Escenarios');
+
