@@ -31,22 +31,7 @@ INSERT INTO exam (exam_id, title, description, difficulty_level, points_awarded)
 (1, 'Examen Básico de Seguridad Vial', 'Evalúa conocimientos básicos de tránsito', 'simple', 20),
 (2, 'Examen Avanzado de Normas', 'Examen sobre normativas avanzadas de conducción', 'advanced', 30);
 
--- Insertar preguntas
-INSERT INTO question (question_id, question_text, question_type) VALUES
-(1, '¿Qué significa una señal de alto?', 'multiple_choice'),
-(2, '¿Es obligatorio usar el cinturón de seguridad?', 'true_false');
 
--- Relacionar preguntas con exámenes
-INSERT INTO exam_question (exam_id, question_id) VALUES
-(1, 1),
-(1, 2);
-
--- Insertar opciones de respuesta
-INSERT INTO answer_option (option_id, question_id, option_text, is_correct) VALUES
-(1, 1, 'Debe detenerse completamente', TRUE),
-(2, 1, 'Debe reducir la velocidad', FALSE),
-(3, 2, 'Sí', TRUE),
-(4, 2, 'No', FALSE);
 
 -- Insertar progreso de exámenes (usando el nuevo ENUM para estado)
 INSERT INTO exam_progress (exam_progress_id, user_id, exam_id, status, completion_date) VALUES

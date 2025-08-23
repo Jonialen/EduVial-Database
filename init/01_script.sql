@@ -1,5 +1,3 @@
--- Crear tipo ENUM para question_type
-CREATE TYPE question_type_enum AS ENUM ('multiple_choice', 'true_false', 'short_answer');
 
 -- Crear tipo ENUM para roles
 CREATE TYPE user_role_enum AS ENUM ('admin', 'principiante', 'avanzado');
@@ -131,30 +129,6 @@ CREATE TABLE leaderboard (
   FOREIGN KEY (user_id) REFERENCES app_user(user_id)
 );
 
--- Preguntas
-CREATE TABLE question (
-  question_id SERIAL PRIMARY KEY,
-  question_text TEXT,
-  question_type question_type_enum
-);
-
--- Relación examen-pregunta
-CREATE TABLE exam_question (
-  exam_id INT NOT NULL,
-  question_id INT NOT NULL,
-  PRIMARY KEY (exam_id, question_id),
-  FOREIGN KEY (exam_id) REFERENCES exam(exam_id),
-  FOREIGN KEY (question_id) REFERENCES question(question_id)
-);
-
--- Opciones de respuesta
-CREATE TABLE answer_option (
-  option_id SERIAL PRIMARY KEY,
-  question_id INT NOT NULL,
-  option_text TEXT,
-  is_correct BOOLEAN,
-  FOREIGN KEY (question_id) REFERENCES question(question_id)
-);
 
 -- Historial de notificaciones
 CREATE TABLE notification_history (
