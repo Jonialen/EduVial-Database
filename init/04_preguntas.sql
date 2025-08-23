@@ -3,8 +3,10 @@ CREATE TABLE quest (
   txt TEXT NOT NULL,
   cat VARCHAR(100), 
   lvl VARCHAR(50),  
-  lawid INT REFERENCES lawarticle(id) ON DELETE SET NULL
+  lawid INT REFERENCES lawarticle(id) ON DELETE SET NULL,
+  qtype quest_type_enum NOT NULL DEFAULT 'multiple_choice'
 );
+
 
 CREATE TABLE opt (
   id SERIAL PRIMARY KEY,

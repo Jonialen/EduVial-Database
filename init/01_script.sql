@@ -1,3 +1,5 @@
+-- Crear tipo ENUM para tipos de pregunta
+CREATE TYPE quest_type_enum AS ENUM ('multiple_choice', 'true_false', 'short_answer');
 
 -- Crear tipo ENUM para roles
 CREATE TYPE user_role_enum AS ENUM ('admin', 'principiante', 'avanzado');
