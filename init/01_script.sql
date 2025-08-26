@@ -1,5 +1,5 @@
 -- Crear tipo ENUM para tipos de pregunta
-CREATE TYPE quest_type_enum AS ENUM ('multiple_choice', 'true_false', 'short_answer');
+CREATE TYPE quest_type_enum AS ENUM ('multiple_choice', 'true_false');
 
 -- Crear tipo ENUM para roles
 CREATE TYPE user_role_enum AS ENUM ('admin', 'principiante', 'avanzado');
@@ -9,6 +9,9 @@ CREATE TYPE progress_status_enum AS ENUM ('no_completado', 'en_progreso', 'compl
 
 -- Crear tipo ENUM para dificultad de lecciones o examenes
 CREATE TYPE difficulty_level_enum AS ENUM ('simple', 'advanced');
+
+--Si algún día hay que agregar un tipo nuevo al ENUM
+-- ALTER TYPE question_type_enum ADD VALUE 'matching';
 
 -- Tabla de usuarios (rol directo como ENUM)
 CREATE TABLE app_user (
