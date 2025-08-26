@@ -4,8 +4,8 @@ CREATE TABLE quest (
   cat   VARCHAR(100),
   lvl   VARCHAR(50),
   lawid INT REFERENCES lawarticle(id) ON DELETE SET NULL,
-  qtype question_type_enum NOT NULL DEFAULT 'multiple_choice'
-)
+  qtype quest_type_enum NOT NULL DEFAULT 'multiple_choice'
+);
 
 
 CREATE TABLE opt (
