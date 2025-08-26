@@ -1,7 +1,7 @@
 -- Pregunta 1: Artículo 82 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué obligación tiene el conductor respecto al uso del cinturón de seguridad?',
-  'Seguridad vial',
+  'Escenarios',
   'Básico',
   82
 );
@@ -17,7 +17,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 2: Artículo 35 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la velocidad máxima permitida en zonas escolares?',
-  'Seguridad vial',
+  'Escenarios',
   'Básico',
   35
 );
@@ -33,7 +33,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 3: Artículo 22 - Peatones
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Quién tiene prioridad en un paso de cebra sin semáforo?',
-  'Peatones',
+  'Escenarios',
   'Básico',
   22
 );
@@ -49,7 +49,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 4: Artículo 47 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor al escuchar una sirena de emergencia?',
-  'Normas generales',
+  'Simulaciones',
   'Básico',
   47
 );
@@ -65,7 +65,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 5: Artículo 14 - Documentación
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué documento debe portar todo conductor?',
-  'Documentación',
+  'Escenarios',
   'Básico',
   14
 );
@@ -81,7 +81,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 6: Artículo 68 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica la prioridad de paso en una intersección?',
-  'Normas generales',
+  'Simulaciones',
   'Intermedio',
   68
 );
@@ -97,7 +97,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 7: Artículo 56 - Circulación
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una línea amarilla continua en la vía?',
-  'Circulación',
+  'Señales',
   'Intermedio',
   56
 );
@@ -113,7 +113,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 8: Artículo 72 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo se permite el uso de luces altas?',
-  'Seguridad vial',
+  'Escenarios',
   'Intermedio',
   72
 );
@@ -129,7 +129,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 9: Artículo 90 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer si sufre un desperfecto mecánico en carretera?',
-  'Seguridad vial',
+  'Simulaciones',
   'Intermedio',
   90
 );
@@ -145,7 +145,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 10: Artículo 61 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la función del cinturón de seguridad?',
-  'Seguridad vial',
+  'Escenarios',
   'Intermedio',
   61
 );
@@ -161,7 +161,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 11: Artículo 75 - Circulación
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿En qué situación está prohibido adelantar otro vehículo según la ley?',
-  'Circulación',
+  'Escenarios',
   'Avanzado',
   75
 );
@@ -177,7 +177,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 12: Artículo 105 - Infracciones
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la sanción por conducir bajo efectos del alcohol?',
-  'Infracciones',
+  'Escenarios',
   'Avanzado',
   105
 );
@@ -193,7 +193,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 13: Artículo 132 - Vehículos
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe tener un vehículo para transportar personas?',
-  'Vehículos',
+  'Escenarios',
   'Avanzado',
   132
 );
@@ -209,7 +209,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 14: Artículo 149 - Autoridades
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué autoridad puede detener a un vehículo en circulación?',
-  'Autoridades',
+  'Escenarios',
   'Avanzado',
   149
 );
@@ -225,7 +225,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 15: Artículo 158 - Motociclistas
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo es obligatorio usar casco en motocicleta?',
-  'Motociclistas',
+  'Escenarios',
   'Avanzado',
   158
 );
@@ -240,7 +240,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 16: Artículo 33 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué color indica precaución en los semáforos?',
-  'Seguridad vial',
+  'Señales',
   'Básico',
   33
 );
@@ -256,7 +256,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 17: Artículo 40 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor antes de cambiar de carril?',
-  'Normas generales',
+  'Simulaciones',
   'Básico',
   40
 );
@@ -272,7 +272,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 18: Artículo 12 - Peatones
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Quién puede usar pasos peatonales elevados?',
-  'Peatones',
+  'Escenarios',
   'Básico',
   12
 );
@@ -288,7 +288,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 19: Artículo 19 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una señal de alto?',
-  'Seguridad vial',
+  'Señales',
   'Básico',
   19
 );
@@ -304,7 +304,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 20: Artículo 52 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si hay un accidente sin heridos?',
-  'Normas generales',
+  'Simulaciones',
   'Básico',
   52
 );
@@ -320,7 +320,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 21: Artículo 88 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué vehículos tienen prioridad de paso?',
-  'Seguridad vial',
+  'Escenarios',
   'Básico',
   88
 );
@@ -336,7 +336,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 22: Artículo 31 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una luz verde intermitente?',
-  'Seguridad vial',
+  'Señales',
   'Básico',
   31
 );
@@ -352,7 +352,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 23: Artículo 21 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué se debe revisar antes de iniciar la conducción?',
-  'Normas generales',
+  'Simulaciones',
   'Básico',
   21
 );
@@ -368,7 +368,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 24: Artículo 67 - Peatones
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal con un peatón?',
-  'Peatones',
+  'Señales',
   'Básico',
   67
 );
@@ -384,7 +384,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 25: Artículo 39 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer en una zona escolar?',
-  'Seguridad vial',
+  'Escenarios',
   'Básico',
   39
 );
@@ -400,7 +400,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 26: Artículo 108 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si un semáforo está apagado?',
-  'Normas generales',
+  'Simulaciones',
   'Intermedio',
   108
 );
@@ -416,7 +416,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 27: Artículo 98 - Circulación
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una doble línea amarilla?',
-  'Circulación',
+  'Señales',
   'Intermedio',
   98
 );
@@ -432,7 +432,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 28: Artículo 141 - Infracciones
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué pasa si no se respetan los límites de velocidad?',
-  'Infracciones',
+  'Escenarios',
   'Intermedio',
   141
 );
@@ -448,7 +448,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 29: Artículo 77 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué tipo de luces deben usarse en neblina?',
-  'Seguridad vial',
+  'Simulaciones',
   'Intermedio',
   77
 );
@@ -464,7 +464,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 30: Artículo 130 - Vehículos
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué es el mantenimiento preventivo?',
-  'Vehículos',
+  'Simulaciones',
   'Intermedio',
   130
 );
@@ -480,7 +480,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 31: Artículo 116 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es el rol del espejo retrovisor?',
-  'Seguridad vial',
+  'Simulaciones',
   'Intermedio',
   116
 );
@@ -496,7 +496,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 32: Artículo 55 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal triangular con borde rojo?',
-  'Seguridad vial',
+  'Señales',
   'Intermedio',
   55
 );
@@ -512,7 +512,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 33: Artículo 65 - Normas generales
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer en un cruce sin señalización?',
-  'Normas generales',
+  'Simulaciones',
   'Intermedio',
   65
 );
@@ -528,7 +528,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 34: Artículo 119 - Peatones
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si un peatón cruza inesperadamente?',
-  'Peatones',
+  'Simulaciones',
   'Intermedio',
   119
 );
@@ -544,7 +544,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 35: Artículo 109 - Ciclistas
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal con bicicleta?',
-  'Ciclistas',
+  'Señales',
   'Intermedio',
   109
 );
@@ -560,7 +560,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 36: Artículo 159 - Transporte
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué medidas debe tomar el conductor de transporte público?',
-  'Transporte',
+  'Simulaciones',
   'Avanzado',
   159
 );
@@ -576,7 +576,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 37: Artículo 198 - Licencias
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué condiciones impiden manejar legalmente?',
-  'Licencias',
+  'Escenarios',
   'Avanzado',
   198
 );
@@ -592,7 +592,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 38: Artículo 164 - Vehículos
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué se exige para vehículos de carga pesada?',
-  'Vehículos',
+  'Escenarios',
   'Avanzado',
   164
 );
@@ -608,7 +608,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 39: Artículo 173 - Emergencia
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal azul con una H?',
-  'Emergencia',
+  'Señales',
   'Avanzado',
   173
 );
@@ -624,7 +624,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 40: Artículo 184 - Transporte
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué establece la ley sobre transporte escolar?',
-  'Transporte',
+  'Escenarios',
   'Avanzado',
   184
 );
@@ -640,7 +640,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 41: Artículo 187 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor tras un accidente con heridos?',
-  'Seguridad vial',
+  'Simulaciones',
   'Avanzado',
   187
 );
@@ -656,7 +656,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 42: Artículo 195 - Circulación
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una línea blanca discontinua?',
-  'Circulación',
+  'Señales',
   'Avanzado',
   195
 );
@@ -672,7 +672,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 43: Artículo 200 - Documentación
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué documento prueba que un vehículo es legal?',
-  'Documentación',
+  'Escenarios',
   'Avanzado',
   200
 );
@@ -688,7 +688,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 44: Artículo 161 - Mecánica
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué sistema reduce la velocidad del vehículo?',
-  'Mecánica',
+  'Simulaciones',
   'Avanzado',
   161
 );
@@ -704,7 +704,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 45: Artículo 178 - Seguridad vial
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué riesgo hay al manejar con llantas lisas?',
-  'Seguridad vial',
+  'Simulaciones',
   'Avanzado',
   178
 );

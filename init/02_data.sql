@@ -7,8 +7,9 @@ INSERT INTO app_user (name, email, password, role) VALUES
 
 -- Insertar categorías de lecciones
 INSERT INTO lesson_category (category_id, category_name) VALUES
-(1, 'Seguridad Vial'),
-(2, 'Normas de Conducción');
+(1, 'Simulaciones'),
+(2, 'Señales'),
+(3, 'Escenarios');
 
 -- Insertar lecciones
 INSERT INTO lesson (lesson_id, title, description, difficulty_level, points_awarded) VALUES
