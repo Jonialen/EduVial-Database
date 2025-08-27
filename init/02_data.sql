@@ -51,21 +51,16 @@ INSERT INTO lesson_result (lesson_result_id, user_id, lesson_id, score, date) VA
 (2, 3, 2, 90, '2025-03-16 12:05:00');
 
 -- Insertar puntajes de usuarios
-INSERT INTO user_score (score_id, user_id, total_points) VALUES
-(1, 1, 105),
-(2, 2, 0),
-(3, 3, 125),
-(4, 4, 0);
+INSERT INTO user_score (user_id, total_points) VALUES
+(1, 105),
+(2, 0),
+(3, 125),
+(4, 0);
 
 -- Insertar recompensas
 INSERT INTO reward (reward_id, name, description, cost_points) VALUES
 (1, 'Insignia Principiante', 'Recompensa por completar el nivel básico', 100),
 (2, 'Insignia Avanzada', 'Recompensa por completar el nivel avanzado', 200);
-
--- Insertar historial de notificaciones
-INSERT INTO notification_history (notification_id, user_id, message, sent_date) VALUES
-(1, 1, 'Has completado la lección de Señales de Tránsito', '2025-03-15 11:00:00'),
-(2, 3, 'Nuevo examen disponible: Examen Avanzado de Normas', '2025-03-16 09:30:00');
 
 -- Insertar logs del sistema
 INSERT INTO log (log_id, timestamp, username, affected_table, operation, details) VALUES

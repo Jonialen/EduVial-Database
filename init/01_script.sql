@@ -102,7 +102,7 @@ CREATE TABLE lesson_result (
 -- Puntaje acumulado por usuario
 CREATE TABLE user_score (
   score_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
+  user_id INT NOT NULL UNIQUE,
   total_points INT DEFAULT 0,
   FOREIGN KEY (user_id) REFERENCES app_user(user_id)
 );
@@ -131,16 +131,6 @@ CREATE TABLE leaderboard (
   user_id INT NOT NULL,
   position INT NOT NULL,
   total_points INT NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES app_user(user_id)
-);
-
-
--- Historial de notificaciones
-CREATE TABLE notification_history (
-  notification_id SERIAL PRIMARY KEY,
-  user_id INT NOT NULL,
-  message TEXT,
-  sent_date TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES app_user(user_id)
 );
 
