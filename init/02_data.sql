@@ -50,14 +50,16 @@ INSERT INTO lesson_result (lesson_result_id, user_id, lesson_id, score, date) VA
 (1, 1, 1, 95, '2025-03-15 10:35:00'),
 (2, 3, 2, 90, '2025-03-16 12:05:00');
 
--- Insertar puntajes de usuarios
+--- Insertar o actualizar puntajes de usuarios
 INSERT INTO user_score (user_id, total_points) VALUES
-(1, 105),
-(2, 0),
-(3, 125),
-(4, 0);
+    (1, 105),
+    (2, 0),
+    (3, 125),
+    (4, 0)
+ON CONFLICT (user_id) 
+DO UPDATE SET total_points = EXCLUDED.total_points;
 
--- Insertar recompensas
+--- Insertar recompensas
 INSERT INTO reward (reward_id, name, description, cost_points) VALUES
 (1, 'Insignia Principiante', 'Recompensa por completar el nivel básico', 100),
 (2, 'Insignia Avanzada', 'Recompensa por completar el nivel avanzado', 200);

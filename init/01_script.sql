@@ -165,3 +165,17 @@ CREATE TABLE lawartcat (
   artid INT REFERENCES lawarticle(id) ON DELETE CASCADE,
   catid INT REFERENCES lawcat(id) ON DELETE CASCADE
 );
+
+CREATE OR REPLACE FUNCTION create_user_score()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO user_score(user_id) VALUES (NEW.user_id);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_create_user_score
+AFTER INSERT ON app_user
+FOR EACH ROW
+EXECUTE FUNCTION create_user_score();
+
