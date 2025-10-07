@@ -3,7 +3,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué obligación tiene el conductor respecto al uso del cinturón de seguridad?',
   'Escenarios',
   'Básico',
-  82
+  (SELECT id FROM lawarticle WHERE artnum = '82')
 );
 
 -- Opciones para pregunta 1 (ID generado = 1)
@@ -19,7 +19,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la velocidad máxima permitida en zonas escolares?',
   'Escenarios',
   'Básico',
-  35
+  (SELECT id FROM lawarticle WHERE artnum = '35')
 );
 
 -- Opciones para pregunta 2 (ID generado = 2)
@@ -35,7 +35,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Quién tiene prioridad en un paso de cebra sin semáforo?',
   'Escenarios',
   'Básico',
-  22
+  (SELECT id FROM lawarticle WHERE artnum = '22')
 );
 
 -- Opciones para pregunta 3 (ID generado = 3)
@@ -51,7 +51,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor al escuchar una sirena de emergencia?',
   'Simulaciones',
   'Básico',
-  47
+  (SELECT id FROM lawarticle WHERE artnum = '47')
 );
 
 -- Opciones para pregunta 4 (ID generado = 4)
@@ -67,7 +67,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué documento debe portar todo conductor?',
   'Escenarios',
   'Básico',
-  14
+  (SELECT id FROM lawarticle WHERE artnum = '14')
 );
 
 -- Opciones para pregunta 5 (ID generado = 5)
@@ -83,7 +83,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica la prioridad de paso en una intersección?',
   'Simulaciones',
   'Intermedio',
-  68
+  (SELECT id FROM lawarticle WHERE artnum = '68')
 );
 
 -- Opciones para pregunta 6 (ID generado = 6)
@@ -99,7 +99,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una línea amarilla continua en la vía?',
   'Señales',
   'Intermedio',
-  56
+  (SELECT id FROM lawarticle WHERE artnum = '56')
 );
 
 -- Opciones para pregunta 7 (ID generado = 7)
@@ -115,7 +115,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo se permite el uso de luces altas?',
   'Escenarios',
   'Intermedio',
-  72
+  (SELECT id FROM lawarticle WHERE artnum = '72')
 );
 
 -- Opciones para pregunta 8 (ID generado = 8)
@@ -131,7 +131,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer si sufre un desperfecto mecánico en carretera?',
   'Simulaciones',
   'Intermedio',
-  90
+  (SELECT id FROM lawarticle WHERE artnum = '90')
 );
 
 -- Opciones para pregunta 9 (ID generado = 9)
@@ -147,7 +147,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la función del cinturón de seguridad?',
   'Escenarios',
   'Intermedio',
-  61
+  (SELECT id FROM lawarticle WHERE artnum = '61')
 );
 
 -- Opciones para pregunta 10 (ID generado = 10)
@@ -163,7 +163,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿En qué situación está prohibido adelantar otro vehículo según la ley?',
   'Escenarios',
   'Avanzado',
-  75
+  (SELECT id FROM lawarticle WHERE artnum = '75')
 );
 
 -- Opciones para pregunta 11 (ID generado = 11)
@@ -179,7 +179,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la sanción por conducir bajo efectos del alcohol?',
   'Escenarios',
   'Avanzado',
-  105
+  (SELECT id FROM lawarticle WHERE artnum = '105')
 );
 
 -- Opciones para pregunta 12 (ID generado = 12)
@@ -195,7 +195,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe tener un vehículo para transportar personas?',
   'Escenarios',
   'Avanzado',
-  132
+  (SELECT id FROM lawarticle WHERE artnum = '132')
 );
 
 -- Opciones para pregunta 13 (ID generado = 13)
@@ -211,7 +211,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué autoridad puede detener a un vehículo en circulación?',
   'Escenarios',
   'Avanzado',
-  149
+  (SELECT id FROM lawarticle WHERE artnum = '149')
 );
 
 -- Opciones para pregunta 14 (ID generado = 14)
@@ -227,7 +227,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo es obligatorio usar casco en motocicleta?',
   'Escenarios',
   'Avanzado',
-  158
+  (SELECT id FROM lawarticle WHERE artnum = '158')
 );
 
 -- Opciones para pregunta 15 (ID generado = 15)
@@ -242,7 +242,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué color indica precaución en los semáforos?',
   'Señales',
   'Básico',
-  33
+  (SELECT id FROM lawarticle WHERE artnum = '33')
 );
 
 -- Opciones para pregunta 16 (ID generado = 16)
@@ -258,7 +258,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor antes de cambiar de carril?',
   'Simulaciones',
   'Básico',
-  40
+  (SELECT id FROM lawarticle WHERE artnum = '40')
 );
 
 -- Opciones para pregunta 17 (ID generado = 17)
@@ -274,7 +274,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Quién puede usar pasos peatonales elevados?',
   'Escenarios',
   'Básico',
-  12
+  (SELECT id FROM lawarticle WHERE artnum = '12')
 );
 
 -- Opciones para pregunta 18 (ID generado = 18)
@@ -290,7 +290,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una señal de alto?',
   'Señales',
   'Básico',
-  19
+  (SELECT id FROM lawarticle WHERE artnum = '19')
 );
 
 -- Opciones para pregunta 19 (ID generado = 19)
@@ -306,7 +306,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si hay un accidente sin heridos?',
   'Simulaciones',
   'Básico',
-  52
+  (SELECT id FROM lawarticle WHERE artnum = '52')
 );
 
 -- Opciones para pregunta 20 (ID generado = 20)
@@ -322,7 +322,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué vehículos tienen prioridad de paso?',
   'Escenarios',
   'Básico',
-  88
+  (SELECT id FROM lawarticle WHERE artnum = '88')
 );
 
 -- Opciones para pregunta 21 (ID generado = 21)
@@ -338,7 +338,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una luz verde intermitente?',
   'Señales',
   'Básico',
-  31
+  (SELECT id FROM lawarticle WHERE artnum = '31')
 );
 
 -- Opciones para pregunta 22 (ID generado = 22)
@@ -354,7 +354,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué se debe revisar antes de iniciar la conducción?',
   'Simulaciones',
   'Básico',
-  21
+  (SELECT id FROM lawarticle WHERE artnum = '21')
 );
 
 -- Opciones para pregunta 23 (ID generado = 23)
@@ -370,7 +370,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal con un peatón?',
   'Señales',
   'Básico',
-  67
+  (SELECT id FROM lawarticle WHERE artnum = '67')
 );
 
 -- Opciones para pregunta 24 (ID generado = 24)
@@ -386,7 +386,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer en una zona escolar?',
   'Escenarios',
   'Básico',
-  39
+  (SELECT id FROM lawarticle WHERE artnum = '39')
 );
 
 -- Opciones para pregunta 25 (ID generado = 25)
@@ -402,7 +402,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si un semáforo está apagado?',
   'Simulaciones',
   'Intermedio',
-  108
+  (SELECT id FROM lawarticle WHERE artnum = '108')
 );
 
 -- Opciones para pregunta 26 (ID generado = 26)
@@ -418,7 +418,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una doble línea amarilla?',
   'Señales',
   'Intermedio',
-  98
+  (SELECT id FROM lawarticle WHERE artnum = '98')
 );
 
 -- Opciones para pregunta 27 (ID generado = 27)
@@ -434,7 +434,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué pasa si no se respetan los límites de velocidad?',
   'Escenarios',
   'Intermedio',
-  141
+  (SELECT id FROM lawarticle WHERE artnum = '141')
 );
 
 -- Opciones para pregunta 28 (ID generado = 28)
@@ -450,7 +450,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué tipo de luces deben usarse en neblina?',
   'Simulaciones',
   'Intermedio',
-  77
+  (SELECT id FROM lawarticle WHERE artnum = '77')
 );
 
 -- Opciones para pregunta 29 (ID generado = 29)
@@ -466,7 +466,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué es el mantenimiento preventivo?',
   'Simulaciones',
   'Intermedio',
-  130
+  (SELECT id FROM lawarticle WHERE artnum = '130')
 );
 
 -- Opciones para pregunta 30 (ID generado = 30)
@@ -482,7 +482,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es el rol del espejo retrovisor?',
   'Simulaciones',
   'Intermedio',
-  116
+  (SELECT id FROM lawarticle WHERE artnum = '116')
 );
 
 -- Opciones para pregunta 31 (ID generado = 31)
@@ -498,7 +498,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal triangular con borde rojo?',
   'Señales',
   'Intermedio',
-  55
+  (SELECT id FROM lawarticle WHERE artnum = '55')
 );
 
 -- Opciones para pregunta 32 (ID generado = 32)
@@ -514,7 +514,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer en un cruce sin señalización?',
   'Simulaciones',
   'Intermedio',
-  65
+  (SELECT id FROM lawarticle WHERE artnum = '65')
 );
 
 -- Opciones para pregunta 33 (ID generado = 33)
@@ -530,7 +530,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si un peatón cruza inesperadamente?',
   'Simulaciones',
   'Intermedio',
-  119
+  (SELECT id FROM lawarticle WHERE artnum = '119')
 );
 
 -- Opciones para pregunta 34 (ID generado = 34)
@@ -546,7 +546,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal con bicicleta?',
   'Señales',
   'Intermedio',
-  109
+  (SELECT id FROM lawarticle WHERE artnum = '109')
 );
 
 -- Opciones para pregunta 35 (ID generado = 35)
@@ -562,7 +562,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué medidas debe tomar el conductor de transporte público?',
   'Simulaciones',
   'Avanzado',
-  159
+  (SELECT id FROM lawarticle WHERE artnum = '159')
 );
 
 -- Opciones para pregunta 36 (ID generado = 36)
@@ -578,7 +578,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué condiciones impiden manejar legalmente?',
   'Escenarios',
   'Avanzado',
-  198
+  (SELECT id FROM lawarticle WHERE artnum = '198')
 );
 
 -- Opciones para pregunta 37 (ID generado = 37)
@@ -594,7 +594,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué se exige para vehículos de carga pesada?',
   'Escenarios',
   'Avanzado',
-  164
+  (SELECT id FROM lawarticle WHERE artnum = '164')
 );
 
 -- Opciones para pregunta 38 (ID generado = 38)
@@ -610,7 +610,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal azul con una H?',
   'Señales',
   'Avanzado',
-  173
+  (SELECT id FROM lawarticle WHERE artnum = '173')
 );
 
 -- Opciones para pregunta 39 (ID generado = 39)
@@ -626,7 +626,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué establece la ley sobre transporte escolar?',
   'Escenarios',
   'Avanzado',
-  184
+  (SELECT id FROM lawarticle WHERE artnum = '184')
 );
 
 -- Opciones para pregunta 40 (ID generado = 40)
@@ -642,7 +642,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor tras un accidente con heridos?',
   'Simulaciones',
   'Avanzado',
-  187
+  (SELECT id FROM lawarticle WHERE artnum = '187')
 );
 
 -- Opciones para pregunta 41 (ID generado = 41)
@@ -658,7 +658,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una línea blanca discontinua?',
   'Señales',
   'Avanzado',
-  195
+  (SELECT id FROM lawarticle WHERE artnum = '195')
 );
 
 -- Opciones para pregunta 42 (ID generado = 42)
@@ -674,7 +674,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué documento prueba que un vehículo es legal?',
   'Escenarios',
   'Avanzado',
-  200
+  (SELECT id FROM lawarticle WHERE artnum = '200')
 );
 
 -- Opciones para pregunta 43 (ID generado = 43)
@@ -690,7 +690,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué sistema reduce la velocidad del vehículo?',
   'Simulaciones',
   'Avanzado',
-  161
+  (SELECT id FROM lawarticle WHERE artnum = '161')
 );
 
 -- Opciones para pregunta 44 (ID generado = 44)
@@ -706,7 +706,7 @@ INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué riesgo hay al manejar con llantas lisas?',
   'Simulaciones',
   'Avanzado',
-  178
+  (SELECT id FROM lawarticle WHERE artnum = '178')
 );
 
 -- Opciones para pregunta 45 (ID generado = 45)
