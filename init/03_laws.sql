@@ -6,39 +6,44 @@ INSERT INTO lawcat (name) VALUES
 ('Señalización vial'),
 ('Vehículos especiales'),
 ('Sanciones administrativas');
+ON CONFLICT (name) DO NOTHING;
 
 
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('1', 'Artículo 1', '- De la Ley.
- Para los efectos dispuestos por la presente 
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('1', 'Artículo 1', $$- De la Ley.
+Para los efectos dispuestos por la presente 
 ley por tránsito deben entenderse todas aquellas actividades 
 relacionadas con la regulación, control, ordenamiento y administración 
 de la circulación terrestre y acuática de las personas y vehículos, sus  
 conductores y pasajeros, estacionamiento de vehículos, señalización, 
 semaforización, uso de vías públicas, educación vial y actividades de 
 policía, relacionadas con el tránsito en las vías públicas.
-  
- Las disposiciones de esta ley se aplican a toda persona y vehículo 
+Las disposiciones de esta ley se aplican a toda persona y vehículo 
 que se encuentre en territorio nacional; sólo se exceptúa lo establecido
- 
-Guatemala.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('2', 'Artículo 2', '- Via pública.
+Guatemala.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES 
+('2', 'Artículo 2', $$- Via pública.
  La vía pública se integra por las carreteras,
 caminos, calles y avenidas, calzadas, viaductos y respectivas
 áreas de derecho de vía, aceras, puentes, pasarelas; y los ríos y lagos  
 navegables, mar territorial, demás vías acuáticas, cuyo destino obvio y  
 natural sea la circulación de personas y vehículos y que conforme a las  
 normas civiles que rigen la propiedad de los bienes del poder público 
-están destinadas al uso común.');
+están destinadas al uso común.$$);
 INSERT INTO lawarticle (artnum, title, descr) VALUES ('3', 'Artículo 3', '- Responsabilidad. 
 Es responsabilidad de los  
 conductores de los vehículos y de todas las personas, sean peatones, 
 nadadores o pasajeros, cumplir con las normas que en materia de 
 tránsito establece la presente ley y, normen sus reglamentos. En
-consecuencia, independientemente de las disposiciones que afecten la 
+consecuencia, indep será responsabilidad solidaria del propietario del
+mismo y del conductoendientemente de las disposiciones que afecten la 
 tenencia de los vehículos, las sanciones deberán dirigirse también
 hacia el conductor responsable. En todo caso, cualquier sanción que 
-afecte el vehículo, será responsabilidad solidaria del propietario del
-mismo y del conductor.
+afecte el vehículo,r.
 TITULO II
 De la Autoridad de Tránsito');
 INSERT INTO lawarticle (artnum, title, descr) VALUES ('4', 'Artículo 4', '- Competencia.
