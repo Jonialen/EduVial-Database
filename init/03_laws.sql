@@ -25,16 +25,21 @@ ON CONFLICT (artnum) DO UPDATE
 SET title = EXCLUDED.title,
     descr = EXCLUDED.descr;
 
-INSERT INTO lawarticle (artnum, title, descr) VALUES 
-('2', 'Artículo 2', $$- Via pública.
- La vía pública se integra por las carreteras,
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('2', 'Artículo 2', $$- Via pública.
+La vía pública se integra por las carreteras,
 caminos, calles y avenidas, calzadas, viaductos y respectivas
 áreas de derecho de vía, aceras, puentes, pasarelas; y los ríos y lagos  
 navegables, mar territorial, demás vías acuáticas, cuyo destino obvio y  
 natural sea la circulación de personas y vehículos y que conforme a las  
 normas civiles que rigen la propiedad de los bienes del poder público 
-están destinadas al uso común.$$);
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('3', 'Artículo 3', '- Responsabilidad. 
+están destinadas al uso común.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('3', 'Artículo 3', $$ Responsabilidad. 
 Es responsabilidad de los  
 conductores de los vehículos y de todas las personas, sean peatones, 
 nadadores o pasajeros, cumplir con las normas que en materia de 
@@ -45,67 +50,46 @@ tenencia de los vehículos, las sanciones deberán dirigirse también
 hacia el conductor responsable. En todo caso, cualquier sanción que 
 afecte el vehículo,r.
 TITULO II
-De la Autoridad de Tránsito');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('4', 'Artículo 4', '- Competencia.
- Compete al Ministerio de Gobernación, 
+De la Autoridad de Tránsito$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('4', 'Artículo 4', $$ Competencia.
+Compete al Ministerio de Gobernación, 
 por intermedio del Departamento de Tránsito de la Dirección General 
 de la Policía Nacional el ejercicio de la autoridad de tránsito en la vía 
 pública, de conformidad con esta ley, salvo lo dispuesto en los
-artículos 8 y 9.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('5', 'Artículo 5', '- Facultades.
- Corresponderá al Departamento de 
+artículos 8 y 9.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('5', 'Artículo 5', $$ Facultades.
+Corresponderá al Departamento de 
 Tránsito de la Dirección General de la Policía Nacional del Ministerio
 de Gobernación aplicar la presente ley y para el efecto está facultado 
-
-7
-para lo siguiente: 
-
+7 para lo siguiente: 
      territorio nacional;
-b. 
- 
-Elaborar el reglamento para la aplicación de la presente ley;
-c. 
- 
-Organizar y dirigir la Policía Nacional de Tránsito y controlar el
-  
-funcionamiento de otras entidades, públicas o privadas,
-  
-autorizadas para cumplir actividades de tránsito;
-d. 
- 
-Emitir, renovar, suspender, cancelar y reponer licencias de 
-  
-conducir;
-e. 
- 
-Organizar, llevar y actualizar el registro de conductores;
-f.
-  
-Organizar, llevar y actualizar el registro de vehículos;
-g. 
- 
-Diseñar, colocar, habilitar y mantener las señales de tránsito y
-  
-los semáforos;
-h. 
- 
-Recaudar los ingresos provenientes de la aplicación de esta ley
-  
-disponer de ellos conforme a la misma; 
-i.
-  
-Aplicar las sanciones previstas en esta ley;
-j.
- 
-Diseñar, dirigir y coordinar el plan y sistema nacional de
-  
-educación vial; y, 
-k. 
- 
-Todas las funciones otorgadas por la ley y las que le asigne el
-  
-Ministerio de Gobernación en materia de tránsito.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('6', 'Artículo 6', '- Organización.
+b.  Elaborar el reglamento para la aplicación de la presente ley;
+c.  Organizar y dirigir la Policía Nacional de Tránsito y controlar el
+funcionamiento de otras entidades, públicas o privadas, autorizadas para cumplir actividades de tránsito;
+d.  Emitir, renovar, suspender, cancelar y reponer licencias de conducir;
+e. Organizar, llevar y actualizar el registro de conductores;
+f. Organizar, llevar y actualizar el registro de vehículos;
+g. Diseñar, colocar, habilitar y mantener las señales de tránsito y los semáforos;
+h. Recaudar los ingresos provenientes de la aplicación de esta ley disponer de ellos conforme a la misma; 
+i. Aplicar las sanciones previstas en esta ley;
+j. Diseñar, dirigir y coordinar el plan y sistema nacional de educación vial; y, 
+k. Todas las funciones otorgadas por la ley y las que le asigne el Ministerio de Gobernación en materia de tránsito.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('6', 'Artículo 6', $$ Organización.
  El Ministerio de Gobernación mediante 
 acuerdo gubernativo organizará el Departamento de Tránsito, el que 
 será dirigido por un Jefe y un Subjefe nombrados por el titular del
@@ -116,28 +100,35 @@ También mediante acuerdo ministerial se creará y organizará la
 Policía de Tránsito, como parte integrante de la Policía Nacional, y con 
 funciones especializadas de tránsito, a la cual le corresponderá aplicar  
 la presente ley y por lo tanto sus integrantes están facultados para
-dirigir el tránsito y aplicar las sanciones instituidas en esta ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('7', 'Artículo 7', '- Traslado y contratación de funciones.
- El Ministerio de 
-Gobernación podrá trasladar o contratar funciones que competen al 
+dirigir el tránsito y aplicar las sanciones instituidas en esta ley.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('7', 'Artículo 7', $$ Traslado y contratación de funciones.
+ El Ministerio de Gobernación podrá trasladar o contratar funciones que competen al 
 Departamento de Tránsito con entidades públicas o privadas, mediante 
 la suscripción de un convenio, pero el Ministerio se reservará el
 derecho de dar por terminada esta relación en cualquier tiempo, sin 
 responsabilidad alguna de su parte, por incumplimiento o incapacidad 
 de la otra parte o por motivos de seguridad nacional.
 
-8
-Las funciones que se trasladen o contraten conforme la ley están 
+8 Las funciones que se trasladen o contraten conforme la ley están 
 sujetas al cumplimiento de las disposiciones legales de tránsito y al
 control del Ministerio de Gobernación y/o municipalidad
-correspondiente, según el caso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('8', 'Artículo 8', '- Del ejercicio de Funciones de tránsito por las 
+correspondiente, según el caso.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('8', 'Artículo 8', $$ Del ejercicio de Funciones de tránsito por las 
 municipalidades.
- El Organismo Ejecutivo, mediante acuerdo 
+El Organismo Ejecutivo, mediante acuerdo 
 gubernativo, podrá trasladar la competencia de la administración de
 tránsito a las municipalidades de la República que se encuentren en
- 
-jurisdicción y acrediten, como mínimo, los extremos señalados en este 
+ jurisdicción y acrediten, como mínimo, los extremos señalados en este 
 artículo.
 Para tal efecto, además del acuerdo gubernativo referido, el Consejo 
 Municipal correspondiente deberá convalidar dicho traslado mediante 
@@ -150,73 +141,93 @@ función únicamente podrán emitir regulaciones que afecten con
 exclusividad su jurisdicción.
 Para que el Organismo Ejecutivo pueda delegar la competencia de 
 tránsito a una municipalidad, es necesario que ésta así lo solicite y  
-
 desempeñar dicha función. Asimismo, se responsabilizará por su
 ejercicio y mantenimiento, dictará los reglamentos y/u ordenanzas
+Policía Municipal de Tránsito, si careciere del mismo.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-Policía Municipal de Tránsito, si careciere del mismo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('9', 'Artículo 9', '- Ejercicio conjunto.
- Dos o más municipalidades podrán 
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('9', 'Artículo 9', $$ Ejercicio conjunto.
+Dos o más municipalidades podrán 
 solicitar les sean trasladadas en forma conjunta funciones de la
 administración de tránsito, en sus respectivas circunscripciones
-
 las municipalidades interesadas suscribirán, previamente, un convenio
 de compromiso entre sí y luego solicitarán al Ministerio de
-Gobernación el traslado de funciones.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('10', 'Artículo 10', '- Contratación de servicios. 
+Gobernación el traslado de funciones.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES ('10', 'Artículo 10', $$ Contratación de servicios. 
 Mediante contrato
 aprobado por acuerdo ministerial o por acuerdo municipal, el Ministerio 
 de Gobernación o las municipalidades según el caso, podrán contratar  
 o subcontratar servicios de personas individuales o jurídicas, públicas
-o privadas, para hacerse cargo de la prestación de servicios de policía');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('11', 'Artículo 11', '- Autoridad de Tránsito en carreteras y caminos. 
-El 
-Ministro de Gobernación, por intermedio del Departamento de
+o privadas, para hacerse cargo de la prestación de servicios de policía.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-9
-Tránsito de la Dirección General de la Policía Nacional, ejercerá la
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('11', 'Artículo 11', $$ Autoridad de Tránsito en carreteras y caminos. 
+El Ministro de Gobernación, por intermedio del Departamento de
+
+9 Tránsito de la Dirección General de la Policía Nacional, ejercerá la
 autoridad de tránsito en todas las carreteras nacionales y
 departamentales, así como en las carreteras municipales y en los
 caminos de herradura y vecinales, cuya administración no haya sido
 trasladada a las municipalidades.
 TITULO III
-Del Tránsito de Personas');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('12', 'Artículo 12', '- Derecho de vía. 
+Del Tránsito de Personas.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('12', 'Artículo 12', $$ Derecho de vía. 
 Las personas tienen prioridad ante los  
 vehículos para circular en las vías públicas, terrestres y acuáticas,
 siempre que lo hagan en las zonas de seguridad y ejerciten su derecho 
 por el lugar, en la oportunidad, forma y modo que normen los
-reglamentos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('13', 'Artículo 13', '- Límite de la responsabilidad.
+reglamentos.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('13', 'Artículo 13', $$ Límite de la responsabilidad.
  En el caso que un
 vehículo atropelle a una persona en la vía pública que cuente con
 zonas de seguridad, fuera de éstas, el conductor estará exento de toda 
 responsabilidad, siempre y cuando estuviere conduciendo conforme 
 las leyes aplicables.
 TITULO IV
-De los Conductores y de la Licencia de Conducir');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('14', 'Artículo 14', '- Licencia de conducir. 
+De los Conductores y de la Licencia de Conducir$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('14', 'Artículo 14', $$ Licencia de conducir. 
 La licencia de conducir es el 
 documento emitido por el Departamento deTránsito de la Dirección 
 General de la Policía Nacional que autoriza a una persona para
 conducir un vehículo, de acuerdo con esta ley, sus reglamentos y
-
 titular como conductor, quien está obligado a portar la licencia de
 conducir siempre que conduzca un vehículo y exhibirla a la autoridad 
 cuando le sea requerida.
-ﬁPara la obtención de la primera licencia de conducir vehículos
+Para la obtención de la primera licencia de conducir vehículos
 automotores terrestres se requiere:
 a.  Llenar el formulario correspondiente.
 b.  Presentarse personalmente.
 c.  En caso de mayores de edad, presentar original de la cédula de
 vecindad y entregar fotocopia completa de la misma.
 d.  En caso de personas que tengan dieciséis o más años de edad
-
-
 legalizada de quien ejerza la patria potestad, en la que deberá 
 
-10
-declarar bajo juramento hacerse cargo de las responsabilidades  
+10 declarar bajo juramento hacerse cargo de las responsabilidades  
 civiles que pudieren ocasionarse.
 e.  Pagar el valor correspondiente.
 f.   Presentar el número de fotos que se requiere la autoridad o en su 
@@ -226,20 +237,23 @@ y prácticos que determine el reglamento, emitida por las
 entidades aprobadas para el efecto por el Departamento de 
 Tránsito de la Policía Nacional Civil del Ministerio de
 Gobernación.
-
 los seis meses anteriores a la fecha de su presentación.
 Para renovar o reponer una licencia de conducir se requiere: En caso 
 de renovación, presentar la licencia vencida y llenar los requisitos
 indicados para la obtención de la primera licencia, con excepción de lo 
-
 la denuncia presentada ante la autoridad competente.
 El exámen de la vista necesario para la obtención, renovación y
 reposición de licencias de conducir, deberá ser realizado por un
 profesional especializado en la materia.
 Todo lo demás relacionado con la suspensión, cancelación, tipos, 
 medios, materiales y procedimientos relacionados con las licencias de 
-1');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('15', 'Artículo 15', '- De la conducción.
+1$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('15', 'Artículo 15', $$ De la conducción.
  Para conducir un vehículo por la 
 vía pública, es necesario que el conductor reúna los requisitos
 siguientes:
@@ -250,30 +264,39 @@ mentales y volitivas;
 c. Conducir el vehículo en la vía pública por el lugar, en la
 oportunidad, modo, forma y dentro de las velocidades
 establecidas conforme esta ley, sus reglamentos y demás leyes  
-aplicables.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('16', 'Artículo 16', '- Pago de derechos.
+aplicables.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('16', 'Artículo 16', $$ Pago de derechos.
  La emisión, renovación,
 suspensión, cancelación y reposición de licencias de conducir está
-_________________________
  
-1 
-Reformado por atículo 1 Decreto 84-2005.
+1  Reformado por atículo 1 Decreto 84-2005.
+11 sujeta al pago de los derechos correspondientes en el Departamento 
+ integrarán los fondos privativos del Departamento deTránsito de la 
+Policía Nacional.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-11
-sujeta al pago de los derechos correspondientes en el Departamento 
- 
-integrarán los fondos privativos del Departamento deTránsito de la 
-Policía Nacional.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('17', 'Artículo 17', '- Escuelas de aprendizaje. 
- 
-extendidos por las escuelas de aprendizaje de tránsito, debidamente 
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('17', 'Artículo 17', $$ Escuelas de aprendizaje. 
+ extendidos por las escuelas de aprendizaje de tránsito, debidamente 
 autorizadas por el Ministerio de Gobernación y registradas en el 
 Departamento de Tránsito, serán válidos para acreditar la capacidad 
 teórica y práctica de quienes soliciten licencia de conducir, según lo
 normen los reglamentos.
 TITULO V
-De los Vehiculos');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('18', 'Artículo 18', '- De los vehículos.
+De los Vehiculos$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('18', 'Artículo 18', $$ De los vehículos.
  Por vehículo se entiende cualquier
 medio de transporte terrestre o acuático que circule permanente u
 ocasionalmente por la vía pública, sea para el transporte de personas
@@ -291,22 +314,26 @@ d.  Los vehículos usados por personas discapacitadas deberán
           estar debidamente adaptados y equipados para ser conducidos
            bajo estrictas condiciones de seguridad.
  
-autoridades de tránsito.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('19', 'Artículo 19', '- Tarjeta y placas de circulación. 
-Todo vehículo que 
- 
-circulación emitidas por el Ministerio de Finanzas Públicas, pero el 
-Ministerio de Gobernación está facultado para disponer los diseños, 
- 
-resguardo del interés general y la seguridad nacional, para tal efecto, 
-el Ministerio de Finanzas Públicas acatará tales disposiciones.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('20', 'Artículo 20', '- Vehículos destinados al servicio público.
- Bajo pena 
-de cancelar la autorización, permiso o concesión correspondiente o 
-simplemente de prohibir el ejercicio de la actividad, las personas
+autoridades de tránsito.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-12
-individuales o jurídicas que presten servicios de transporte al público 
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('19', 'Artículo 19', $$ Tarjeta y placas de circulación. 
+Todo vehículo que circulación emitidas por el Ministerio de Finanzas Públicas, pero el 
+Ministerio de Gobernación está facultado para disponer los diseños, 
+ resguardo del interés general y la seguridad nacional, para tal efecto, 
+el Ministerio de Finanzas Públicas acatará tales disposiciones.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('20', 'Artículo 20', $$ Vehículos destinados al servicio público.
+ Bajo pena  de cancelar la autorización, permiso o concesión correspondiente o 
+simplemente de prohibir el ejercicio de la actividad, las personas
+12 individuales o jurídicas que presten servicios de transporte al público 
 deberán mantener actualizada en el Departamento deTránsito la 
 información siguiente:
 
@@ -315,64 +342,79 @@ b.  Domicilio y residencia del propietario o de su representante legal;
       y,
 c.  Nombres y apellidos completos, residencia, número de licencia 
     de conducir y de la cédula de vecindad de los conductores de 
-      dichos vehículos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('21', 'Artículo 21', '- Circulación de vehículos de emergencia.
- Los
-vehículos de emergencia, como ambulancias, vehículos de bomberos
+      dichos vehículos.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('21', 'Artículo 21', $$ Circulación de vehículos de emergencia.
+ Los vehículos de emergencia, como ambulancias, vehículos de bomberos
 y vehículos de la policía, debidamente autorizados, están sujetos  a las  
 disposiciones de esta ley y sus reglamentos; y tendrán derecho 
 preferencial  de  vía  únicamente  cuando  se encuentren en el 
 desempeño de labores de emergencia, lo cual deberán indicar con
-señales visuales y auditivas.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('22', 'Artículo 22', '- Registro de vehículos.
- El Departamento de Tránsito 
+señales visuales y auditivas.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('22', 'Artículo 22', $$ Registro de vehículos.
+El Departamento de Tránsito 
 de la Dirección General de la Policía  organizará, llevará y actualizará
 un registro de vehículos que comprenda todos los que circulen en el 
 país, basado en el registro de vehículos del Ministerio de Finanzas  
 Públicas y en los reportes de Aduanas de los vehículos de tránsito. El 
- 
-registros de vehículos de Ministerio de Gobernación con el registro
+ registros de vehículos de Ministerio de Gobernación con el registro
 TITULO VI
-Via Pública');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('23', 'Artículo 23', '- Vía pública.
+Via Pública$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('23', 'Artículo 23', $$ Vía pública.
  La vía pública se utilizará única y
 exclusivamente para el tránsito y circulación de personas y vehículos, 
 cuyos derechos se ejercerán conforme las disposiciones de esta ley y  
 sus reglamentos. 
 Está terminantemente prohibido lo siguiente:
 a.  Obstaculizar, cerrar o limitar, transitoria o permanentemente la
- 
-  
 vía pública, en perjuicio de la circulación de personas y                        
-   
-     
 vehículos, salvo autorización previa y expresa de la autoridad;
 b.  Colocar o mantener en la vía pública signos, demarcaciones o
-     
-  
 elementos que limiten o alteren las señales de tránsito;
-c.    Alterar, destruir, deteriorar o remover señales de tránsito; y
+c.  Alterar, destruir, deteriorar o remover señales de tránsito; y
 
 13
 d.  Colocar en los signos de tránsito anuncios o propaganda de 
-  
- 
 cualquier índole; salvo autorización expresa de la autoridad 
-       correspondiente.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('24', 'Artículo 24', '- Retiro de cosas, vehículos, materiales,
- 
-propaganda
-u otros.
- La autoridad de tránsito está facultada para retirar de la vía
+       correspondiente.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('24', 'Artículo 24', $$ Retiro de cosas, vehículos, materiales,
+propaganda u otros.
+La autoridad de tránsito está facultada para retirar de la vía
 pública cualquier cosa, vehículo, material, propaganda u otro que
 obstaculice la circulación de personas y vehículos y para trasladarla y  
 depositarla, a costa del propietario, en los predios habilitados para tal 
-efecto.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('25', 'Artículo 25', '- Trabajo en la vía pública.
+efecto.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('25', 'Artículo 25', $$ Trabajo en la vía pública.
  Cuando entidades
 públicas o privadas requieran realizar trabajos propios en la vía
 pública, deberán obtener permiso ante la autoridad respectiva, pero en 
- 
 todo caso están obligados a indicar el área de trabajo, mediante
 señales visibles y adecuadamente colocadas para evitar lesiones a las  
 personas y daños a los vehículos; y una vez concluida la obra, están 
@@ -381,12 +423,22 @@ El encargado expresamente nombrado o en su defecto el jefe de la
 dependencia, autoridad máxima o representante legal de quien
 estuviere realizando los trabajos será directa y personalmente
 responsable de las lesiones y los daños que estas obras o trabajos  
-ocasionen a personas y vehículos que circulen por la vía pública.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('26', 'Artículo 26', '- Estacionamiento. 
+ocasionen a personas y vehículos que circulen por la vía pública.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('26', 'Artículo 26', $$ Estacionamiento. 
 El estacionamiento de vehículos en
 la vía pública se hará conforme las disposiciones de la autoridad de
-tránsito correspondiente.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('27', 'Artículo 27', '- Parqueos.
+tránsito correspondiente.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('27', 'Artículo 27', $$ Parqueos.
  Se autoriza construir y habilitar parqueos 
 subterráneos o por elevación en calles, parques u otros bienes
 nacionales o municipales de uso común.
@@ -394,34 +446,51 @@ Si  dichos predios públicos carecieren de inscripción en el Registro
 General de la Propiedad, bajo el juramento del funcionario respectivo, se
 inscribirán en dicho Registro mediante escritura pública y en base a 
 plano autorizado por ingeniero colegiado, a favor de la Nación o el 
-Municipio, según el caso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('28', 'Artículo 28', '- Señalización y semaforización.
+Municipio, según el caso.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('28', 'Artículo 28', $$ Señalización y semaforización.
  Las señales, signos   y
 semaforización   para   normar   el   tránsito,   se  establecerán   respetando    los
 tratados y convenciones internacionales.
 TITULO VII
-Del Seguro');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('29', 'Artículo 29', '- Del seguro. 
+Del Seguro$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('29', 'Artículo 29', $$ Del seguro. 
 Todo propietario de un vehículo
 autorizado para circular por la vía pública, deberá contratar, como
-
-14
-mínimo, un seguro de responsabilidad civil contra terceros y
+14 mínimo, un seguro de responsabilidad civil contra terceros y
 ocupantes, conforme las disposiciones reglamentarias de esta ley.
 El Ministerio de Gobernación podrá acordar la obligatoriedad de
 cualquier otro seguro para los conductores o los vehículos; así como 
 para el transporte urbano y extraurbano.
 TITULO VIII
-Infracciones y Sanciones');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('30', 'Artículo 30', '- Infracciones de tránsito.
- Constituyen infracciones en
+Infracciones y Sanciones$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('30', 'Artículo 30', $$ Infracciones de tránsito.
+Constituyen infracciones en
 materia de tránsito la inobservancia, incumplimiento y violación de las  
 normas establecidas en esta ley y sus reglamentos, salvo el caso de 
-
 sancionará con amonestación o multa, conforme lo norma esta ley; y
 se impondrá sanciones tantas veces como se cometan infracciones,
-aún cuando se trate de la misma persona o vehículo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('31', 'Artículo 31', '- Sanciones.
+aún cuando se trate de la misma persona o vehículo.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('31', 'Artículo 31', $$ Sanciones.
  El Ministerio de Gobernación, por
 intermedio del Departamento de Tránsito o la municipalidad por
 intermedio del Juzgado de Asuntos Municipales, según el caso, podrá
@@ -431,25 +500,26 @@ multas, retención de documentos, cepos para vehículos, incautación
 de vehículos y suspensión y cancelación de licencia de conducir.
 Estas sanciones se impondrán independientemente de las
 responsabilidades civiles o penales que pudieran corresponder al
-actor.
-Cuando se trate de infracciones cometidas por un conductor la
+actor. Cuando se trate de infracciones cometidas por un conductor la
 autoridad le entregará la papeleta de aviso debidamente habilitada por  
 el Departamento de Tránsito o la municipalidad, según el caso, en la 
-
 sanción impuesta.
 Si se trata de un vehículo dejado en la vía pública, cuyo conductor no 
 se encuentra presente, la autoridad dejará la papeleta de aviso
 mencionada en el párrafo anterior en el vehículo en un lugar visible y  
-seguro.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('32', 'Artículo 32', '- Amonestación y multas.
+seguro.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('32', 'Artículo 32', $$ Amonestación y multas.
  La autoridad de tránsito
 impondrá, según lo norme el reglamento, amonestación, y/o multas a
 las personas, conductores y propietarios  de vehículos que no
 observen, violen o incumplan las disposiciones de esta ley y sus
 reglamentos; especialmente respecto al lugar, oportunidad, forma, 
-
-15
-modo y velocidades para circular en la vía pública.
+15 modo y velocidades para circular en la vía pública.
 Las amonestaciones consistirán en perforación de la licencia, en los  
 espacios previstos para tal efecto.
 Las multas se graduarán entre un mínimo equivalente a un salario 
@@ -459,8 +529,13 @@ para la actividad agrícola del café, vigente al momento de cometer la
 infracción, multiplicado hasta por mil, conforme lo norme el reglamento.
 Corresponde al Departamento de Tránsito o a la municipalidad,
 según el caso, imponer multas y recaudar los recursos por este
-concepto.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('33', 'Artículo 33', '- Retención de documentos.
+concepto.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('33', 'Artículo 33', $$ Retención de documentos.
  Se consideran
 infracciones administrativas y corresponderá al Departamento de
 Tránsito o a la municipalidad respectiva, a través del Juzgado de
@@ -473,44 +548,56 @@ b.       Al conductor que hubiere acumulado tres multas sin haber hecho
         efectivo su pago.
 La licencia de conducir será devuelta al infractor una vez haya
 cancelado la multa impuesta.
-ﬁ');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('34', 'Artículo 34', '- Cepos.
+ﬁ$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('34', 'Artículo 34', $$ Cepos.
  La autoridad de tránsito podrá emplear cepos  
 o mecanismos similares para inmovilizar los vehículos dejados en la 
 vía pública en lugares no autorizados para los mismos o bien para
 inmovilizar vehículos cuyos conductores hayan cometido otras
 infracciones. Los cepos se liberarán hasta que se haya cumplido con el 
-2');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('35', 'Artículo 35', '- Incautación de vehículos y cosas. 
-El Departamento 
-deTránsito o la municipalidad respectiva, podrá incautar y retirar los
+2$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('35', 'Artículo 35', $$ Incautación de vehículos y cosas. 
+El Departamento  deTránsito o la municipalidad respectiva, podrá incautar y retirar los
 vehículos, chatarra y demás cosas colocadas en la vía pública en
 lugares no autorizados o que obstaculicen el tránsito. Estos vehículos,
 chatarra o cosas serán conducidos o transportados, a costa del
 propietario, a los depósitos autorizados para tal efecto. Además sus  
-
-_________________________
-2 
-Suspendido provisionalmente mediante Expediente 368-2002 de la Corte de
-
-
+2  Suspendido provisionalmente mediante Expediente 368-2002 de la Corte de
 otras infraccionesﬂ.
-
-16
-conforme a esta ley y sus reglamentos.
+16 conforme a esta ley y sus reglamentos.
 Cuando un vehículo permanezca en la vía pública por más de treinta
 y seis horas, esté o no bien estacionado, en funcionamiento o con
 desperfectos mecánicos, haya sido o no objeto de un accidente de
 tránsito,  o utilizado para hechos ilícitos, obstruyendo o no el tránsito, se 
-considerará abandonado y se procederá conforme el párrafo anterior.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('36', 'Artículo 36', '- Depósitos nacionales y municipales.
+considerará abandonado y se procederá conforme el párrafo anterior.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('36', 'Artículo 36', $$ Depósitos nacionales y municipales.
  Se crean los  
 depósitos de gobernación y/o municipales, como dependencias
 administrativas de Departamento deTránsito de la Dirección General 
 de la Policía Nacional o del Juzgado de Asuntos Municipales, según el 
 caso. Como personal auxiliar se integrarán con un administrador y el 
-personal administrativo que fuera necesario.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('37', 'Artículo 37', '- Disposiciones de bienes incautados o de vehículos
+personal administrativo que fuera necesario.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('37', 'Artículo 37', $$ Disposiciones de bienes incautados o de vehículos
 abandonados.
  Los vehículos, chatarra o cosas incautadas o
 vehículos dejados en la vía pública que hayan causado abandono 
@@ -518,13 +605,17 @@ conforme párrafo segundo del Artículo 35 de esta ley, se venderán
 en pública subasta, o se adjudicarán al Ministerio de Gobernación o a
 las municipalidades, según corresponda, si después de seis meses de
 haberse incluido su descripción en los avisos colocados por la
-
 nacionales, departamentales, municipales u otras, según el caso, no 
 fueren reclamados por sus propietarios o legítimos tenedores.
 Los fondos recaudados integrarán los recursos privativos del
 Ministerio de Gobernación o de la municipalidad, según el caso,
-quienes dispondrán de los mismos conforme esta ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('38', 'Artículo 38', '- Devolución de vehículos.
+quienes dispondrán de los mismos conforme esta ley.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('38', 'Artículo 38', $$ Devolución de vehículos.
  Para reclamar un vehículo,
 chatarra o cosa, dentro de los seis meses siguientes al primer
 aviso de su incautación, el propietario o legítimo tenedor deberá
@@ -533,7 +624,6 @@ multas, recargos y gastos correspondientes hasta el día del efectivo
 retiro del vehículo, chatarra o cosa.
 Cuando no se compruebe fehacientemente la propiedad del
 vehículo, chatarra o cosa, la autoridad respectiva dará audiencia a
-
 resolución se podrá interponer recurso de revocatoria, si se trata de
 una resolución emitida por el Jefe del departamento de Tránsito y si se 
 trata, del Juez de Asuntos Municipales cabrán los recursos previstos  
@@ -541,9 +631,13 @@ por el Código Municipal.
 Si no fuere posible establecer la propiedad de los vehículos, éstos  
 pasarán, sin más trámite, a propiedad de la autoridad que los hubiera 
 incautado, quien dispondrá de ellos en pública subasta.
+17$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-17');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('39', 'Artículo 39', '- De la pública subasta.
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('39', 'Artículo 39', $$ De la pública subasta.
  Los vehículos, chatarra o
 cosas incautados que no se retiren de los depósitos habilitados para
 tal efecto, dentro del plazo señalado por esta ley y previa autorización 
@@ -552,13 +646,8 @@ administración, los venderá en pública subasta, o lo adjudicará al
 Ministerio de Gobernación a las municipalidades, según
 corresponda. Para el efecto, señalará lugar, día y hora para el remate, 
 dentro de un plazo no menor de quince días ni mayor de treinta días, y  
-
 el país y además, lo anunciará en los lugares visibles y públicos de sus  
 En el lugar, día y hora señalados la autoridad de tránsito, por medio
-
- 
-
- 
 el remate al mejor postor, lo cual dará a conocer el administrador
 mencionado, durante el mismo acto.
 En el acta de remate se hará constar la forma de pago y demás
@@ -576,20 +665,27 @@ persona que así lo solicite, adjudicándoselos por su precio base, el
 cual deberá cubrir, como mínimo, los gastos, multas, recargos y demás  
 que le pudieran corresponder y, descontados éstos, el saldo
 ingresará a los fondo privativos de la autoridad de tránsito que los
-hubiese subastado.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('40', 'Artículo 40', '- Suspensión de la licencia de conducir. 
-El
-Departamento de Tránsito o la municipalidad respectiva, a través del 
+hubiese subastado.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('40', 'Artículo 40', $$ Suspensión de la licencia de conducir. 
+El Departamento de Tránsito o la municipalidad respectiva, a través del 
 Juzgado de Asuntos Municipales, podrá suspender la vigencia de la 
 licencia, cuando su titular haya sido amonestado administrativamente 
 cinco veces o multado administrativamente tres veces por infracciones  
 cometidas contra las leyes de tránsito durante un mismo año
 calendario, contado a partir de la fecha de la primera infracción. La
- 
 meses.
+18$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-18');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('41', 'Artículo 41', '-Cancelación de la licencia.
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('41', 'Artículo 41', $$Cancelación de la licencia.
  El Departamento de
 Tránsito podrá cancelar la licencia de conducir, cuando a su titular se
 la haya suspendido administrativamente dos años calendario
@@ -601,51 +697,57 @@ judicial, conforme las normas penales correspondientes.
 Transcurrido el plazo administrativo o judicial de la cancelación de 
 una licencia, el afectado podrá solicitar nueva licencia, deberá cumplir 
 con los requisitos de toda primera licencia y contratará un seguro
-especial, conforme lo normen los reglamentos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('42', 'Artículo 42', '-Costo de servicios.
+especial, conforme lo normen los reglamentos.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('42', 'Artículo 42', $$Costo de servicios.
  Independientemente del pago de
 las multas que corresponda aplicar a los infractores de las
 disposiciones de tránsito, éstos estarán obligados a pagar los gastos  
 correspondientes a los servicios de cepos, grúas, depósitos y otros
-necesarios para la aplicación de la ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('43', 'Artículo 43', '- Faltas y delitos.
+necesarios para la aplicación de la ley.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('43', 'Artículo 43', $$ Faltas y delitos.
  La autoridad de tránsito retendrá la 
 licencia de conducir en los casos siguientes:
 a.  Cuando el conductor se encuentre ebrio o bajo los efectos de
-    
-  
 drogas, estupefacientes o similares que limiten sus capacidades
-   
-   
 volitivas, físicas o mentales;
 b. Cuando se conduzca un vehículo cuyos documentos de
-   
-  
-
-     
-  
 circulación el vehículo; y
-c. 
- 
-Cuando se hayan producido lesiones a personas o daños a
+c. Cuando se hayan producido lesiones a personas o daños a
        vehículos, con ocasión del tránsito.
-
 más cercana al conductor, al vehículo y a la licencia para que ésta lo 
 traslade a conocimiento del organismo jurisdiccional correspondiente.
 TITULO IX
-Régimen Financiero');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('44', 'Artículo 44', '- De los ingresos.
+Régimen Financiero.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('44', 'Artículo 44', $$ De los ingresos.
  Los ingresos provenientes de la
 aplicación de la presente ley tendrán el carácter de fondos privativos
 de la Dirección General de la Policía Nacional; Dirección que por sí o
 por intermedio del Departamento de Tránsito los recaudará y  
 dispondrá de ellos conforme esta ley.
 Quedan a salvo los fondos recaudados por los tribunales con
+19 ocasión del conocimiento de asuntos de tránsito, los cuales integran el 
+presupuesto del Organismo Judicial.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
-19
-ocasión del conocimiento de asuntos de tránsito, los cuales integran el 
-presupuesto del Organismo Judicial.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('45', 'Artículo 45', '- Recaudación y disposición de ingresos por las
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('45', 'Artículo 45', $$ Recaudación y disposición de ingresos por las
 municipalidades.
  Cuando el Ministerio de Gobernación traslade la
 administración del tránsito a una municipalidad, los ingresos
@@ -656,8 +758,13 @@ y el municipio los destinará exclusivamente para el diseño,
 mantenimiento y mejoramiento de las actividades de tránsito,
 incluyendo obras de infraestructura vial.
 TITULO X
-Educación Vial');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('46', 'Artículo 46', '- Educación vial. 
+Educación Vial$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('46', 'Artículo 46', $$ Educación vial. 
 El Ministerio de Gobernación por
 intermedio del Departamento de Tránsito de la Dirección General de la 
 Policía Nacional implementará y coordinará junto con otras entidades  
@@ -667,8 +774,13 @@ educación vial, cuyos elementos se incorporarán a los planes
 educativos formales o informales; así como a los de capacitación
 superior.
 TITULO XI
-Disposiciones Finales');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('47', 'Artículo 47', '- Medios de impugnación administrativos. 
+Disposiciones Finales.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('47', 'Artículo 47', $$ Medios de impugnación administrativos. 
 En materia
 de tránsito, toda persona que se considere afectada por una
 disposición administrativa, podrá interponer recurso de revocatoria
@@ -677,20 +789,31 @@ Municipales, según el caso, el que será resuelto en el término de
 treinta días. En caso de silencio administrativo, se tendrá por resuelto 
 desfavorablemente.
 En contra de la resolución que emitan estas autoridades, cabrán los  
-recursos que establece la ley de lo Contencioso Administrativo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('48', 'Artículo 48', '- Reglamentación. 
+recursos que establece la ley de lo Contencioso Administrativo.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('48', 'Artículo 48', $$ Reglamentación. 
 Corresponde al Presidente de la
 República, con el referendo del Ministro de Gobernación, reglamentar
 la presente ley, dentro de los sesenta días a partir de la
-fecha de su publicación.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('49', 'Artículo 49', '- Derogatoria.
+fecha de su publicación.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('49', 'Artículo 49', $$ Derogatoria.
  Se deroga el Decreto Número 66-72 del 
+20 disposiciones que se opongan a la presente ley.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
 
- 
-
-20
-disposiciones que se opongan a la presente ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('50', 'Artículo 50', '- Vigencia.
+INSERT INTO lawarticle (artnum, title, descr)
+VALUES ('50', 'Artículo 50', $$ Vigencia.
  El presente decreto entrará en vigencia a los  
 Pase al Organismo Ejecutivo, para su Sanción, Promulgación y
 Publicación.
@@ -705,24 +828,18 @@ novecientos noventa y seis.
 PUBLIQUESE Y CUMPLASE.
 ARZU IRIGOYEN
 RODOLFO A. MENDOZA ROSALES, Ministro de Gobernación
-
-21
-REGLAMENTO DE TRÁNSITO
+21 REGLAMENTO DE TRÁNSITO
 ACUERDO GUBERNATIVO NÚMERO 273-98
 CONSIDERANDO:
 Que el acuerdo Gubernativo Número 499-97 que contiene el
 Reglamento de Tránsito emitido el 2 de julio de 1997 ha cumplido una 
 etapa divulgativa haciendo conciencia sobre la necesidad de ordenar y  
 regular el tránsito;
- 
 CONSIDERANDO:
-
 Reglamentos para el estricto cumplimiento de las leyes, a efecto que
- 
 mismos, según las posibilidades socioeconómicas de los
 guatemaltecos;
 POR TANTO:
-
 la Constitución Política de la República de Guatemala,
 ACUERDA:
 Emitir el siguiente:
@@ -730,14 +847,19 @@ REGLAMENTO DE TRÁNSITO
 TITULO I
 Disposiciones Generales
 CAPITULO I
-Autoridad De Transito');
+Autoridad De Transito.$$)
+ON CONFLICT (artnum) DO UPDATE
+SET title = EXCLUDED.title,
+    descr = EXCLUDED.descr;
+
 INSERT INTO lawarticle (artnum, title, descr) VALUES ('1', 'Artículo 1', '- Organizacion del Departamento de Tránsito. 
 Para la 
 realización de sus funciones y atribuciones, el Departamento de
 Tránsito de la Dirección General de la Policía Nacional Civil, se
 integrará con las dependencias administrativas siguientes: Jefatura, 
 Subjefatura, Secretaría General, Secciones, Divisiones, Unidades
-Ejecutivas y Delegaciones Departamentales de Tránsito.');
+Ejecutivas y Delegaciones Departamentales de Tránsito.')
+
 INSERT INTO lawarticle (artnum, title, descr) VALUES ('2', 'Artículo 2', '- Creación y Supresión de Dependencias.
  Cuando lo 
 requieran las necesidades del servicio, mediante acuerdo del
