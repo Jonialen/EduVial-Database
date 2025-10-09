@@ -152,10 +152,6 @@ CREATE TABLE lawarticle (
   descr TEXT NOT NULL,
   sanc TEXT
 );
--- Candados contra duplicados (idempotentes)
-CREATE UNIQUE INDEX IF NOT EXISTS uq_lawcat_name      ON lawcat(name);
-CREATE UNIQUE INDEX IF NOT EXISTS uq_lawarticle_artnum ON lawarticle(artnum);
-
 
 --Tabla de relaciones
 CREATE TABLE lawcat (

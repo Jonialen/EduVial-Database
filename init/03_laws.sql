@@ -8,6 +8,9 @@ INSERT INTO lawcat (name) VALUES
 ('Sanciones administrativas');
 ON CONFLICT (name) DO NOTHING;
 
+-- Candados contra duplicados (idempotentes)
+CREATE UNIQUE INDEX IF NOT EXISTS uq_lawcat_name      ON lawcat(name);
+CREATE UNIQUE INDEX IF NOT EXISTS uq_lawarticle_artnum ON lawarticle(artnum);
 
 INSERT INTO lawarticle (artnum, title, descr)
 VALUES ('1', 'Artículo 1', $$- De la Ley.
