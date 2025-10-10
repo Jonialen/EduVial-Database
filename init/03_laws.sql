@@ -8,7 +8,7 @@ INSERT INTO lawcat (name) VALUES
 ('Licencias de conducir'),
 ('Señalización vial'),
 ('Vehículos especiales'),
-('Sanciones administrativas');
+('Sanciones administrativas')
 ON CONFLICT (name) DO NOTHING;
 
 
