@@ -751,7 +751,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 48: Artículo 3 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Cuando una señal de tránsito y una indicación de un agente difieren, ¿a cuál se debe obedecer?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '3')
 );
@@ -799,7 +799,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 51: Artículo 6 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si la vía está obstruida por un accidente, ¿qué debe hacer el conductor al aproximarse?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '6')
 );
@@ -831,7 +831,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 53: Artículo 8 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué condición básica debe mantener el vehículo antes de circular?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '8')
 );
@@ -847,7 +847,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 54: Artículo 9 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un conductor antes de iniciar la marcha desde el estacionamiento?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '9')
 );
@@ -863,7 +863,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 55: Artículo 10 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Ante una señal de ALTO (STOP), ¿qué debe hacer el conductor?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '10')
 );
@@ -879,7 +879,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 56: Artículo 11 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué luz debe usarse preferentemente al conducir de noche en zonas urbanas iluminadas?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '11')
 );
@@ -895,7 +895,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 57: Artículo 13 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor al aproximarse a un cruce peatonal marcado?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '13')
 );
@@ -911,7 +911,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 58: Artículo 15 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la conducta correcta al cambiar de carril?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '15')
 );
@@ -927,7 +927,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 59: Artículo 16 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'En una rotonda, ¿quién tiene la prioridad de paso por regla general?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '16')
 );
@@ -943,7 +943,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 60: Artículo 17 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué distancia de seguridad debe mantener un conductor respecto al vehículo de adelante?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '17')
 );
@@ -959,7 +959,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 61: Artículo 18 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si un peatón está cruzando correctamente por un paso de cebra, ¿qué debe hacer el conductor?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '18')
 );
@@ -975,7 +975,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 62: Artículo 20 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al aproximarse a un paso a nivel (vía férrea) sin barrera, ¿qué precaución es obligatoria?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '20')
 );
@@ -991,7 +991,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 63: Artículo 23 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la conducta correcta ante un bus escolar detenido recogiendo o dejando niños?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '23')
 );
@@ -1007,7 +1007,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 64: Artículo 24 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor antes de realizar un giro a la derecha?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '24')
 );
@@ -1023,7 +1023,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 65: Artículo 25 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la regla general para rebasar a otro vehículo en carretera?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '25')
 );
@@ -1038,7 +1038,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 66: Artículo 26 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué maniobra está prohibida en presencia de línea central continua?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '26')
 );
@@ -1054,7 +1054,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 67: Artículo 27 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al estacionar en pendiente, ¿qué medida preventiva básica se recomienda?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '27')
 );
@@ -1070,7 +1070,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 68: Artículo 28 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor antes de abrir las puertas del vehículo hacia la vía?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '28')
 );
@@ -1086,7 +1086,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 69: Artículo 29 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si un semáforo cambia a amarillo, ¿cuál es la acción recomendada?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '29')
 );
@@ -1102,7 +1102,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 70: Artículo 30 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué deben hacer los peatones al cruzar una vía según la regla básica de seguridad?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '30')
 );
@@ -1117,7 +1117,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 71: Artículo 32 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor antes de iniciar un adelantamiento?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '32')
 );
@@ -1132,7 +1132,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 72: Artículo 34 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al aproximarse a una intersección sin control, ¿qué debe priorizar el conductor?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '34')
 );
@@ -1147,7 +1147,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 73: Artículo 36 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo es obligatorio usar las luces del vehículo durante el día?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '36')
 );
@@ -1162,7 +1162,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 74: Artículo 37 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al circular detrás de una motocicleta, ¿qué debe considerar el conductor?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '37')
 );
@@ -1177,7 +1177,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 75: Artículo 38 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si un agente de tránsito ordena detenerse, ¿qué debe hacer el conductor?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '38')
 );
@@ -1207,7 +1207,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 77: Artículo 42 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al detenerse en un semáforo en rojo, ¿dónde debe quedar el vehículo?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '42')
 );
@@ -1222,7 +1222,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 78: Artículo 43 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo se permite girar a la derecha con el semáforo en rojo?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '43')
 );
@@ -1237,7 +1237,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 79: Artículo 44 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor cuando sus luces altas encandilan a otro usuario?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '44')
 );
@@ -1252,7 +1252,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 80: Artículo 45 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'En una vía con dos carriles por sentido, ¿cuál es el carril habitual para circular?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '45')
 );
@@ -1282,7 +1282,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 82: Artículo 47 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor si su vehículo presenta una falla mecánica en vía pública?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '47')
 );
@@ -1342,7 +1342,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 86: Artículo 51 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'En pasos escolares, ¿qué acción es obligatoria para los conductores?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '51')
 );
@@ -1357,7 +1357,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 87: Artículo 52 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué norma general aplica para el uso del claxon (bocina)?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '52')
 );
@@ -1372,7 +1372,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 88: Artículo 53 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una línea amarilla continua junto al borde de la vía?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '53')
 );
@@ -1402,7 +1402,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 90: Artículo 55 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué acción es correcta al circular por una zona residencial?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '55')
 );
@@ -1430,7 +1430,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 92: Artículo 57 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué precaución básica debe tener el conductor al retroceder?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '57')
 );
@@ -1444,7 +1444,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 93: Artículo 58 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo es obligatorio el uso de intermitentes (direccionales)?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '58')
 );
@@ -1472,7 +1472,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 95: Artículo 60 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si una señal temporal de obras reduce el límite de velocidad, ¿qué debe hacer el conductor?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '60')
 );
@@ -1514,7 +1514,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 98: Artículo 63 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer un peatón antes de bajar de un vehículo estacionado junto a la vía?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '63')
 );
@@ -1528,7 +1528,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 99: Artículo 64 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'En zonas de niebla o lluvia intensa, ¿qué luces deben utilizarse principalmente?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '64')
 );
@@ -1542,7 +1542,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 100: Artículo 65 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué distancia lateral mínima debe mantener al adelantar a un ciclista cuando la vía lo permita?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '65')
 );
@@ -1612,7 +1612,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 105: Artículo 70 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Sobre el uso de casco en motociclistas, ¿qué es correcto?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '70')
 );
@@ -1640,7 +1640,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 107: Artículo 72 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si el vehículo queda inmovilizado en la vía por avería, ¿qué debe colocar el conductor?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '72')
 );
@@ -1654,7 +1654,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 108: Artículo 73 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué conducta es correcta al cruzar una zona escolar señalizada?',
-  'Escenarios',
+  'Señales  ',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '73')
 );
@@ -1668,7 +1668,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 109: Artículo 74 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Respecto al estacionamiento en zonas señalizadas como prohibidas, ¿qué aplica?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '74')
 );
@@ -1682,7 +1682,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 110: Artículo 75 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer el conductor antes de abrir el capó en la vía por una emergencia menor?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '75')
 );
@@ -1696,7 +1696,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 111: Artículo 76 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Cuando un peatón inicia el cruce con luz peatonal en verde, ¿qué debe hacer el conductor?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '76')
 );
@@ -1752,7 +1752,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 115: Artículo 80 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué norma básica rige el uso de luces intermitentes de emergencia (balizas)?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '80')
 );
@@ -1766,7 +1766,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 116: Artículo 81 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Sobre la revisión del estado del vehículo, ¿qué es recomendable antes de un viaje?',
-  'Escenarios',
+  'Simulaciones',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '81')
 );
@@ -1780,7 +1780,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 117: Artículo 82 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué obligación tiene el conductor respecto al uso del cinturón de seguridad?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '82')
 );
@@ -1794,7 +1794,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 -- Pregunta 118: Artículo 83 - Escenarios
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'En presencia de un paso de peatones no regulado, ¿qué conducta corresponde?',
-  'Escenarios',
+  'Señales',
   'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '83')
 );
@@ -2180,3 +2180,353 @@ INSERT INTO opt (qid, txt, correct) VALUES
 (145, 'Frenar a fondo y girar de inmediato', FALSE),
 (145, 'Apagar el motor en seco', FALSE),
 (145, 'Soltar volante y dejarlo ir recto', FALSE);
+
+-- Pregunta 146: Artículo 111 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Al salir de un estacionamiento en reversa hacia una vía con tránsito fluido, ¿cómo ejecutas la maniobra con seguridad?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '111')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(146, 'Señalizo, verifico espejos y puntos ciegos y cedo el paso hasta tener espacio suficiente', TRUE),
+(146, 'Entro rápido para que los demás frenen', FALSE),
+(146, 'Solo miro la cámara trasera y avanzo', FALSE),
+(146, 'Me apoyo en la bocina para abrirme paso', FALSE);
+
+
+-- Pregunta 147: Artículo 112 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una flecha roja en el semáforo de carril indica que ese carril está:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '112')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(147, 'Cerrado a la circulación en ese sentido', TRUE),
+(147, 'Exclusivo para giros a la derecha', FALSE),
+(147, 'Libre mientras no venga nadie', FALSE),
+(147, 'Reservado para motocicletas', FALSE);
+
+
+-- Pregunta 148: Artículo 113 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Al aproximarte a una intersección con visibilidad reducida, ¿qué conducta corresponde?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '113')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(148, 'Reducir velocidad, acercarse con precaución y estar lista para ceder el paso', TRUE),
+(148, 'Cruzar rápido para evitar quedar en medio', FALSE),
+(148, 'Usar luces altas y pitar para pasar', FALSE),
+(148, 'Detenerse en medio de la intersección para observar', FALSE);
+
+
+-- Pregunta 149: Artículo 114 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'De noche y con lluvia, tu parabrisas se empaña y disminuye la visibilidad. ¿Qué haces?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '114')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(149, 'Activo desempañador/aire, reduzco velocidad y mantengo luces de cruce', TRUE),
+(149, 'Apago luces para evitar reflejos', FALSE),
+(149, 'Abro las ventanas y acelero', FALSE),
+(149, 'Sigo igual para no perder tiempo', FALSE);
+
+
+-- Pregunta 150: Artículo 115 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal vertical de “Velocidad máxima 40” en zona residencial implica:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '115')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(150, 'No exceder 40 km/h salvo disposición específica que indique menos', TRUE),
+(150, 'Poder superar 40 km/h si la vía está vacía', FALSE),
+(150, 'Aplicar solo de noche', FALSE),
+(150, 'Aplicar solo a vehículos pesados', FALSE);
+
+
+-- Pregunta 151: Artículo 116 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un vehículo delante activa intermitente para girar a la izquierda y se detiene. ¿Qué haces?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '116')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(151, 'Reduzco, guardo distancia y espero sin invadir carril contrario si no es seguro', TRUE),
+(151, 'Adelanto por la derecha sobre la banqueta', FALSE),
+(151, 'Le toco bocina hasta que se quite', FALSE),
+(151, 'Me pego al parachoques para apurarlo', FALSE);
+
+
+-- Pregunta 152: Artículo 117 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Conduces en bajada prolongada; observas olor a freno. ¿Cómo actúas?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '117')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(152, 'Uso freno motor con cambio adecuado y evito frenar en exceso de forma continua', TRUE),
+(152, 'Mantengo frenado constante para no ganar velocidad', FALSE),
+(152, 'Pongo neutro y dejo que ruede libremente', FALSE),
+(152, 'Apago el motor para “enfriar” el sistema', FALSE);
+
+
+-- Pregunta 153: Artículo 118 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal preventiva de curva peligrosa con velocidad sugerida implica que:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '118')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(153, 'Debes ajustar tu velocidad a la sugerida para mayor seguridad', TRUE),
+(153, 'Puedes ignorarla si el pavimento está seco', FALSE),
+(153, 'Solo aplica para vehículos pesados', FALSE),
+(153, 'Es una recomendación que no influye en la conducción', FALSE);
+
+
+-- Pregunta 154: Artículo 119 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un peatón inicia cruce cuando la luz peatonal cambia a rojo intermitente. ¿Qué haces?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '119')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(154, 'Permito que termine de cruzar si ya está en la calzada, sin ponerlo en riesgo', TRUE),
+(154, 'Acelero antes de que llegue a mi carril', FALSE),
+(154, 'Pito y avanzo para que se regrese', FALSE),
+(154, 'Invado el paso peatonal para “ganar” el semáforo', FALSE);
+
+
+-- Pregunta 155: Artículo 120 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'El auto comienza a sobrecalentarse en carretera. ¿Cuál es la respuesta segura?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '120')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(155, 'Me orillo en zona segura, apago el motor y espero a que baje la temperatura', TRUE),
+(155, 'Abro el radiador de inmediato', FALSE),
+(155, 'Sigo hasta el próximo retorno con calefacción encendida', FALSE),
+(155, 'Acelero para que entre más aire', FALSE);
+
+
+-- Pregunta 156: Artículo 121 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal de “Prohibido adelantar” aplicada a tu carril significa:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '121')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(156, 'No puedes rebasar a otro vehículo hasta fin de la restricción', TRUE),
+(156, 'Solo no puedes rebasar a buses', FALSE),
+(156, 'Prohibición válida solo de noche', FALSE),
+(156, 'Puedes rebasar si tocas bocina', FALSE);
+
+
+-- Pregunta 157: Artículo 122 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Circulas tras una bicicleta en vía urbana sin ciclovía. ¿Qué debes hacer para adelantarla?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '122')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(157, 'Mantener distancia y adelantar cuando sea seguro, dejando separación lateral suficiente', TRUE),
+(157, 'Pegarme para que acelere', FALSE),
+(157, 'Rebasar sin cambiar de trayectoria', FALSE),
+(157, 'Usar solo la bocina para advertir', FALSE);
+
+
+-- Pregunta 158: Artículo 123 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Se te pincha una llanta fuera de la zona urbana. ¿Cuál es la secuencia correcta?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '123')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(158, 'Orillar, activar intermitentes, colocar triángulos y cambiar llanta en lugar seguro', TRUE),
+(158, 'Frenar en seco en el carril', FALSE),
+(158, 'Cambiar llanta a mitad de la calzada', FALSE),
+(158, 'Seguir con la llanta dañada hasta el destino', FALSE);
+
+
+-- Pregunta 159: Artículo 124 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal de “Zona escolar” combinada con límite de velocidad implica que debes:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '124')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(159, 'Reducir velocidad al límite indicado y extremar precaución por presencia de menores', TRUE),
+(159, 'Tocar bocina al pasar para avisar', FALSE),
+(159, 'Acelerar para salir rápido de la zona', FALSE),
+(159, 'Circular por el centro para “proteger” a peatones', FALSE);
+
+
+-- Pregunta 160: Artículo 125 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Te aproximas a una rotonda saturada. ¿Qué regla de prioridad aplicas?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '125')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(160, 'Cedo el paso a quienes ya circulan dentro de la rotonda', TRUE),
+(160, 'Entro primero si vengo por la derecha', FALSE),
+(160, 'Entro rápido para no bloquear atrás', FALSE),
+(160, 'Uso bocina para que me dejen entrar', FALSE);
+
+
+-- Pregunta 161: Artículo 126 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Tu limpia parabrisas falla durante un aguacero en carretera. ¿Cómo reduces el riesgo?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '126')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(161, 'Reduzco velocidad, enciendo luces de cruce y busco detenerme fuera de la calzada', TRUE),
+(161, 'Mantengo velocidad y sigo la estela del de adelante', FALSE),
+(161, 'Uso solo luces de emergencia y continúo', FALSE),
+(161, 'Me paso al carril contrario si veo mejor', FALSE);
+
+
+-- Pregunta 162: Artículo 127 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un panel de mensaje variable advierte “colisión adelante, reduzca velocidad”. Esto significa:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '127')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(162, 'Debes disminuir la velocidad y prepararte para detenciones inesperadas', TRUE),
+(162, 'Solo aplica a vehículos de carga', FALSE),
+(162, 'Puedes ignorarlo si no ves luces rojas', FALSE),
+(162, 'Es informativo sin impacto en tu conducción', FALSE);
+
+
+-- Pregunta 163: Artículo 128 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un vehículo de emergencia se aproxima por detrás con sirena y luces. ¿Qué haces?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '128')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(163, 'Facilito el paso orillándome o cambiando de carril cuando sea seguro', TRUE),
+(163, 'Acelero para despejarle el camino por delante', FALSE),
+(163, 'Lo bloqueo para que no pase por mi carril', FALSE),
+(163, 'Freno en seco donde estoy', FALSE);
+
+
+-- Pregunta 164: Artículo 129 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Eres la primera en llegar a un choque leve sin heridos. ¿Cuál es el procedimiento correcto?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '129')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(164, 'Señalizar la zona, colocar triángulos, retirar vehículos si es seguro y reportar', TRUE),
+(164, 'Mover los vehículos sin señalizar', FALSE),
+(164, 'Dejar los autos en medio de la vía “para constancia”', FALSE),
+(164, 'Encender luces altas y tocar bocina', FALSE);
+
+
+-- Pregunta 165: Artículo 130 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal reglamentaria de “No girar en U” implica que:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '130')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(165, 'Está prohibido realizar giros en U en ese tramo', TRUE),
+(165, 'Solo está prohibido de 6:00 a 18:00', FALSE),
+(165, 'Aplica únicamente a camiones', FALSE),
+(165, 'Puedes hacerlo si no hay tránsito', FALSE);
+
+
+-- Pregunta 166: Artículo 131 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un vehículo intenta incorporarse desde un garaje a la vía principal. ¿Quién tiene prioridad?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '131')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(166, 'La vía principal; quien sale debe ceder el paso', TRUE),
+(166, 'El que enciende intermitente primero', FALSE),
+(166, 'El que toque la bocina', FALSE),
+(166, 'El vehículo más grande', FALSE);
+
+
+-- Pregunta 167: Artículo 132 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'El pedal del freno se siente esponjoso y aumenta la distancia de frenado. ¿Qué haces?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '132')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(167, 'Detengo el vehículo en lugar seguro y solicito asistencia técnica', TRUE),
+(167, 'Sigo conduciendo con freno de mano', FALSE),
+(167, 'Acelero para “limpiar” el sistema', FALSE),
+(167, 'Solo bajo un cambio y continúo', FALSE);
+
+
+-- Pregunta 168: Artículo 133 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué significa una marca de zig-zag junto al borde en zona de parada de bus?',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '133')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(168, 'Área reservada: prohibido estacionar/detenerse para no obstaculizar la parada', TRUE),
+(168, 'Área para estacionar con intermitentes', FALSE),
+(168, 'Carril exclusivo para giros en U', FALSE),
+(168, 'Zona de carga y descarga obligatoria', FALSE);
+
+
+-- Pregunta 169: Artículo 134 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Te aproximas a un túnel largo: ¿qué preparativos son correctos antes de entrar?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '134')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(169, 'Encender luces de cruce, ajustar velocidad y aumentar distancia', TRUE),
+(169, 'Luces altas y bocina para avisar', FALSE),
+(169, 'Quitarse el cinturón por comodidad', FALSE),
+(169, 'Cambiar a carril contrario para ver mejor', FALSE);
+
+
+-- Pregunta 170: Artículo 135 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Durante una inundación repentina en la vía, el agua cubre media llanta. ¿Qué haces?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '135')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(170, 'Evito cruzar tramos anegados, busco ruta alterna o espero asistencia', TRUE),
+(170, 'Acelero fuerte para crear una ola y pasar', FALSE),
+(170, 'Cruzo en diagonal a mayor velocidad', FALSE),
+(170, 'Desconecto ABS para frenar mejor', FALSE);
+
