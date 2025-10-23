@@ -2530,3 +2530,304 @@ INSERT INTO opt (qid, txt, correct) VALUES
 (170, 'Cruzo en diagonal a mayor velocidad', FALSE),
 (170, 'Desconecto ABS para frenar mejor', FALSE);
 
+-- Pregunta 171: Artículo 136 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Tu vehículo empieza a vibrar a alta velocidad en carretera. ¿Qué haces?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '136')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(171, 'Reduzco velocidad gradualmente y verifico llantas o alineación al detenerme', TRUE),
+(171, 'Sujeto el volante y acelero para estabilizarlo', FALSE),
+(171, 'Freno fuerte para detenerme en seco', FALSE),
+(171, 'Ignoro la vibración si no se escucha ruido', FALSE);
+
+
+-- Pregunta 172: Artículo 137 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal triangular con borde rojo y figura de resbalón indica:',
+  'Señales',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '137')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(172, 'Pavimento resbaladizo: reduce velocidad y evita giros bruscos', TRUE),
+(172, 'Zona de estacionamiento', FALSE),
+(172, 'Vía cerrada', FALSE),
+(172, 'Inicio de autopista', FALSE);
+
+
+-- Pregunta 173: Artículo 138 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Si al conducir de noche un vehículo te encandila con luces altas, ¿qué debes hacer?',
+  'Escenarios',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '138')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(173, 'Desviar la vista al borde derecho y reducir velocidad hasta recuperar visión', TRUE),
+(173, 'Encender tus luces altas para responder', FALSE),
+(173, 'Cerrar los ojos momentáneamente', FALSE),
+(173, 'Pitar hasta que apague sus luces', FALSE);
+
+
+-- Pregunta 174: Artículo 139 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'El acelerador se queda trabado mientras conduces. ¿Cuál es la acción correcta?',
+  'Simulaciones',
+  'Intermedio',
+  (SELECT id FROM lawarticle WHERE artnum = '139')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(174, 'Pongo punto muerto, apago el motor gradualmente y me detengo en zona segura', TRUE),
+(174, 'Apago el motor de golpe con el carro en marcha', FALSE),
+(174, 'Freno a fondo sin cambiar de marcha', FALSE),
+(174, 'Tiro del freno de mano de inmediato', FALSE);
+
+-- Pregunta 175: Artículo 140 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Transportas material frágil y voluminoso en autopista: ¿qué debes asegurar antes de iniciar el viaje?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '140')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(175, 'Que la carga esté firmemente sujeta y no comprometa visibilidad ni estabilidad', TRUE),
+(175, 'Que sobrepase lateralmente sin señalización', FALSE),
+(175, 'Que el maletero quede entreabierto para ventilar', FALSE),
+(175, 'Que el peso recaiga todo en el eje trasero', FALSE);
+
+-- Pregunta 176: Artículo 141 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Una señal de “Prohibido girar en U” complementada con horario específico implica que:',
+  'Señales',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '141')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(176, 'La prohibición rige en el horario indicado y fuera de él según la señal general', TRUE),
+(176, 'Es solo una recomendación sin sanción', FALSE),
+(176, 'Permite U si enciendes intermitentes', FALSE),
+(176, 'Solo aplica a motocicletas', FALSE);
+
+-- Pregunta 177: Artículo 142 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'En un control de carretera, la autoridad solicita documentación y verificación del equipo de seguridad. ¿Cómo procedes?',
+  'Escenarios',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '142')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(177, 'Entrego documentos exigidos y muestro triángulos, extintor y botiquín si se requieren', TRUE),
+(177, 'Me niego a abrir el maletero por privacidad', FALSE),
+(177, 'Presento fotos del equipo en lugar del equipo real', FALSE),
+(177, 'Acelero para evitar la revisión', FALSE);
+
+-- Pregunta 178: Artículo 143 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Remolcas un vehículo averiado de noche: ¿qué condiciones de iluminación y señalización debes cumplir?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '143')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(178, 'Luces e intermitentes operativos y señal de advertencia en el remolcado', TRUE),
+(178, 'Solo luces altas del vehículo tractor', FALSE),
+(178, 'Cinta reflectiva en el gancho basta', FALSE),
+(178, 'Ninguna señal si vas despacio', FALSE);
+
+-- Pregunta 179: Artículo 144 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un carril reversible indicado por señalización variable entra en operación. ¿Qué debes verificar antes de incorporarte?',
+  'Señales',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '144')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(179, 'Sentido habilitado en paneles/luminarias y ausencia de flujo en contra', TRUE),
+(179, 'Que haya menos tráfico en ese carril', FALSE),
+(179, 'Que tu GPS lo recomiende', FALSE),
+(179, 'Que el semáforo peatonal esté en rojo', FALSE);
+
+-- Pregunta 180: Artículo 145 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Tras un siniestro con solo daños materiales, ¿qué pasos legales y de seguridad debes seguir?',
+  'Escenarios',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '145')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(180, 'Señalizar, retirar vehículos si es posible, intercambiar datos y dar aviso según proceda', TRUE),
+(180, 'Mover los autos sin avisar a nadie', FALSE),
+(180, 'Abandonar el lugar para evitar congestión', FALSE),
+(180, 'Esperar dentro del carril sin triángulos', FALSE);
+
+-- Pregunta 181: Artículo 146 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Conduces un bus escolar: ¿qué protocolos adicionales debes cumplir al recoger y dejar estudiantes?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '146')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(181, 'Paradas seguras, luces/avisos reglamentarios y control de abordaje/descenso', TRUE),
+(181, 'Parar en cualquier carril con balizas', FALSE),
+(181, 'Permitir que suban con el bus en movimiento', FALSE),
+(181, 'Detenerse sobre pasos peatonales', FALSE);
+
+-- Pregunta 182: Artículo 147 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Señal de “Velocidad mínima” en autopista: su efecto normativo es que…',
+  'Señales',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '147')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(182, 'No debes circular por debajo del valor indicado salvo causa justificada', TRUE),
+(182, 'Es meramente informativa', FALSE),
+(182, 'Solo aplica a vehículos de carga', FALSE),
+(182, 'Se ignora si no hay tráfico', FALSE);
+
+-- Pregunta 183: Artículo 148 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Al transportar personas de pie en un vehículo autorizado, ¿qué condiciones de seguridad son obligatorias?',
+  'Escenarios',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '148')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(183, 'Respeto de capacidad, barras/asideros y conducción suave sin maniobras bruscas', TRUE),
+(183, 'Permitir exceso de ocupantes si el trayecto es corto', FALSE),
+(183, 'Circular con puertas abiertas para ventilación', FALSE),
+(183, 'Acelerar para reducir tiempo de exposición', FALSE);
+
+-- Pregunta 184: Artículo 149 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Desciendes un puerto de montaña con carga pesada: ¿cómo gestionas freno motor y temperatura?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '149')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(184, 'Engranar relación baja, usar freno motor y evitar fatiga de frenos de servicio', TRUE),
+(184, 'Bajar en neutro para ahorrar combustible', FALSE),
+(184, 'Enfriar frenos con agua en marcha', FALSE),
+(184, 'Frenar a fondo en cada curva', FALSE);
+
+-- Pregunta 185: Artículo 150 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un panel informa “carril exclusivo bus” con horario. ¿Cuándo puedes usarlo en vehículo particular?',
+  'Señales',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '150')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(185, 'Solo fuera del horario señalado o cuando la norma lo permita expresamente', TRUE),
+(185, 'Siempre que no estorbe a nadie', FALSE),
+(185, 'Si enciendes luces de emergencia', FALSE),
+(185, 'Si circulas por breves tramos', FALSE);
+
+-- Pregunta 186: Artículo 151 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Un vehículo de emergencia se aproxima por un carril reversible en sentido habilitado: tu obligación es…',
+  'Escenarios',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '151')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(186, 'Facilitar el paso sin invadir el sentido contrario ni obstruir el carril', TRUE),
+(186, 'Detenerte en seco en medio del carril', FALSE),
+(186, 'Acelerar para no estorbar', FALSE),
+(186, 'Usar el arcén de forma continuada', FALSE);
+
+-- Pregunta 187: Artículo 152 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Al reventar un neumático delantero a alta velocidad, ¿cuál es la secuencia de control correcta?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '152')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(187, 'Sujetar firme el volante, mantener trayectoria, soltar acelerador y frenar suave', TRUE),
+(187, 'Frenar a fondo y girar hacia el arcén', FALSE),
+(187, 'Apagar el motor de golpe', FALSE),
+(187, 'Pisar embrague y soltar volante', FALSE);
+
+-- Pregunta 188: Artículo 153 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Balizas encendidas en vehículo detenido en carril: la señalización complementaria adecuada es…',
+  'Señales',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '153')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(188, 'Colocar triángulos a la distancia reglamentaria y, de noche, elementos reflectivos', TRUE),
+(188, 'Confiar solo en las luces de freno', FALSE),
+(188, 'Poner chaleco y quedarse en la calzada', FALSE),
+(188, 'Usar una linterna desde la ventanilla', FALSE);
+
+-- Pregunta 189: Artículo 154 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Operas un vehículo articulado en zona urbana densa: ¿qué maniobras deben priorizar la seguridad de vulnerables?',
+  'Escenarios',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '154')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(189, 'Giros amplios controlados, velocidad moderada y verificación de puntos ciegos', TRUE),
+(189, 'Cierres de curva rápidos para “ganar” el paso', FALSE),
+(189, 'Uso continuo de claxon para abrir paso', FALSE),
+(189, 'Aproximación a centímetros de peatones', FALSE);
+
+-- Pregunta 190: Artículo 155 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Tu vehículo cae al agua tras un choque: ¿cuál es el protocolo de evacuación?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '155')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(190, 'Destrabar cinturón, bajar ventana/romper vidrio y evacuar manteniendo la calma', TRUE),
+(190, 'Abrir puertas de inmediato contra la presión del agua', FALSE),
+(190, 'Esperar a que se hunda para salir', FALSE),
+(190, 'Usar luces altas para pedir ayuda', FALSE);
+
+-- Pregunta 191: Artículo 156 - Señales
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Señal de “Peso máximo por eje”: tu actuación correcta es…',
+  'Señales',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '156')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(191, 'Verificar la carga y abstenerse de ingresar si se supera el límite', TRUE),
+(191, 'Entrar y descargar en medio del puente', FALSE),
+(191, 'Pasar a mayor velocidad para “aligerar”', FALSE),
+(191, 'Solo considerar el peso total, no por eje', FALSE);
+
+-- Pregunta 192: Artículo 157 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Tras un choque con lesionados, ¿qué intervenciones están permitidas al conductor mientras arriban los servicios?',
+  'Escenarios',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '157')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(192, 'Asegurar la zona, pedir ayuda, no mover víctimas salvo riesgo inminente', TRUE),
+(192, 'Trasladar por cuenta propia sin valoración', FALSE),
+(192, 'Ofrecer bebidas a los heridos', FALSE),
+(192, 'Retirar evidencia para despejar la vía', FALSE);
+
+-- Pregunta 193: Artículo 158 - Simulaciones
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Conduces con fuertes rachas de viento lateral en puente elevado: ¿cómo compensas el efecto?',
+  'Simulaciones',
+  'Avanzado',
+  (SELECT id FROM lawarticle WHERE artnum = '158')
+);
+INSERT INTO opt (qid, txt, correct) VALUES
+(193, 'Reducir velocidad, sujetar firme el volante y anticipar correcciones suaves', TRUE),
+(193, 'Acelerar para “vencer” el viento', FALSE),
+(193, 'Circular pegado al borde del puente', FALSE),
+(193, 'Desplazar el centro de carril hacia el carril opuesto', FALSE);
