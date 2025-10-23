@@ -1034,3 +1034,82 @@ INSERT INTO opt (qid, txt, correct) VALUES
 (65, 'Rebasar por la derecha en cualquier caso', FALSE),
 (65, 'Rebasar en curvas si no viene nadie', FALSE),
 (65, 'Rebasar en puentes para ahorrar tiempo', FALSE);
+
+-- Pregunta 66: Artículo 26 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué maniobra está prohibida en presencia de línea central continua?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '26')
+);
+
+-- Opciones para pregunta 66 (ID generado = 66)
+INSERT INTO opt (qid, txt, correct) VALUES
+(66, 'Invadir el carril contrario para adelantar', TRUE),
+(66, 'Circular a velocidad constante', FALSE),
+(66, 'Encender luces de cruce', FALSE),
+(66, 'Reducir la velocidad', FALSE);
+
+
+-- Pregunta 67: Artículo 27 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Al estacionar en pendiente, ¿qué medida preventiva básica se recomienda?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '27')
+);
+
+-- Opciones para pregunta 67 (ID generado = 67)
+INSERT INTO opt (qid, txt, correct) VALUES
+(67, 'Orientar las ruedas hacia el borde y usar freno de mano', TRUE),
+(67, 'Dejar el vehículo en neutro', FALSE),
+(67, 'Apagar luces y salir sin más', FALSE),
+(67, 'Mantener el motor encendido', FALSE);
+
+
+-- Pregunta 68: Artículo 28 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué debe hacer el conductor antes de abrir las puertas del vehículo hacia la vía?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '28')
+);
+
+-- Opciones para pregunta 68 (ID generado = 68)
+INSERT INTO opt (qid, txt, correct) VALUES
+(68, 'Verificar que no se aproxima nadie y hacerlo con precaución', TRUE),
+(68, 'Abrir rápidamente para bajar primero', FALSE),
+(68, 'Solo abrir si el vehículo está en doble fila', FALSE),
+(68, 'Dejar la puerta abierta para reservar espacio', FALSE);
+
+
+-- Pregunta 69: Artículo 29 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Si un semáforo cambia a amarillo, ¿cuál es la acción recomendada?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '29')
+);
+
+-- Opciones para pregunta 69 (ID generado = 69)
+INSERT INTO opt (qid, txt, correct) VALUES
+(69, 'Prepararse para detenerse con seguridad', TRUE),
+(69, 'Acelerar para cruzar antes del rojo', FALSE),
+(69, 'Pitar y continuar', FALSE),
+(69, 'Detenerse en medio del cruce', FALSE);
+
+
+-- Pregunta 70: Artículo 30 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué deben hacer los peatones al cruzar una vía según la regla básica de seguridad?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '30')
+);
+
+-- Opciones para pregunta 70 (ID generado = 70)
+INSERT INTO opt (qid, txt, correct) VALUES
+(70, 'Usar pasos peatonales y observar ambos sentidos', TRUE),
+(70, 'Cruzar por cualquier punto si no hay tráfico', FALSE),
+(70, 'Correr entre vehículos detenidos', FALSE),
+(70, 'Cruzar con el teléfono sin mirar', FALSE);
