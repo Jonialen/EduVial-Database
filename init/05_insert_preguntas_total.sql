@@ -715,3 +715,322 @@ INSERT INTO opt (qid, txt, correct) VALUES
 (45, 'Mejor tracción', FALSE),
 (45, 'Gasto reducido', FALSE),
 (45, 'Mejor visibilidad', FALSE);
+
+-- Pregunta 46: Artículo 1 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Cuál es el propósito principal de la normativa de tránsito?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '1')
+);
+
+-- Opciones para pregunta 46 (ID generado = 46)
+INSERT INTO opt (qid, txt, correct) VALUES
+(46, 'Proteger la vida y seguridad de usuarios de la vía', TRUE),
+(46, 'Aumentar la recaudación por multas', FALSE),
+(46, 'Favorecer a conductores profesionales', FALSE),
+(46, 'Permitir circular sin restricciones', FALSE);
+
+
+-- Pregunta 47: Artículo 2 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿A quiénes aplica la normativa de tránsito en la vía pública?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '2')
+);
+
+-- Opciones para pregunta 47 (ID generado = 47)
+INSERT INTO opt (qid, txt, correct) VALUES
+(47, 'A conductores, pasajeros y peatones', TRUE),
+(47, 'Solo a conductores con licencia profesional', FALSE),
+(47, 'Exclusivamente a vehículos particulares', FALSE),
+(47, 'Únicamente a peatones en zonas urbanas', FALSE);
+
+
+-- Pregunta 48: Artículo 3 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Cuando una señal de tránsito y una indicación de un agente difieren, ¿a cuál se debe obedecer?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '3')
+);
+
+-- Opciones para pregunta 48 (ID generado = 48)
+INSERT INTO opt (qid, txt, correct) VALUES
+(48, 'A la indicación del agente', TRUE),
+(48, 'A la señal vertical', FALSE),
+(48, 'Al semáforo solamente', FALSE),
+(48, 'A ninguna si no hay tráfico', FALSE);
+
+
+-- Pregunta 49: Artículo 4 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué documento básico debe portar siempre el conductor para acreditar su autorización de manejo?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '4')
+);
+
+-- Opciones para pregunta 49 (ID generado = 49)
+INSERT INTO opt (qid, txt, correct) VALUES
+(49, 'Licencia de conducir vigente', TRUE),
+(49, 'Recibo de compra del vehículo', FALSE),
+(49, 'Contrato de seguro en original', FALSE),
+(49, 'Tarjeta de circulación provisional', FALSE);
+
+
+-- Pregunta 50: Artículo 5 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué responsabilidad general tiene el conductor respecto de las normas de tránsito?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '5')
+);
+
+-- Opciones para pregunta 50 (ID generado = 50)
+INSERT INTO opt (qid, txt, correct) VALUES
+(50, 'Conocerlas y cumplirlas', TRUE),
+(50, 'Cumplirlas solo en horarios hábiles', FALSE),
+(50, 'Conocerlas pero no necesariamente cumplirlas', FALSE),
+(50, 'Cumplir solo las de su municipio', FALSE);
+
+
+-- Pregunta 51: Artículo 6 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Si la vía está obstruida por un accidente, ¿qué debe hacer el conductor al aproximarse?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '6')
+);
+
+-- Opciones para pregunta 51 (ID generado = 51)
+INSERT INTO opt (qid, txt, correct) VALUES
+(51, 'Reducir velocidad y acatar señalamiento o indicaciones', TRUE),
+(51, 'Acelerar para pasar rápido', FALSE),
+(51, 'Tocar la bocina y seguir', FALSE),
+(51, 'Detenerse en medio del carril', FALSE);
+
+
+-- Pregunta 52: Artículo 7 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué prioridad tienen los vehículos de emergencia con señalización activa?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '7')
+);
+
+-- Opciones para pregunta 52 (ID generado = 52)
+INSERT INTO opt (qid, txt, correct) VALUES
+(52, 'Tienen prioridad de paso', TRUE),
+(52, 'Deben ceder a los autobuses', FALSE),
+(52, 'Solo en intersecciones con semáforo en verde', FALSE),
+(52, 'Ninguna prioridad especial', FALSE);
+
+
+-- Pregunta 53: Artículo 8 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué condición básica debe mantener el vehículo antes de circular?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '8')
+);
+
+-- Opciones para pregunta 53 (ID generado = 53)
+INSERT INTO opt (qid, txt, correct) VALUES
+(53, 'Estar en buenas condiciones mecánicas y de seguridad', TRUE),
+(53, 'Tener vidrios polarizados', FALSE),
+(53, 'Contar con bocina de aire reforzada', FALSE),
+(53, 'Portar llantas de competición', FALSE);
+
+
+-- Pregunta 54: Artículo 9 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué debe hacer un conductor antes de iniciar la marcha desde el estacionamiento?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '9')
+);
+
+-- Opciones para pregunta 54 (ID generado = 54)
+INSERT INTO opt (qid, txt, correct) VALUES
+(54, 'Señalizar y verificar que la maniobra sea segura', TRUE),
+(54, 'Salir sin señalizar si no hay peatones', FALSE),
+(54, 'Arrancar tocando bocina', FALSE),
+(54, 'Usar solo luces altas', FALSE);
+
+
+-- Pregunta 55: Artículo 10 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Ante una señal de ALTO (STOP), ¿qué debe hacer el conductor?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '10')
+);
+
+-- Opciones para pregunta 55 (ID generado = 55)
+INSERT INTO opt (qid, txt, correct) VALUES
+(55, 'Detenerse completamente y ceder el paso', TRUE),
+(55, 'Reducir y cruzar si no hay vehículos', FALSE),
+(55, 'Continuar si el carril está libre', FALSE),
+(55, 'Tocar bocina y seguir', FALSE);
+
+
+-- Pregunta 56: Artículo 11 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué luz debe usarse preferentemente al conducir de noche en zonas urbanas iluminadas?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '11')
+);
+
+-- Opciones para pregunta 56 (ID generado = 56)
+INSERT INTO opt (qid, txt, correct) VALUES
+(56, 'Luces bajas (cruce)', TRUE),
+(56, 'Luces altas en todo momento', FALSE),
+(56, 'Luz intermitente de emergencia', FALSE),
+(56, 'Solo luces de estacionamiento', FALSE);
+
+
+-- Pregunta 57: Artículo 13 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué debe hacer el conductor al aproximarse a un cruce peatonal marcado?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '13')
+);
+
+-- Opciones para pregunta 57 (ID generado = 57)
+INSERT INTO opt (qid, txt, correct) VALUES
+(57, 'Reducir velocidad y ceder el paso al peatón', TRUE),
+(57, 'Acelerar para liberar el cruce', FALSE),
+(57, 'Usar bocina para advertir y pasar', FALSE),
+(57, 'Ignorar el cruce si no hay semáforo', FALSE);
+
+
+-- Pregunta 58: Artículo 15 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Cuál es la conducta correcta al cambiar de carril?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '15')
+);
+
+-- Opciones para pregunta 58 (ID generado = 58)
+INSERT INTO opt (qid, txt, correct) VALUES
+(58, 'Señalizar previamente y verificar el ángulo muerto', TRUE),
+(58, 'Cambiar sin señalizar si el carril está libre', FALSE),
+(58, 'Señalizar solo después de cambiar', FALSE),
+(58, 'Pisar la línea continua para adelantar', FALSE);
+
+
+-- Pregunta 59: Artículo 16 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'En una rotonda, ¿quién tiene la prioridad de paso por regla general?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '16')
+);
+
+-- Opciones para pregunta 59 (ID generado = 59)
+INSERT INTO opt (qid, txt, correct) VALUES
+(59, 'El que ya circula dentro de la rotonda', TRUE),
+(59, 'El que entra por la derecha', FALSE),
+(59, 'El vehículo de mayor tamaño', FALSE),
+(59, 'Quien toque más la bocina', FALSE);
+
+
+-- Pregunta 60: Artículo 17 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué distancia de seguridad debe mantener un conductor respecto al vehículo de adelante?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '17')
+);
+
+-- Opciones para pregunta 60 (ID generado = 60)
+INSERT INTO opt (qid, txt, correct) VALUES
+(60, 'Una distancia que permita detenerse con seguridad', TRUE),
+(60, 'Media longitud del vehículo propio', FALSE),
+(60, 'La misma distancia en ciudad y carretera', FALSE),
+(60, 'Ninguna si se conduce despacio', FALSE);
+
+
+-- Pregunta 61: Artículo 18 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Si un peatón está cruzando correctamente por un paso de cebra, ¿qué debe hacer el conductor?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '18')
+);
+
+-- Opciones para pregunta 61 (ID generado = 61)
+INSERT INTO opt (qid, txt, correct) VALUES
+(61, 'Detenerse y permitirle cruzar', TRUE),
+(61, 'Acelerar para pasar antes', FALSE),
+(61, 'Tocar la bocina para que apure el paso', FALSE),
+(61, 'Pasar por el carril contrario', FALSE);
+
+
+-- Pregunta 62: Artículo 20 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  'Al aproximarse a un paso a nivel (vía férrea) sin barrera, ¿qué precaución es obligatoria?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '20')
+);
+
+-- Opciones para pregunta 62 (ID generado = 62)
+INSERT INTO opt (qid, txt, correct) VALUES
+(62, 'Reducir la velocidad y comprobar que no se aproxime un tren', TRUE),
+(62, 'Cruzar rápido sin detenerse', FALSE),
+(62, 'Usar luces altas y bocina', FALSE),
+(62, 'Detenerse solo si viene un tren visible', FALSE);
+
+
+-- Pregunta 63: Artículo 23 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Cuál es la conducta correcta ante un bus escolar detenido recogiendo o dejando niños?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '23')
+);
+
+-- Opciones para pregunta 63 (ID generado = 63)
+INSERT INTO opt (qid, txt, correct) VALUES
+(63, 'Detenerse y no rebasar hasta que sea seguro', TRUE),
+(63, 'Rebasar por el carril contrario rápidamente', FALSE),
+(63, 'Tocar bocina para que avance', FALSE),
+(63, 'Pasar por la cuneta', FALSE);
+
+
+-- Pregunta 64: Artículo 24 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Qué debe hacer el conductor antes de realizar un giro a la derecha?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '24')
+);
+
+-- Opciones para pregunta 64 (ID generado = 64)
+INSERT INTO opt (qid, txt, correct) VALUES
+(64, 'Señalizar con anticipación y pegarse al lado derecho', TRUE),
+(64, 'Girar sin señalizar si no hay vehículos', FALSE),
+(64, 'Tomar el carril izquierdo y cruzar', FALSE),
+(64, 'Detenerse por completo siempre', FALSE);
+
+
+-- Pregunta 65: Artículo 25 - Escenarios
+INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
+  '¿Cuál es la regla general para rebasar a otro vehículo en carretera?',
+  'Escenarios',
+  'Básico',
+  (SELECT id FROM lawarticle WHERE artnum = '25')
+);
+
+-- Opciones para pregunta 65 (ID generado = 65)
+INSERT INTO opt (qid, txt, correct) VALUES
+(65, 'Rebasar por la izquierda cuando la línea lo permita y sea seguro', TRUE),
+(65, 'Rebasar por la derecha en cualquier caso', FALSE),
+(65, 'Rebasar en curvas si no viene nadie', FALSE),
+(65, 'Rebasar en puentes para ahorrar tiempo', FALSE);
