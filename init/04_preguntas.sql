@@ -24,10 +24,4 @@ CREATE TABLE ans (
   ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Evita preguntas duplicadas (mismo texto + misma ley)
-CREATE UNIQUE INDEX IF NOT EXISTS uq_quest_txt_law
-ON quest ((lower(regexp_replace(txt, '\s+', ' ', 'g'))), COALESCE(lawid, -1));
 
--- Evita opciones repetidas dentro de la misma pregunta
-CREATE UNIQUE INDEX IF NOT EXISTS uq_opt_per_q
-ON opt (qid, (lower(regexp_replace(txt, '\s+', ' ', 'g'))), correct);
