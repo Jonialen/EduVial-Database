@@ -82,7 +82,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica la prioridad de paso en una intersección?',
   'Simulaciones',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '68')
 );
 
@@ -98,7 +98,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una línea amarilla continua en la vía?',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '56')
 );
 
@@ -114,7 +114,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuándo se permite el uso de luces altas?',
   'Escenarios',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '72')
 );
 
@@ -130,7 +130,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué debe hacer si sufre un desperfecto mecánico en carretera?',
   'Simulaciones',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '90')
 );
 
@@ -146,7 +146,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es la función del cinturón de seguridad?',
   'Escenarios',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '61')
 );
 
@@ -401,7 +401,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si un semáforo está apagado?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '108')
 );
 
@@ -417,7 +417,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una doble línea amarilla?',
   'Señales',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '98')
 );
 
@@ -433,7 +433,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué pasa si no se respetan los límites de velocidad?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '141')
 );
 
@@ -449,7 +449,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué tipo de luces deben usarse en neblina?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '77')
 );
 
@@ -465,7 +465,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué es el mantenimiento preventivo?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '130')
 );
 
@@ -481,7 +481,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Cuál es el rol del espejo retrovisor?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '116')
 );
 
@@ -497,7 +497,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal triangular con borde rojo?',
   'Señales',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '55')
 );
 
@@ -513,7 +513,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer en un cruce sin señalización?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '65')
 );
 
@@ -529,7 +529,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué hacer si un peatón cruza inesperadamente?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '119')
 );
 
@@ -545,7 +545,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué indica una señal con bicicleta?',
   'Señales',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '109')
 );
 
@@ -1836,7 +1836,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué precaución debes tomar al circular detrás de un vehículo pesado en una pendiente con lluvia?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '86')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1850,7 +1850,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Semáforo intermitente en amarillo: ¿qué indica?',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '87')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1864,7 +1864,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Quién tiene prioridad de paso con señales luminosas y sonoras activas?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '88')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1878,7 +1878,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Con aguacero fuerte, el auto tiende a patinar. ¿Qué haces?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '89')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1892,7 +1892,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Te quedas varada en carretera por avería: primera acción correcta.',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '90')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1906,7 +1906,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Encuentras animales sueltos en la vía. ¿Qué procede?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '91')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1920,7 +1920,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Un agente ordena lo contrario a la señal fija. ¿A quién obedeces?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '92')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1934,7 +1934,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'El auto derrapa en curva. ¿Cómo reaccionas para recuperar trayectoria?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '93')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1948,7 +1948,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Antes de adelantar en carretera, ¿qué debes confirmar?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '94')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1962,7 +1962,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Documento mínimo que debes presentar para acreditar circulación del vehículo ante control vial:',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '95')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1976,7 +1976,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Previo a iniciar marcha, ¿qué revisar del sistema de frenos?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '96')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -1990,7 +1990,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Con niebla densa, ¿qué luces debes usar?',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '97')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2004,7 +2004,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Doble línea amarilla en el centro de la vía significa:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '98')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2018,7 +2018,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al girar en una intersección, ¿qué prioridad debes respetar?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '99')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2032,7 +2032,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Conduces somnolienta de noche. ¿Qué haces para reducir el riesgo?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '100')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2046,7 +2046,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Línea amarilla continua junto al borde generalmente indica:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '101')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2060,7 +2060,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'En un paso a nivel sin barrera, ¿qué conducta es correcta?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '102')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2074,7 +2074,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Cambio de carril en vía rápida: pasos mínimos correctos.',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '103')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2088,7 +2088,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Flecha verde en semáforo de carril indica:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '104')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2102,7 +2102,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Vas a remolcar un vehículo: verificación básica antes de iniciar.',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '105')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2116,7 +2116,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Vehículo detenido en subida por congestión: ¿cómo te posicionas?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '106')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2130,7 +2130,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Señal de ceda el paso obliga a:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '107')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2144,7 +2144,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Incorporación desde carril de aceleración: regla clave.',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '108')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2158,7 +2158,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Luz roja fija: ¿dónde debe quedar detenido el vehículo?',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '109')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2172,7 +2172,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Explota una llanta en marcha. ¿Cuál es la maniobra más segura?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '110')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2185,7 +2185,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al salir de un estacionamiento en reversa hacia una vía con tránsito fluido, ¿cómo ejecutas la maniobra con seguridad?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '111')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2199,7 +2199,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una flecha roja en el semáforo de carril indica que ese carril está:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '112')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2213,7 +2213,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Al aproximarte a una intersección con visibilidad reducida, ¿qué conducta corresponde?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '113')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2227,7 +2227,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'De noche y con lluvia, tu parabrisas se empaña y disminuye la visibilidad. ¿Qué haces?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '114')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2241,7 +2241,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una señal vertical de “Velocidad máxima 40” en zona residencial implica:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '115')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2255,7 +2255,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Un vehículo delante activa intermitente para girar a la izquierda y se detiene. ¿Qué haces?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '116')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2269,7 +2269,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Conduces en bajada prolongada; observas olor a freno. ¿Cómo actúas?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '117')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2283,7 +2283,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una señal preventiva de curva peligrosa con velocidad sugerida implica que:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '118')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2297,7 +2297,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Un peatón inicia cruce cuando la luz peatonal cambia a rojo intermitente. ¿Qué haces?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '119')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2311,7 +2311,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'El auto comienza a sobrecalentarse en carretera. ¿Cuál es la respuesta segura?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '120')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2325,7 +2325,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una señal de “Prohibido adelantar” aplicada a tu carril significa:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '121')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2339,7 +2339,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Circulas tras una bicicleta en vía urbana sin ciclovía. ¿Qué debes hacer para adelantarla?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '122')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2353,7 +2353,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Se te pincha una llanta fuera de la zona urbana. ¿Cuál es la secuencia correcta?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '123')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2367,7 +2367,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una señal de “Zona escolar” combinada con límite de velocidad implica que debes:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '124')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2381,7 +2381,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Te aproximas a una rotonda saturada. ¿Qué regla de prioridad aplicas?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '125')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2395,7 +2395,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Tu limpia parabrisas falla durante un aguacero en carretera. ¿Cómo reduces el riesgo?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '126')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2409,7 +2409,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Un panel de mensaje variable advierte “colisión adelante, reduzca velocidad”. Esto significa:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '127')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2423,7 +2423,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Un vehículo de emergencia se aproxima por detrás con sirena y luces. ¿Qué haces?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '128')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2437,7 +2437,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Eres la primera en llegar a un choque leve sin heridos. ¿Cuál es el procedimiento correcto?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '129')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2451,7 +2451,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una señal reglamentaria de “No girar en U” implica que:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '130')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2465,7 +2465,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Un vehículo intenta incorporarse desde un garaje a la vía principal. ¿Quién tiene prioridad?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '131')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2479,7 +2479,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'El pedal del freno se siente esponjoso y aumenta la distancia de frenado. ¿Qué haces?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '132')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2493,7 +2493,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   '¿Qué significa una marca de zig-zag junto al borde en zona de parada de bus?',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '133')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2507,7 +2507,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Te aproximas a un túnel largo: ¿qué preparativos son correctos antes de entrar?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '134')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2521,7 +2521,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Durante una inundación repentina en la vía, el agua cubre media llanta. ¿Qué haces?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '135')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2534,7 +2534,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Tu vehículo empieza a vibrar a alta velocidad en carretera. ¿Qué haces?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '136')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2548,7 +2548,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Una señal triangular con borde rojo y figura de resbalón indica:',
   'Señales',
-  'Intermedio',
+  'Básico',
   (SELECT id FROM lawarticle WHERE artnum = '137')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2562,7 +2562,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'Si al conducir de noche un vehículo te encandila con luces altas, ¿qué debes hacer?',
   'Escenarios',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '138')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
@@ -2576,7 +2576,7 @@ INSERT INTO opt (qid, txt, correct) VALUES
 INSERT INTO quest (txt, cat, lvl, lawid) VALUES (
   'El acelerador se queda trabado mientras conduces. ¿Cuál es la acción correcta?',
   'Simulaciones',
-  'Intermedio',
+  'Avanzado',
   (SELECT id FROM lawarticle WHERE artnum = '139')
 );
 INSERT INTO opt (qid, txt, correct) VALUES
