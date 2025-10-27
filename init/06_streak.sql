@@ -1,6 +1,5 @@
-
 -- Tabla principal de rachas de usuario
-CREATE TABLE user_streak (
+CREATE TABLE IF NOT EXISTS user_streak (
   streak_id SERIAL PRIMARY KEY,
   user_id INT NOT NULL UNIQUE,
   current_streak INT DEFAULT 0,
@@ -10,7 +9,7 @@ CREATE TABLE user_streak (
 );
 
 -- Índice para consultas rápidas
-CREATE INDEX idx_user_streak_current ON user_streak(current_streak DESC);
+CREATE INDEX IF NOT EXISTS idx_user_streak_current ON user_streak(current_streak DESC);
 
 -- Función simplificada para actualizar racha al completar lección
 CREATE OR REPLACE FUNCTION update_streak_on_lesson(p_user_id INT)
@@ -75,12 +74,16 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- Trigger para crear registro de racha cuando se crea un usuario
+-- DROP DEL TRIGGER ANTERIOR SI EXISTE
+DROP TRIGGER IF EXISTS trg_create_user_streak ON app_user;
+DROP FUNCTION IF EXISTS create_user_streak();
+
+-- Trigger CORREGIDO para crear registro de racha cuando se crea un usuario
 CREATE OR REPLACE FUNCTION create_user_streak()
 RETURNS TRIGGER AS $$
 BEGIN
-    INSERT INTO user_streak(user_id, current_streak, longest_streak)
-    VALUES (NEW.user_id, 0, 0);
+    INSERT INTO user_streak(user_id, current_streak, longest_streak, last_activity_date)
+    VALUES (NEW.user_id, 0, 0, CURRENT_DATE);
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
