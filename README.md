@@ -1,13 +1,12 @@
 # EduVial Database 
 
-> **Archivos "mantén los nombres tal cual" :**
-> - `01_script.sql`
-> - `02_data.sql`
-> - `03_laws.sql`
-> - `04_cleanup.sql` *(se queda)*
-> - `05_insert_preguntas_total.sql`
-> - `Filtracion.sql` *(consultas útiles)*
-> - `full_backup.sql`
+> **Archivos de inicialización SQL:**
+> - `01_script.sql` - Esquema de la base de datos
+> - `02_data.sql` - Datos base iniciales
+> - `03_laws.sql` - Leyes y artículos
+> - `04_preguntas.sql` - Base de preguntas
+> - `05_insert_preguntas_total.sql` - Preguntas y respuestas completas
+> - `06_streak.sql` - Sistema de racha y progreso
 
 ---
 
@@ -43,13 +42,17 @@ Comandos útiles dentro de `psql`:
    - Módulo exámenes/preguntas: `question` (con `category`), `answer_option` (índice: 1 correcta), `exam`, `exam_question`
    - Intentos/respuestas: `exam_attempt`, `user_answer`
    - Lecciones/progreso/gamificación y leyes
-2. `02_data.sql` — datos base mínimos .
-3. `03_laws.sql` — carga artículos de ley y categorías.
-4. `04_cleanup.sql` — **No tocar/ Ignorar**. Solo borra legacy (`quest`, `opt`, `ans`, `exam_result`, `exam_progress`). Si esas tablas no existen, puedes saltarlo.
+2. `02_data.sql` — datos base mínimos iniciales
+3. `03_laws.sql` — carga artículos de ley y categorías
+4. `04_preguntas.sql` — carga el banco de preguntas base
 5. `05_insert_preguntas_total.sql` — operativo para el front/back:
    - Inserta **answer_option** (A/B/C/D; **una** correcta por pregunta)
    - Llena **exam_question** (asigna preguntas a exámenes)
    - Crea la **vista** `v_questions_front` (mapea `Señales → 'peatones'` y genera `lvl` numérico)
+6. `06_streak.sql` — configura el sistema de rachas:
+   - Tablas para seguimiento de progreso diario
+   - Cálculo de rachas consecutivas
+   - Sistema de recompensas por racha
 
 
 **Ejemplo de ejecución manual desde PowerShell** (ajusta la ruta si tus `.sql` están en otra carpeta del contenedor):
@@ -57,8 +60,9 @@ Comandos útiles dentro de `psql`:
 docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/01_script.sql
 docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/02_data.sql
 docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/03_laws.sql
-docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/04_cleanup.sql   # opcional
+docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/04_preguntas.sql
 docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/05_insert_preguntas_total.sql
+docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/06_streak.sql
 ```
 
 ---
@@ -187,9 +191,9 @@ type .\full_backup.sql | docker exec -i eduvial_db psql -U eduvial_user -d eduvi
 
 ## FAQ / Problemas comunes
 
-**“relation 'USER' does not exist”** → usar comillas: `SELECT * FROM "USER";`  
+**"relation 'USER' does not exist"** → usar comillas: `SELECT * FROM "USER";`  
 **El front no ve preguntas** → verificar `answer_option`, `exam_question` y `v_questions_front`.  
-**04_cleanup.sql** no se “corre” solo → es **opcional** y, si el contenedor ya estaba inicializado, **ejecútalo manualmente** con `psql -f`.
+**Racha no se actualiza** → verificar la ejecución correcta de `06_streak.sql` y las tablas de progreso.
 
 ---
 
