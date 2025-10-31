@@ -37,3 +37,10 @@ COMMIT;
 --    SELECT da.* FROM default_avatar da
 --    JOIN user_avatar ua ON da.avatar_id = ua.avatar_id
 --    WHERE ua.user_id = ? AND ua.is_active = TRUE;
+
+-- Insertar avatares predeterminados
+BEGIN;
+INSERT INTO default_avatar (name, filename, url) VALUES ('photo1', 'photo1.jpeg', 'https://dev.eduvial.space/avatars/photo1.jpeg');
+INSERT INTO default_avatar (name, filename, url) VALUES ('photo2', 'photo2.jpeg', 'https://dev.eduvial.space/avatars/photo2.jpeg');
+INSERT INTO default_avatar (name, filename, url) VALUES ('photo3', 'photo3.jpeg', 'https://dev.eduvial.space/avatars/photo3.jpeg');
+COMMIT;
