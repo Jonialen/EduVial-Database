@@ -1,6 +1,7 @@
--- 07_default_avatars.sql 
+-- 07_default_avatars.sql
 BEGIN;
 
+-- 1) Tabla de avatares predeterminados
 CREATE TABLE IF NOT EXISTS default_avatar (
     avatar_id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
@@ -9,17 +10,23 @@ CREATE TABLE IF NOT EXISTS default_avatar (
     created_at TIMESTAMP DEFAULT NOW()
 );
 
+-- 2) Tabla intermedia: conecta usuarios con avatares
 CREATE TABLE IF NOT EXISTS user_avatar (
     user_avatar_id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL REFERENCES app_user(user_id) ON DELETE CASCADE,  -- 👈 CAMBIO AQUÍ
+    user_id INT NOT NULL REFERENCES app_user(user_id) ON DELETE CASCADE,
     avatar_id INT NOT NULL REFERENCES default_avatar(avatar_id) ON DELETE CASCADE,
     is_active BOOLEAN DEFAULT TRUE,
-    assigned_at TIMESTAMP DEFAULT NOW(),
-    UNIQUE(user_id, is_active) WHERE is_active = TRUE
+    assigned_at TIMESTAMP DEFAULT NOW()
 );
 
+-- Índices
 CREATE INDEX IF NOT EXISTS idx_user_avatar_user ON user_avatar(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_avatar_active ON user_avatar(user_id, is_active);
+
+-- Índice único parcial: un usuario solo puede tener UN avatar activo
+CREATE UNIQUE INDEX IF NOT EXISTS idx_user_avatar_unique_active 
+ON user_avatar(user_id) 
+WHERE is_active = TRUE;
 
 COMMIT;
 
