@@ -1,12 +1,13 @@
 # EduVial Database 
 
-> **Archivos de inicialización SQL:**
+> **Archivos de inicialización SQL (orden de ejecución):**
 > - `01_script.sql` - Esquema de la base de datos
 > - `02_data.sql` - Datos base iniciales
 > - `03_laws.sql` - Leyes y artículos
 > - `04_preguntas.sql` - Base de preguntas
 > - `05_insert_preguntas_total.sql` - Preguntas y respuestas completas
 > - `06_streak.sql` - Sistema de racha y progreso
+> - `07_default_avatars.sql` - Avatares predeterminados para perfil
 
 ---
 
@@ -204,4 +205,61 @@ type .\full_backup.sql | docker exec -i eduvial_db psql -U eduvial_user -d eduvi
   - Prisma: `npx prisma db pull`
   - Sequelize Auto: `npx sequelize-auto ...`
   - TypeORM Generator: `npx typeorm-model-generator ...`
+
+## Avatares predeterminados (perfil)
+
+Si quieres ofrecer avatares predeterminados para que los usuarios elijan en la app, hay dos piezas a coordinar: 1) los metadatos en la base de datos (qué avatares existen), y 2) los ficheros de imagen (servidos por el backend o un CDN).
+
+Estrategias comunes (elige una):
+- Guardar la URL final en la tabla `"USER"` en una columna `avatar_url` (simple, bueno para CDN).
+- Guardar una referencia a una tabla `default_avatar` (más estructurado): la tabla contiene metadata (filename, url, name) y `"USER"` almacena `default_avatar_id`.
+
+SQL de ejemplo (ya se incluyó en `init/07_default_avatars.sql`):
+
+```sql
+-- crea tabla de avatares y añade columnas a "USER"
+CREATE TABLE IF NOT EXISTS default_avatar (
+  avatar_id SERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  filename TEXT NOT NULL,
+  url TEXT NOT NULL
+);
+
+ALTER TABLE "USER" ADD COLUMN IF NOT EXISTS avatar_url TEXT;
+ALTER TABLE "USER" ADD COLUMN IF NOT EXISTS default_avatar_id INT REFERENCES default_avatar(avatar_id);
+
+-- semillas de ejemplo (URLs relativas que el backend debe servir)
+INSERT INTO default_avatar (name, filename, url) VALUES
+  ('Avatar 1', 'avatar1.png', '/static/avatars/avatar1.png'),
+  ('Avatar 2', 'avatar2.png', '/static/avatars/avatar2.png');
+```
+
+Cómo servir las imágenes:
+- Opción A (recomendado para proyectos pequeños): añade una carpeta en el backend p.ej. `backend/static/avatars/` y copia allí `avatar1.png`, `avatar2.png`, ... El backend debe servir `/static/avatars/*`.
+- Opción B (más escalable): sube las imágenes a un CDN o storage (S3) y usa URLs absolutas en `default_avatar.url`.
+
+Docker / desarrollo local:
+- Si el backend corre en Docker, monta el directorio de assets con un volumen. Ejemplo (en el servicio `backend` del `docker-compose.yml`):
+
+```yaml
+volumes:
+  - ./assets/avatars:/app/static/avatars:ro
+```
+
+- Luego pon las imágenes en `./assets/avatars/` en tu repo y el backend las servirá desde `/static/avatars/`.
+
+Ejecutar el script SQL manualmente dentro del contenedor de la BD:
+
+```powershell
+docker exec -i eduvial_db psql -U eduvial_user -d eduvial_db -f /docker-entrypoint-initdb.d/07_default_avatars.sql
+```
+
+Recomendaciones para el frontend/back-end:
+- El backend puede exponer `avatar_url` en la API de usuario; si usas `default_avatar_id`, el backend hace JOIN con `default_avatar` para construir la URL.
+- Al crear un usuario nuevo, el backend puede asignar por defecto `default_avatar_id = 1` o una `avatar_url` por defecto.
+- Permite al usuario sobrescribir `avatar_url` con una subida propia (guardar la nueva URL en la columna `avatar_url` y preferirla sobre la referencia `default_avatar_id`).
+
+Notas:
+- Este repo contiene la parte SQL/DB (metadatos). Añadir los ficheros de imagen y la ruta de servido es responsabilidad del servicio backend o del CDN.
+- Si quieres, puedo añadir un ejemplo de carpeta `assets/avatars` con imágenes de muestra y un ejemplo mínimo de cómo montar el volumen en un `docker-compose.yml` del backend.
 
