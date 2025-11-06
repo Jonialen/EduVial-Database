@@ -1,4 +1,3 @@
-
 -- Insertar categorías de ley
 INSERT INTO lawcat (name) VALUES 
 ('Normas generales'),
@@ -8,7 +7,7 @@ INSERT INTO lawcat (name) VALUES
 ('Sanciones administrativas');
 
 
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('1', 'Artículo 1', '- De la Ley.
+INSERT INTO lawarticle (artnum, title, descr) VALUES (1, 'Artículo 1', '- De la Ley.
  Para los efectos dispuestos por la presente 
 ley por tránsito deben entenderse todas aquellas actividades 
 relacionadas con la regulación, control, ordenamiento y administración 
@@ -21,7 +20,9 @@ policía, relacionadas con el tránsito en las vías públicas.
 que se encuentre en territorio nacional; sólo se exceptúa lo establecido
  
 Guatemala.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('2', 'Artículo 2', '- Via pública.
+INSERT INTO lawartcat (artid, catid) VALUES (1, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (2, 'Artículo 2', '- Via pública.
  La vía pública se integra por las carreteras,
 caminos, calles y avenidas, calzadas, viaductos y respectivas
 áreas de derecho de vía, aceras, puentes, pasarelas; y los ríos y lagos  
@@ -29,7 +30,9 @@ navegables, mar territorial, demás vías acuáticas, cuyo destino obvio y
 natural sea la circulación de personas y vehículos y que conforme a las  
 normas civiles que rigen la propiedad de los bienes del poder público 
 están destinadas al uso común.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('3', 'Artículo 3', '- Responsabilidad. 
+INSERT INTO lawartcat (artid, catid) VALUES (2, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (3, 'Artículo 3', '- Responsabilidad. 
 Es responsabilidad de los  
 conductores de los vehículos y de todas las personas, sean peatones, 
 nadadores o pasajeros, cumplir con las normas que en materia de 
@@ -41,13 +44,17 @@ afecte el vehículo, será responsabilidad solidaria del propietario del
 mismo y del conductor.
 TITULO II
 De la Autoridad de Tránsito');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('4', 'Artículo 4', '- Competencia.
+INSERT INTO lawartcat (artid, catid) VALUES (3, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (4, 'Artículo 4', '- Competencia.
  Compete al Ministerio de Gobernación, 
 por intermedio del Departamento de Tránsito de la Dirección General 
 de la Policía Nacional el ejercicio de la autoridad de tránsito en la vía 
 pública, de conformidad con esta ley, salvo lo dispuesto en los
 artículos 8 y 9.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('5', 'Artículo 5', '- Facultades.
+INSERT INTO lawartcat (artid, catid) VALUES (4, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (5, 'Artículo 5', '- Facultades.
  Corresponderá al Departamento de 
 Tránsito de la Dirección General de la Policía Nacional del Ministerio
 de Gobernación aplicar la presente ley y para el efecto está facultado 
@@ -100,7 +107,9 @@ k.
 Todas las funciones otorgadas por la ley y las que le asigne el
   
 Ministerio de Gobernación en materia de tránsito.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('6', 'Artículo 6', '- Organización.
+INSERT INTO lawartcat (artid, catid) VALUES (5, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (6, 'Artículo 6', '- Organización.
  El Ministerio de Gobernación mediante 
 acuerdo gubernativo organizará el Departamento de Tránsito, el que 
 será dirigido por un Jefe y un Subjefe nombrados por el titular del
@@ -112,7 +121,9 @@ Policía de Tránsito, como parte integrante de la Policía Nacional, y con
 funciones especializadas de tránsito, a la cual le corresponderá aplicar  
 la presente ley y por lo tanto sus integrantes están facultados para
 dirigir el tránsito y aplicar las sanciones instituidas en esta ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('7', 'Artículo 7', '- Traslado y contratación de funciones.
+INSERT INTO lawartcat (artid, catid) VALUES (6, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (7, 'Artículo 7', '- Traslado y contratación de funciones.
  El Ministerio de 
 Gobernación podrá trasladar o contratar funciones que competen al 
 Departamento de Tránsito con entidades públicas o privadas, mediante 
@@ -126,7 +137,9 @@ Las funciones que se trasladen o contraten conforme la ley están
 sujetas al cumplimiento de las disposiciones legales de tránsito y al
 control del Ministerio de Gobernación y/o municipalidad
 correspondiente, según el caso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('8', 'Artículo 8', '- Del ejercicio de Funciones de tránsito por las 
+INSERT INTO lawartcat (artid, catid) VALUES (7, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (8, 'Artículo 8', '- Del ejercicio de Funciones de tránsito por las 
 municipalidades.
  El Organismo Ejecutivo, mediante acuerdo 
 gubernativo, podrá trasladar la competencia de la administración de
@@ -150,7 +163,9 @@ desempeñar dicha función. Asimismo, se responsabilizará por su
 ejercicio y mantenimiento, dictará los reglamentos y/u ordenanzas
 
 Policía Municipal de Tránsito, si careciere del mismo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('9', 'Artículo 9', '- Ejercicio conjunto.
+INSERT INTO lawartcat (artid, catid) VALUES (8, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (9, 'Artículo 9', '- Ejercicio conjunto.
  Dos o más municipalidades podrán 
 solicitar les sean trasladadas en forma conjunta funciones de la
 administración de tránsito, en sus respectivas circunscripciones
@@ -158,13 +173,17 @@ administración de tránsito, en sus respectivas circunscripciones
 las municipalidades interesadas suscribirán, previamente, un convenio
 de compromiso entre sí y luego solicitarán al Ministerio de
 Gobernación el traslado de funciones.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('10', 'Artículo 10', '- Contratación de servicios. 
+INSERT INTO lawartcat (artid, catid) VALUES (9, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (10, 'Artículo 10', '- Contratación de servicios. 
 Mediante contrato
 aprobado por acuerdo ministerial o por acuerdo municipal, el Ministerio 
 de Gobernación o las municipalidades según el caso, podrán contratar  
 o subcontratar servicios de personas individuales o jurídicas, públicas
 o privadas, para hacerse cargo de la prestación de servicios de policía');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('11', 'Artículo 11', '- Autoridad de Tránsito en carreteras y caminos. 
+INSERT INTO lawartcat (artid, catid) VALUES (10, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (11, 'Artículo 11', '- Autoridad de Tránsito en carreteras y caminos. 
 El 
 Ministro de Gobernación, por intermedio del Departamento de
 
@@ -176,13 +195,17 @@ caminos de herradura y vecinales, cuya administración no haya sido
 trasladada a las municipalidades.
 TITULO III
 Del Tránsito de Personas');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('12', 'Artículo 12', '- Derecho de vía. 
+INSERT INTO lawartcat (artid, catid) VALUES (11, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (12, 'Artículo 12', '- Derecho de vía. 
 Las personas tienen prioridad ante los  
 vehículos para circular en las vías públicas, terrestres y acuáticas,
 siempre que lo hagan en las zonas de seguridad y ejerciten su derecho 
 por el lugar, en la oportunidad, forma y modo que normen los
 reglamentos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('13', 'Artículo 13', '- Límite de la responsabilidad.
+INSERT INTO lawartcat (artid, catid) VALUES (12, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (13, 'Artículo 13', '- Límite de la responsabilidad.
  En el caso que un
 vehículo atropelle a una persona en la vía pública que cuente con
 zonas de seguridad, fuera de éstas, el conductor estará exento de toda 
@@ -190,7 +213,9 @@ responsabilidad, siempre y cuando estuviere conduciendo conforme
 las leyes aplicables.
 TITULO IV
 De los Conductores y de la Licencia de Conducir');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('14', 'Artículo 14', '- Licencia de conducir. 
+INSERT INTO lawartcat (artid, catid) VALUES (13, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (14, 'Artículo 14', '- Licencia de conducir. 
 La licencia de conducir es el 
 documento emitido por el Departamento deTránsito de la Dirección 
 General de la Policía Nacional que autoriza a una persona para
@@ -234,7 +259,9 @@ profesional especializado en la materia.
 Todo lo demás relacionado con la suspensión, cancelación, tipos, 
 medios, materiales y procedimientos relacionados con las licencias de 
 1');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('15', 'Artículo 15', '- De la conducción.
+INSERT INTO lawartcat (artid, catid) VALUES (14, 2);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (15, 'Artículo 15', '- De la conducción.
  Para conducir un vehículo por la 
 vía pública, es necesario que el conductor reúna los requisitos
 siguientes:
@@ -246,7 +273,9 @@ c. Conducir el vehículo en la vía pública por el lugar, en la
 oportunidad, modo, forma y dentro de las velocidades
 establecidas conforme esta ley, sus reglamentos y demás leyes  
 aplicables.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('16', 'Artículo 16', '- Pago de derechos.
+INSERT INTO lawartcat (artid, catid) VALUES (15, 2);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (16, 'Artículo 16', '- Pago de derechos.
  La emisión, renovación,
 suspensión, cancelación y reposición de licencias de conducir está
 _________________________
@@ -259,7 +288,9 @@ sujeta al pago de los derechos correspondientes en el Departamento
  
 integrarán los fondos privativos del Departamento deTránsito de la 
 Policía Nacional.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('17', 'Artículo 17', '- Escuelas de aprendizaje. 
+INSERT INTO lawartcat (artid, catid) VALUES (16, 2);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (17, 'Artículo 17', '- Escuelas de aprendizaje. 
  
 extendidos por las escuelas de aprendizaje de tránsito, debidamente 
 autorizadas por el Ministerio de Gobernación y registradas en el 
@@ -268,7 +299,9 @@ teórica y práctica de quienes soliciten licencia de conducir, según lo
 normen los reglamentos.
 TITULO V
 De los Vehiculos');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('18', 'Artículo 18', '- De los vehículos.
+INSERT INTO lawartcat (artid, catid) VALUES (17, 2);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (18, 'Artículo 18', '- De los vehículos.
  Por vehículo se entiende cualquier
 medio de transporte terrestre o acuático que circule permanente u
 ocasionalmente por la vía pública, sea para el transporte de personas
@@ -287,7 +320,9 @@ d.  Los vehículos usados por personas discapacitadas deberán
            bajo estrictas condiciones de seguridad.
  
 autoridades de tránsito.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('19', 'Artículo 19', '- Tarjeta y placas de circulación. 
+INSERT INTO lawartcat (artid, catid) VALUES (18, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (19, 'Artículo 19', '- Tarjeta y placas de circulación. 
 Todo vehículo que 
  
 circulación emitidas por el Ministerio de Finanzas Públicas, pero el 
@@ -295,7 +330,9 @@ Ministerio de Gobernación está facultado para disponer los diseños,
  
 resguardo del interés general y la seguridad nacional, para tal efecto, 
 el Ministerio de Finanzas Públicas acatará tales disposiciones.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('20', 'Artículo 20', '- Vehículos destinados al servicio público.
+INSERT INTO lawartcat (artid, catid) VALUES (19, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (20, 'Artículo 20', '- Vehículos destinados al servicio público.
  Bajo pena 
 de cancelar la autorización, permiso o concesión correspondiente o 
 simplemente de prohibir el ejercicio de la actividad, las personas
@@ -311,7 +348,9 @@ b.  Domicilio y residencia del propietario o de su representante legal;
 c.  Nombres y apellidos completos, residencia, número de licencia 
     de conducir y de la cédula de vecindad de los conductores de 
       dichos vehículos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('21', 'Artículo 21', '- Circulación de vehículos de emergencia.
+INSERT INTO lawartcat (artid, catid) VALUES (20, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (21, 'Artículo 21', '- Circulación de vehículos de emergencia.
  Los
 vehículos de emergencia, como ambulancias, vehículos de bomberos
 y vehículos de la policía, debidamente autorizados, están sujetos  a las  
@@ -319,7 +358,9 @@ disposiciones de esta ley y sus reglamentos; y tendrán derecho
 preferencial  de  vía  únicamente  cuando  se encuentren en el 
 desempeño de labores de emergencia, lo cual deberán indicar con
 señales visuales y auditivas.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('22', 'Artículo 22', '- Registro de vehículos.
+INSERT INTO lawartcat (artid, catid) VALUES (21, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (22, 'Artículo 22', '- Registro de vehículos.
  El Departamento de Tránsito 
 de la Dirección General de la Policía  organizará, llevará y actualizará
 un registro de vehículos que comprenda todos los que circulen en el 
@@ -329,7 +370,9 @@ Públicas y en los reportes de Aduanas de los vehículos de tránsito. El
 registros de vehículos de Ministerio de Gobernación con el registro
 TITULO VI
 Via Pública');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('23', 'Artículo 23', '- Vía pública.
+INSERT INTO lawartcat (artid, catid) VALUES (22, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (23, 'Artículo 23', '- Vía pública.
  La vía pública se utilizará única y
 exclusivamente para el tránsito y circulación de personas y vehículos, 
 cuyos derechos se ejercerán conforme las disposiciones de esta ley y  
@@ -354,7 +397,9 @@ d.  Colocar en los signos de tránsito anuncios o propaganda de
  
 cualquier índole; salvo autorización expresa de la autoridad 
        correspondiente.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('24', 'Artículo 24', '- Retiro de cosas, vehículos, materiales,
+INSERT INTO lawartcat (artid, catid) VALUES (23, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (24, 'Artículo 24', '- Retiro de cosas, vehículos, materiales,
  
 propaganda
 u otros.
@@ -363,7 +408,9 @@ pública cualquier cosa, vehículo, material, propaganda u otro que
 obstaculice la circulación de personas y vehículos y para trasladarla y  
 depositarla, a costa del propietario, en los predios habilitados para tal 
 efecto.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('25', 'Artículo 25', '- Trabajo en la vía pública.
+INSERT INTO lawartcat (artid, catid) VALUES (24, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (25, 'Artículo 25', '- Trabajo en la vía pública.
  Cuando entidades
 públicas o privadas requieran realizar trabajos propios en la vía
 pública, deberán obtener permiso ante la autoridad respectiva, pero en 
@@ -377,11 +424,15 @@ dependencia, autoridad máxima o representante legal de quien
 estuviere realizando los trabajos será directa y personalmente
 responsable de las lesiones y los daños que estas obras o trabajos  
 ocasionen a personas y vehículos que circulen por la vía pública.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('26', 'Artículo 26', '- Estacionamiento. 
+INSERT INTO lawartcat (artid, catid) VALUES (25, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (26, 'Artículo 26', '- Estacionamiento. 
 El estacionamiento de vehículos en
 la vía pública se hará conforme las disposiciones de la autoridad de
 tránsito correspondiente.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('27', 'Artículo 27', '- Parqueos.
+INSERT INTO lawartcat (artid, catid) VALUES (26, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (27, 'Artículo 27', '- Parqueos.
  Se autoriza construir y habilitar parqueos 
 subterráneos o por elevación en calles, parques u otros bienes
 nacionales o municipales de uso común.
@@ -390,13 +441,17 @@ General de la Propiedad, bajo el juramento del funcionario respectivo, se
 inscribirán en dicho Registro mediante escritura pública y en base a 
 plano autorizado por ingeniero colegiado, a favor de la Nación o el 
 Municipio, según el caso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('28', 'Artículo 28', '- Señalización y semaforización.
+INSERT INTO lawartcat (artid, catid) VALUES (27, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (28, 'Artículo 28', '- Señalización y semaforización.
  Las señales, signos   y
 semaforización   para   normar   el   tránsito,   se  establecerán   respetando    los
 tratados y convenciones internacionales.
 TITULO VII
 Del Seguro');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('29', 'Artículo 29', '- Del seguro. 
+INSERT INTO lawartcat (artid, catid) VALUES (28, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (29, 'Artículo 29', '- Del seguro. 
 Todo propietario de un vehículo
 autorizado para circular por la vía pública, deberá contratar, como
 
@@ -408,7 +463,9 @@ cualquier otro seguro para los conductores o los vehículos; así como
 para el transporte urbano y extraurbano.
 TITULO VIII
 Infracciones y Sanciones');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('30', 'Artículo 30', '- Infracciones de tránsito.
+INSERT INTO lawartcat (artid, catid) VALUES (29, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (30, 'Artículo 30', '- Infracciones de tránsito.
  Constituyen infracciones en
 materia de tránsito la inobservancia, incumplimiento y violación de las  
 normas establecidas en esta ley y sus reglamentos, salvo el caso de 
@@ -416,7 +473,9 @@ normas establecidas en esta ley y sus reglamentos, salvo el caso de
 sancionará con amonestación o multa, conforme lo norma esta ley; y
 se impondrá sanciones tantas veces como se cometan infracciones,
 aún cuando se trate de la misma persona o vehículo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('31', 'Artículo 31', '- Sanciones.
+INSERT INTO lawartcat (artid, catid) VALUES (30, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (31, 'Artículo 31', '- Sanciones.
  El Ministerio de Gobernación, por
 intermedio del Departamento de Tránsito o la municipalidad por
 intermedio del Juzgado de Asuntos Municipales, según el caso, podrá
@@ -436,7 +495,9 @@ Si se trata de un vehículo dejado en la vía pública, cuyo conductor no
 se encuentra presente, la autoridad dejará la papeleta de aviso
 mencionada en el párrafo anterior en el vehículo en un lugar visible y  
 seguro.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('32', 'Artículo 32', '- Amonestación y multas.
+INSERT INTO lawartcat (artid, catid) VALUES (31, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (32, 'Artículo 32', '- Amonestación y multas.
  La autoridad de tránsito
 impondrá, según lo norme el reglamento, amonestación, y/o multas a
 las personas, conductores y propietarios  de vehículos que no
@@ -455,7 +516,9 @@ infracción, multiplicado hasta por mil, conforme lo norme el reglamento.
 Corresponde al Departamento de Tránsito o a la municipalidad,
 según el caso, imponer multas y recaudar los recursos por este
 concepto.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('33', 'Artículo 33', '- Retención de documentos.
+INSERT INTO lawartcat (artid, catid) VALUES (32, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (33, 'Artículo 33', '- Retención de documentos.
  Se consideran
 infracciones administrativas y corresponderá al Departamento de
 Tránsito o a la municipalidad respectiva, a través del Juzgado de
@@ -469,14 +532,18 @@ b.       Al conductor que hubiere acumulado tres multas sin haber hecho
 La licencia de conducir será devuelta al infractor una vez haya
 cancelado la multa impuesta.
 ﬁ');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('34', 'Artículo 34', '- Cepos.
+INSERT INTO lawartcat (artid, catid) VALUES (33, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (34, 'Artículo 34', '- Cepos.
  La autoridad de tránsito podrá emplear cepos  
 o mecanismos similares para inmovilizar los vehículos dejados en la 
 vía pública en lugares no autorizados para los mismos o bien para
 inmovilizar vehículos cuyos conductores hayan cometido otras
 infracciones. Los cepos se liberarán hasta que se haya cumplido con el 
 2');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('35', 'Artículo 35', '- Incautación de vehículos y cosas. 
+INSERT INTO lawartcat (artid, catid) VALUES (34, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (35, 'Artículo 35', '- Incautación de vehículos y cosas. 
 El Departamento 
 deTránsito o la municipalidad respectiva, podrá incautar y retirar los
 vehículos, chatarra y demás cosas colocadas en la vía pública en
@@ -498,14 +565,18 @@ y seis horas, esté o no bien estacionado, en funcionamiento o con
 desperfectos mecánicos, haya sido o no objeto de un accidente de
 tránsito,  o utilizado para hechos ilícitos, obstruyendo o no el tránsito, se 
 considerará abandonado y se procederá conforme el párrafo anterior.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('36', 'Artículo 36', '- Depósitos nacionales y municipales.
+INSERT INTO lawartcat (artid, catid) VALUES (35, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (36, 'Artículo 36', '- Depósitos nacionales y municipales.
  Se crean los  
 depósitos de gobernación y/o municipales, como dependencias
 administrativas de Departamento deTránsito de la Dirección General 
 de la Policía Nacional o del Juzgado de Asuntos Municipales, según el 
 caso. Como personal auxiliar se integrarán con un administrador y el 
 personal administrativo que fuera necesario.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('37', 'Artículo 37', '- Disposiciones de bienes incautados o de vehículos
+INSERT INTO lawartcat (artid, catid) VALUES (36, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (37, 'Artículo 37', '- Disposiciones de bienes incautados o de vehículos
 abandonados.
  Los vehículos, chatarra o cosas incautadas o
 vehículos dejados en la vía pública que hayan causado abandono 
@@ -519,7 +590,9 @@ fueren reclamados por sus propietarios o legítimos tenedores.
 Los fondos recaudados integrarán los recursos privativos del
 Ministerio de Gobernación o de la municipalidad, según el caso,
 quienes dispondrán de los mismos conforme esta ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('38', 'Artículo 38', '- Devolución de vehículos.
+INSERT INTO lawartcat (artid, catid) VALUES (37, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (38, 'Artículo 38', '- Devolución de vehículos.
  Para reclamar un vehículo,
 chatarra o cosa, dentro de los seis meses siguientes al primer
 aviso de su incautación, el propietario o legítimo tenedor deberá
@@ -538,7 +611,9 @@ pasarán, sin más trámite, a propiedad de la autoridad que los hubiera
 incautado, quien dispondrá de ellos en pública subasta.
 
 17');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('39', 'Artículo 39', '- De la pública subasta.
+INSERT INTO lawartcat (artid, catid) VALUES (38, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (39, 'Artículo 39', '- De la pública subasta.
  Los vehículos, chatarra o
 cosas incautados que no se retiren de los depósitos habilitados para
 tal efecto, dentro del plazo señalado por esta ley y previa autorización 
@@ -550,6 +625,8 @@ dentro de un plazo no menor de quince días ni mayor de treinta días, y
 
 el país y además, lo anunciará en los lugares visibles y públicos de sus  
 En el lugar, día y hora señalados la autoridad de tránsito, por medio
+
+ 
 
  
 
@@ -572,7 +649,9 @@ cual deberá cubrir, como mínimo, los gastos, multas, recargos y demás
 que le pudieran corresponder y, descontados éstos, el saldo
 ingresará a los fondo privativos de la autoridad de tránsito que los
 hubiese subastado.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('40', 'Artículo 40', '- Suspensión de la licencia de conducir. 
+INSERT INTO lawartcat (artid, catid) VALUES (39, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (40, 'Artículo 40', '- Suspensión de la licencia de conducir. 
 El
 Departamento de Tránsito o la municipalidad respectiva, a través del 
 Juzgado de Asuntos Municipales, podrá suspender la vigencia de la 
@@ -584,7 +663,9 @@ calendario, contado a partir de la fecha de la primera infracción. La
 meses.
 
 18');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('41', 'Artículo 41', '-Cancelación de la licencia.
+INSERT INTO lawartcat (artid, catid) VALUES (40, 2);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (41, 'Artículo 41', '-Cancelación de la licencia.
  El Departamento de
 Tránsito podrá cancelar la licencia de conducir, cuando a su titular se
 la haya suspendido administrativamente dos años calendario
@@ -597,13 +678,17 @@ Transcurrido el plazo administrativo o judicial de la cancelación de
 una licencia, el afectado podrá solicitar nueva licencia, deberá cumplir 
 con los requisitos de toda primera licencia y contratará un seguro
 especial, conforme lo normen los reglamentos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('42', 'Artículo 42', '-Costo de servicios.
+INSERT INTO lawartcat (artid, catid) VALUES (41, 2);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (42, 'Artículo 42', '-Costo de servicios.
  Independientemente del pago de
 las multas que corresponda aplicar a los infractores de las
 disposiciones de tránsito, éstos estarán obligados a pagar los gastos  
 correspondientes a los servicios de cepos, grúas, depósitos y otros
 necesarios para la aplicación de la ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('43', 'Artículo 43', '- Faltas y delitos.
+INSERT INTO lawartcat (artid, catid) VALUES (42, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (43, 'Artículo 43', '- Faltas y delitos.
  La autoridad de tránsito retendrá la 
 licencia de conducir en los casos siguientes:
 a.  Cuando el conductor se encuentre ebrio o bajo los efectos de
@@ -629,7 +714,9 @@ más cercana al conductor, al vehículo y a la licencia para que ésta lo
 traslade a conocimiento del organismo jurisdiccional correspondiente.
 TITULO IX
 Régimen Financiero');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('44', 'Artículo 44', '- De los ingresos.
+INSERT INTO lawartcat (artid, catid) VALUES (43, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (44, 'Artículo 44', '- De los ingresos.
  Los ingresos provenientes de la
 aplicación de la presente ley tendrán el carácter de fondos privativos
 de la Dirección General de la Policía Nacional; Dirección que por sí o
@@ -640,7 +727,9 @@ Quedan a salvo los fondos recaudados por los tribunales con
 19
 ocasión del conocimiento de asuntos de tránsito, los cuales integran el 
 presupuesto del Organismo Judicial.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('45', 'Artículo 45', '- Recaudación y disposición de ingresos por las
+INSERT INTO lawartcat (artid, catid) VALUES (44, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (45, 'Artículo 45', '- Recaudación y disposición de ingresos por las
 municipalidades.
  Cuando el Ministerio de Gobernación traslade la
 administración del tránsito a una municipalidad, los ingresos
@@ -652,7 +741,9 @@ mantenimiento y mejoramiento de las actividades de tránsito,
 incluyendo obras de infraestructura vial.
 TITULO X
 Educación Vial');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('46', 'Artículo 46', '- Educación vial. 
+INSERT INTO lawartcat (artid, catid) VALUES (45, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (46, 'Artículo 46', '- Educación vial. 
 El Ministerio de Gobernación por
 intermedio del Departamento de Tránsito de la Dirección General de la 
 Policía Nacional implementará y coordinará junto con otras entidades  
@@ -663,7 +754,9 @@ educativos formales o informales; así como a los de capacitación
 superior.
 TITULO XI
 Disposiciones Finales');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('47', 'Artículo 47', '- Medios de impugnación administrativos. 
+INSERT INTO lawartcat (artid, catid) VALUES (46, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (47, 'Artículo 47', '- Medios de impugnación administrativos. 
 En materia
 de tránsito, toda persona que se considere afectada por una
 disposición administrativa, podrá interponer recurso de revocatoria
@@ -673,19 +766,25 @@ treinta días. En caso de silencio administrativo, se tendrá por resuelto
 desfavorablemente.
 En contra de la resolución que emitan estas autoridades, cabrán los  
 recursos que establece la ley de lo Contencioso Administrativo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('48', 'Artículo 48', '- Reglamentación. 
+INSERT INTO lawartcat (artid, catid) VALUES (47, 5);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (48, 'Artículo 48', '- Reglamentación. 
 Corresponde al Presidente de la
 República, con el referendo del Ministro de Gobernación, reglamentar
 la presente ley, dentro de los sesenta días a partir de la
 fecha de su publicación.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('49', 'Artículo 49', '- Derogatoria.
+INSERT INTO lawartcat (artid, catid) VALUES (48, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (49, 'Artículo 49', '- Derogatoria.
  Se deroga el Decreto Número 66-72 del 
 
  
 
 20
 disposiciones que se opongan a la presente ley.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('50', 'Artículo 50', '- Vigencia.
+INSERT INTO lawartcat (artid, catid) VALUES (49, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (50, 'Artículo 50', '- Vigencia.
  El presente decreto entrará en vigencia a los  
 Pase al Organismo Ejecutivo, para su Sanción, Promulgación y
 Publicación.
@@ -726,8 +825,9 @@ TITULO I
 Disposiciones Generales
 CAPITULO I
 Autoridad De Transito');
+INSERT INTO lawartcat (artid, catid) VALUES (50, 1);
 
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('51', 'Artículo 51', '- 
+INSERT INTO lawarticle (artnum, title, descr) VALUES (51, 'Artículo 51', '- 
 Cargas indivisibles mayores que el vehículo.
  Las 
 cargas indivisibles tales como muebles, tubos, vigas, postes y otros
@@ -755,7 +855,9 @@ En estos casos, se deberán adoptar todas las precauciones conve
 -
 nientes para evitar daños o peligros a los demás usuarios de la vía 
 pública.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('52', 'Artículo 52', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (51, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (52, 'Artículo 52', '- 
 Señalización de la carga que sobresale.
  La carga 
 que sobresale, tanto a lo ancho como a lo largo, deberá ir señalizada 
@@ -765,7 +867,9 @@ Durante el día se señalizará cada parte sobresaliente con una
 apropiadas para su visibilidad.
 CAPITULO IV
 Conducción de animales en la vía pública');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('53', 'Artículo 53', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (52, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (53, 'Artículo 53', '- 
 Normas Generales.
  En la vía pública solo se permitirá 
 el paso de animales de tiro, carga o silla, cabezas de ganado aisladas, 
@@ -775,7 +879,9 @@ alguna persona.
 Dicho paso se realizará por la vía alternativa que tenga menor  
 intensidad de circulación de vehículos y de acuerdo con lo que se
 establece en el presente capítulo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('54', 'Artículo 54', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (53, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (54, 'Artículo 54', '- 
 Normas Especiales.
 
 el artículo anterior deben ser guidados, por una persona capaz de
@@ -823,7 +929,9 @@ En estrechamientos, intersecciones y demás casos en que las
 trayectorias se corten, cederán el paso a todo vehículo, salvo
  
 que por disposición reglamentaria gocen de prioridad.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('55', 'Artículo 55', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (54, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (55, 'Artículo 55', '- 
 Prohibición de circular en ciertos tipos de vías. 
 Se 
 prohíbe el paso de animales en todas las autopistas y vías rápidas del 
@@ -831,13 +939,17 @@ territorio nacional, así como en las arterias principales, a nivel urbano.
 Dicha prohibición incluye los vehículos de tracción animal. 
 CAPITULO V
 Peatones');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('56', 'Artículo 56', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (55, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (56, 'Artículo 56', '- 
 Normas Generales.
  Los peatones deberán cumplir las  
 disposiciones del pesente Reglamento, las indicaciones de los
 agentes y atender los dispositivos y señales para el control de tránsito 
 que les corresponda.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('57', 'Artículo 57', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (56, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (57, 'Artículo 57', '- 
 Preeminencia.
  El peatón tiene derecho de vía ante 
 cualquier medio de transporte. Todo conductor de un vehículo deberá 
@@ -849,7 +961,9 @@ En áreas, zonas, franjas, pasos, pasarelas u otros espacios para
 peatones, estos están obligados a utilizarlos, y en tal caso, la
 responsabilidad de los conductores de vehículos, según la ley, se
 limita a que conduzcan de acuerdo a las normas y reglas de la materia.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('58', 'Artículo 58', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (57, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (58, 'Artículo 58', '- 
 Circulación por espacios destinados al peatón. 
 Es  
 obligatorio para los peatones circular en espacios especialmente
@@ -916,7 +1030,9 @@ solo podrán circular en los espacios peatonales si lo hacen a
 velocidad de paso.
  
 de circulación controlada.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('59', 'Artículo 59', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (58, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (59, 'Artículo 59', '- 
 Circulacion por la calzada o el arcén. 
 En las vías  
 que no tuvieran nigun espacio destinado especialmente a los peatones,
@@ -930,7 +1046,9 @@ entorpecer innecesariamente la circulación vehicular. Salvo el caso que
 formase un cortejo, deberán marchar uno tras otro si la seguridad de la 
 circulación así lo requiere; especialmente en casos de poca visibilidad 
 o de gran densidad de circulación de vehículos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('60', 'Artículo 60', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (59, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (60, 'Artículo 60', '- 
 Circulación de peatones por la derecha de la
 calzada.
  Los peatones podrán circular por el lado dercho de la
@@ -967,7 +1085,9 @@ Todas estas personas están obligadas de obedecer las señales
 correspondientes a los vehículos que circulan sobre la calzada.
 
 50');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('61', 'Artículo 61', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (60, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (61, 'Artículo 61', '- 
 Pasos peatonales. 
  En un paso peatonal (paso de 
  
@@ -982,7 +1102,9 @@ los vehículos de esa vía, los peatones no gozarán de prioridad. Sin
 embargo , los conductores de los vehículos deberán ceder siempre el 
 paso a los peatones que estén cruzando la vía perpendicular a la de 
 los vehículos en cuestión; es decir, cuando estos viren a la izquierda o');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('62', 'Artículo 62', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (61, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (62, 'Artículo 62', '- 
 Uso del espacio peatonal.
  Las aceras, refugios, 
 paseos, vías peatonales, zonas peatonales, y pasarelas son espacios  
@@ -1022,7 +1144,9 @@ Para efectos de carga y descarga y de acceso vecinal, la autoridad
 correspondiente podrá permitir el ingreso de vehículos a las vías y  
 zonas peatonales, restringiendo el tipo de vehículo, su peso,
 dimensiones, horarios y otros requisitos que considere convenientes.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('63', 'Artículo 63', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (62, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (63, 'Artículo 63', '- 
 Zonas escolares.
  Los escolares gozarán de prioridad
 de paso en las zonas y horarios establecidos para el efecto, 
@@ -1077,7 +1201,9 @@ zona escolar; y,
 Obedecer todas las señales en la zona, máxime si se trata de
  
 indicaciones de agentes de tránsito o patrulleros escolares.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('64', 'Artículo 64', '- Prohibición de circular a pie en ciertas vías.
+INSERT INTO lawartcat (artid, catid) VALUES (63, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (64, 'Artículo 64', '- Prohibición de circular a pie en ciertas vías.
   Queda 
 prohibida la circulación de peatones sobre la calzada o los arcenes de 
 autopistas y vías rapidas, tanto en el ámbito urbano como extraurba
@@ -1093,7 +1219,9 @@ desnivel que no tuvieran acera o esta estuviera únicamente diseñada
 52
 CAPITULO VI
 Ciclistas');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('65', 'Artículo 65', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (64, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (65, 'Artículo 65', '- 
 Normas Generales.
  Los ciclistas deberán cumplir  las
 disposiciones del presente Reglamento, las indicaciones de los  
@@ -1101,7 +1229,9 @@ agentes y atender los dispositivos y señales para el control de tránsito
 que les corresponda.
 La autoridad de tránsito podrá dictar normas adicionales para
 fortalecer la práctica ciclista.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('66', 'Artículo 66', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (65, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (66, 'Artículo 66', '- 
 Prioridad de los ciclistas.
  Los ciclistas tienen derecho 
 de vía ante cualquier otro medio de transporte, excepto los derechos 
@@ -1112,7 +1242,9 @@ otras vías para ciclistas, estos están obligados a utilizarlas, limitando la
 responsabilidad de los conductores de vehículos automotores a que 
 conduzcan de acuerdo con las normas y reglas contenidas en este
 Reglamento.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('67', 'Artículo 67', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (66, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (67, 'Artículo 67', '- 
 Lugares de circulación de las bicicletas. 
 Los  
 ciclistas deberán conducir en los siguientes lugares:
@@ -1124,7 +1256,7 @@ los ciclistas, éstos circularán en el tránsito mixto al borde derecho
  
 de la calzada o sobre el arcén, si este existiera y fuera
  
-transitable. En las intersecciones deberán ordenarse en el carril 
+transitabile. En las intersecciones deberán ordenarse en el carril 
  
 correspondiente al movimiento que realizarán, haciendo las  
  
@@ -1189,14 +1321,18 @@ ciclovias tienen la prioridad sobre las vías vehiculares y los
 vehículos automotores solo la podrán traspasar en los lugares
 CAPITULO VII
 Transporte Colectivo');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('68', 'Artículo 68', '- Normas Generales.
+INSERT INTO lawartcat (artid, catid) VALUES (67, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (68, 'Artículo 68', '- Normas Generales.
  El conductor de un vehículo de 
 transporte colectivo, urbano y extraurbano, deberá conducir y efectuar  
 las paradas y arranques sin sacudidas ni movimientos bruscos. Se
 abstendrá de realizar acto alguno que le distraiga durante la marcha.
 El conductor, y en su caso el ayudante o encargado, durante la 
 marcha y en las paradas, velará por la seguridad de los viajeros.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('69', 'Artículo 69', '- Numero maximo de ocupante.
+INSERT INTO lawartcat (artid, catid) VALUES (68, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (69, 'Artículo 69', '- Numero maximo de ocupante.
  Queda
 terminantemente prohibido transportar a mas personas de las
 consignadas en los documentos de un vehículo de transporte
@@ -1210,7 +1346,9 @@ lugares como parrillas, escaleras, pescantes y lugares similares.
 servicio colectivo de transporte de personas, están obligados a exhibir, 
 
 reclamos. El lugar, los datos y características que tendrá la tarjeta');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('71', 'Artículo 71', '- Los carriles de circulación.
+INSERT INTO lawartcat (artid, catid) VALUES (69, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (71, 'Artículo 71', '- Los carriles de circulación.
  Los vehículos de 
 transporte público circularán por los carriles exclusivos o prioritarios
 que estén habilitados para el efecto, y si no los hubiere, en el carril
@@ -1219,7 +1357,9 @@ que estén habilitados para el efecto, y si no los hubiere, en el carril
 derecho de la calzada, el más alejado del centro de la misma. Se
 deberán entender el resto de los carriles exclusivamente para rebasar
 o para cambiar de dirección o sentido.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('72', 'Artículo 72', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (70, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (72, 'Artículo 72', '- 
 Ascenso y descenso de pasajeros.
  Las maniobras
 de ascenso o descenso de pasajeros a unidades de transporte público 
@@ -1230,7 +1370,9 @@ distancia y quedando situado éste paralelamente a la acera.
 Se prohíbe terminantemente parar en lugares no autorizados para 
 cargar o descargar pasaje, y el conductor que hiciere caso omiso de 
 esta prohibición, será sancionado conforme a este Reglamento.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('73', 'Artículo 73', '-
+INSERT INTO lawartcat (artid, catid) VALUES (71, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (73, 'Artículo 73', '-
  Paradas congestionadas. 
 En las paradas de trans
 -
@@ -1243,7 +1385,9 @@ que sea solicitado, hasta llegar a la parada misma.
 Se prohíbe terminantemente rebasar a unidades que están
  efectuando su parada justo delante de éstas, máxime si la unidad no 
 quedare paralela a la acera. Asimismo, se prohíbe parar, bajar cargar y');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('74', 'Artículo 74', '-
+INSERT INTO lawartcat (artid, catid) VALUES (72, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (74, 'Artículo 74', '-
  Paradas de taxis.
 
 pueden parar en cualquier lugar para cargar o descargar pasaje,
@@ -1253,7 +1397,9 @@ se desarrolle en un tiempo menor a dos minutos, salvo que el taxi se
 ubique en un espacio de estacionamiento permitido.
 CAPITULO VIII
 Transporte De Carga');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('75', 'Artículo 75', '-
+INSERT INTO lawartcat (artid, catid) VALUES (73, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (75, 'Artículo 75', '-
  Normas Generales.
  El conductor de un vehículo de
 transporte de carga deberá conducir y efectuar las paradas y
@@ -1261,7 +1407,9 @@ arranques sin sacudidas ni movimientos bruscos y se abstendrá de
 realizar acto alguno que le distraiga durante la marcha. El conductor, y  
 en su caso el ayudante o encargado, durante la marcha como y en las  
 paradas, velará por la carga y su correcta sujeción.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('76', 'Artículo 76', '-
+INSERT INTO lawartcat (artid, catid) VALUES (74, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (76, 'Artículo 76', '-
  Carriles de circulación. 
 Los vehículos de transporte 
 de carga circularán por lo carriles exclusivos o prioritarios que estén 
@@ -1271,7 +1419,9 @@ habilitados para el efecto, y si no los hubiere, en el carril derecho de la
 calzada, el más alejado del centro de la misma. Se deberán entender
 el resto de carriles exclusivamente para rebasar o para cambiar de 
 dirección o sentido.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('77', 'Artículo 77', '- Sujecion a horarios y rutas. 
+INSERT INTO lawartcat (artid, catid) VALUES (75, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (77, 'Artículo 77', '- Sujecion a horarios y rutas. 
 La autoridad, en
 coordinación con la Dirección General de Transporte Extraurbano del 
 Ministerio deTransporte, Comunicaciones, Obras públicas y Vivienda 
@@ -1282,7 +1432,9 @@ restricciones las tomará la autoridad en base a dimensiones, pesos,
 tipo de carga, intensidad del tránsito, características de las vías y el
 interés del público. En todo caso, se escuchará  a los sectores de
 transporte afectados.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('78', 'Artículo 78', '- Operaciones de carga y descarga. 
+INSERT INTO lawartcat (artid, catid) VALUES (76, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (78, 'Artículo 78', '- Operaciones de carga y descarga. 
  Las operaciones  
 de carga y  descarga de mercancías o cosas deberán llevarse a cabo
 fuera de la vía pública.  Excepcionalmente, y cuando sea inexcusable
@@ -1317,7 +1469,9 @@ d.
 Las operaciones de carga y descarga de mercancías nocivas,
  
 molestas, insalubres o peligrosas se regirán por las');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('79', 'Artículo 79', '- Bicicletas y motocicletas de carga.  
+INSERT INTO lawartcat (artid, catid) VALUES (77, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (79, 'Artículo 79', '- Bicicletas y motocicletas de carga.  
 Los conductores  
 de bicicletas, motobicicletas y motocicletas, podrán transportar carga 
 cuando estén especialmente acondicionadas y cumplan con lo
@@ -1327,13 +1481,17 @@ su tipo.
 56
 CAPÍTULO IX
 Señalizacion');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('80', 'Artículo 80', '-
+INSERT INTO lawartcat (artid, catid) VALUES (78, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (80, 'Artículo 80', '-
  Concepto. 
 La señalización es el conjunto de directrices  
 que tienen por objeto advertir e informar a los usuarios de la vía, 
 ordenar o reglamentar su comportamiento con la  necesaria antelación, 
 en determinadas circunstancias de la vía o de la circulación.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('81', 'Artículo 81', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (79, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (81, 'Artículo 81', '- 
 Obediencia de las señales.
  Todos los usuarios de la 
 vía pública están obligados a obedecer las señales de circulación que
@@ -1347,7 +1505,9 @@ las vías de dos sentidos de circulación divididas por medianas o
 camellones, en las vías de un solo sentido de circulación o cuando se 
 van a efectuar movimientos a la izquierda, también deberán cumplir  
 con los semáforos y señales verticales a su izquierda.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('82', 'Artículo 82', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (80, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (82, 'Artículo 82', '- 
 Prioridad entre señales y normas.
  El orden de
 prioridad descendente, entre las señales y normas de circulación es el 
@@ -1398,7 +1558,9 @@ privadas relacionadas con el tránsito, transporte y protección vial
 y generar todas aquellas acciones que tengan por objeto informar 
 y regular aspectos relacionados con el tránsito.
 7');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('84', 'Artículo 84', '- 
+INSERT INTO lawartcat (artid, catid) VALUES (81, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (84, 'Artículo 84', '- 
  Responsabilidad de señalizar.
  Corresponde al 
 Departamento, o, en su  caso, a las Municipalidades que administren 
@@ -1639,7 +1801,9 @@ parcial o total de la carga en el carril situado mas a la izquierda de la
 calzada, especialmente en autopistas, vías rápidas y túneles.También 
 se prohíbe el estacionamiento en lugar no permitido, simulando una 
 falla mecánica.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('97', 'Artículo 97', '- Prohibición de reparar vehículos en la vía pública.
+INSERT INTO lawartcat (artid, catid) VALUES (82, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (97, 'Artículo 97', '- Prohibición de reparar vehículos en la vía pública.
 En  la  vía pública, solamente se podrá efectuar reparaciones a 
 vehículos cuando éstas se deban a una emergencia. Sin embargo, el 
 tiempo máximo que puede permanecer un vehículo en esta situación 
@@ -1659,7 +1823,9 @@ públicas para ese objeto. De darse el caso, los agentes de tránsito
 remitirán a los depósitos respectivos los vehículos que se estuvieren 
 reparando, adicionando los costos de este operativo a la multa 
 reglamentaria.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('98', 'Artículo 98', 'Remolque de vehículos averiados.
+INSERT INTO lawartcat (artid, catid) VALUES (83, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (98, 'Artículo 98', 'Remolque de vehículos averiados.
   El  remolque  de 
 un  vehículo averiado o accidentado sólo  deberá realizarse por grúas u 
 otros medios análogos. Excepcionalmente, en aras de no entorpecer la 
@@ -1692,7 +1858,9 @@ Urbanas:
 b.
  
 Extraurbanas:');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('100', 'Artículo 100', 'Circulación por la derecha. 
+INSERT INTO lawartcat (artid, catid) VALUES (84, 4);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (100, 'Artículo 100', 'Circulación por la derecha. 
 Especialmente en las  
 curvas y cambios de rasante y curvas de reducida visibilidad, los ve
 -
@@ -1725,8 +1893,11 @@ _________________________
 8 
 
 
+
 63');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('101', 'Artículo 101', 'Utilización de carriles, fuera de poblado, en 
+INSERT INTO lawartcat (artid, catid) VALUES (85, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (101, 'Artículo 101', 'Utilización de carriles, fuera de poblado, en 
 calzadas de más de un carril por sentido de circulación. 
  En áreas  
 extraurbanas, en las calzadas con más de un carril reservado para 
@@ -1739,7 +1910,9 @@ Los conductores de vehículos pesados también circularán por el
 carril derecho, pudiendo utilizar sólo el contiguo a la izquierda a éste, 
 para sus operaciones de rebase, dejando, si los hubiere, el resto de
 carriles exclusivamente para vehículos livianos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('102', 'Artículo 102', 'Utilización de carriles, en poblado, en calzadas 
+INSERT INTO lawartcat (artid, catid) VALUES (86, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (102, 'Artículo 102', 'Utilización de carriles, en poblado, en calzadas 
 de más de un carril por sentido de circulación. 
 Cuando circule en 
 áreas urbanas en calzadas con dos o más carriles para cada sentido, 
@@ -1752,14 +1925,18 @@ restricción de utilización de carriles por peso máximo o velocidad
 mínima. 
 Los conductores de vehículos que circulen por autopistas y vías  
 rápidas urbanas, deberán comportarse según el artículo anterior.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('103', 'Artículo 103', 'Utilización de los carriles especiales.
+INSERT INTO lawartcat (artid, catid) VALUES (87, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (103, 'Artículo 103', 'Utilización de los carriles especiales.
  La utilización 
 de carriles o vías especiales, como las vías exclusivas para buses, 
 ciclo vías, carriles para tránsito lento, y otros, siempre deben ser  
  
 en la señalización vertical y horizontal. Se prohibe a otros vehículos su 
 utilización.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('104', 'Artículo 104', 'Carriles reversibles.
+INSERT INTO lawartcat (artid, catid) VALUES (88, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (104, 'Artículo 104', 'Carriles reversibles.
  en las calzadas con doble 
 sentido de circulación pueden existir carriles reversibles al centro, 
 demarcadas en el pavimento de forma correspondiente. Esto indica 
@@ -1769,13 +1946,17 @@ Los conductores que circulen por carriles reversibles deberán llevar
 siempre encendida la luz baja, de día y de noche. Queda prohibida, 
 salvo en caso de cambio de dirección o autorización por medio de 
 señales, la utilización de carriles reversibles por vehículos pesados.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('105', 'Artículo 105', 'Utilización de arcenes.
+INSERT INTO lawartcat (artid, catid) VALUES (89, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (105, 'Artículo 105', 'Utilización de arcenes.
  El conductor de cualquier  
 vehículo de tracción animal, vehículos especiales con peso bruto 
 autorizado inferior a 3.5 toneladas métricas, bicicletas, moto bicicletas  
 
 64');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('106', 'Artículo 106', 'Utilización de las calzadas.  
+INSERT INTO lawartcat (artid, catid) VALUES (90, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (106, 'Artículo 106', 'Utilización de las calzadas.  
 En las vías públicas  
 divididas en dos calzadas y dos sentidos de circulación por  medianas, 
 camellones, bordillos o dispositivos análogos, los vehículos deben 
@@ -1786,7 +1967,9 @@ destinada a la circulación en los dos sentidos o a un sentido único,
 permanente temporal o reversible o de uso restringido, según 
 disponga la autoridad e indique la señalización, y las laterales para la 
 circulación en uno solo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('107', 'Artículo 107', 'Utilización de los carriles auxiliares.
+INSERT INTO lawartcat (artid, catid) VALUES (91, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (107, 'Artículo 107', 'Utilización de los carriles auxiliares.
  Los carriles  
 auxiliares que transcurren paralelamente a la o las calzadas  
 principales separadas por bordillos, camellones o dispositivos  
@@ -1796,7 +1979,9 @@ propiedades aledañas, las paradas, detenciones y estacionamientos
 de vehículos. Los conductores de vehículos circularán más despacio 
 en éstos que en la o las calzadas principales, y siempre en el sentido 
 del carril más cercano de la calzada principal más próxima.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('108', 'Artículo 108', 'Sentido de circulación  en refugios, isletas, 
+INSERT INTO lawartcat (artid, catid) VALUES (92, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (108, 'Artículo 108', 'Sentido de circulación  en refugios, isletas, 
 redondeles o  similares.
  Cuando en la vía existan refugios, isletas, 
 dispositivos de guía, plazuelas, plazas, glorietas, redondeles o 
@@ -1808,7 +1993,9 @@ hacerse por cualquiera de los dos lados. Sin embargo, siempre
 
 CAPITULO II
 Velocidad');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('109', 'Artículo 109', 'Adecuación de la velocidad a las circunstancias.
+INSERT INTO lawartcat (artid, catid) VALUES (93, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (109, 'Artículo 109', 'Adecuación de la velocidad a las circunstancias.
  
  
 Todo conductor está obligado a respetar los límites  de velocidad 
@@ -1830,7 +2017,9 @@ de circulación; en general, cuantas circunstancias concurran en cada
  
 de manera que siempre pueda detenerlo dentro de los límites de su 
 campo de visión y ante cualquier obstáculo que pueda presentarse.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('110', 'Artículo 110', 'Moderación de la velocidad. 
+INSERT INTO lawartcat (artid, catid) VALUES (94, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (110, 'Artículo 110', 'Moderación de la velocidad. 
 Se circulará a 
 velocidad moderada y, si fuera preciso, se detendrá el vehículo,
  
@@ -1860,7 +2049,6 @@ utilizando o pueda racionalmente preverse su irrupción en la
  
 misma.
  
-
  
 vía que se está utilizando. 
 e.
@@ -1925,7 +2113,9 @@ escolares, 30 kilómetros por hora.
 Para vehículos pesados y aquellos que lleven remolques, se reducirá 
 en 10 kilómetros por hora, las velocidades máximas establecidas en los  
 incisos anteriores.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('113', 'Artículo 113', 'Velocidades máximas en área extraurbana.
+INSERT INTO lawartcat (artid, catid) VALUES (95, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (113, 'Artículo 113', 'Velocidades máximas en área extraurbana.
   En 
 ámbitos extraurbanos se establecen las siguientes velocidades  
 máximas: 
@@ -1936,7 +2126,9 @@ d.  En carreteras secundarias, 60 kilómetros por hora; y
 e.  En caminos, 40 kilómetros por hora. 
 Para vehículos pesados y aquellos que lleven remolques, se reducirá 
 en 20 kilómetros por hora las velocidades máximas establecidas en los');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('114', 'Artículo 114', 'Velocidades mínimas. 
+INSERT INTO lawartcat (artid, catid) VALUES (96, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (114, 'Artículo 114', 'Velocidades mínimas. 
 No se deberá entorpecer la 
 
 velocidad reducida. Para estos efectos, se prohibe la circulación en 
@@ -1953,14 +2145,18 @@ b.
 Cuando las condiciones del tránsito impidan el mantenimiento de 
  
 una velocidad superior a la mínima; y,');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('111', 'Artículo 111', 'Señalización respecto a la velocidad.
+INSERT INTO lawartcat (artid, catid) VALUES (97, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (111, 'Artículo 111', 'Señalización respecto a la velocidad.
  La autoridad 
 
  
 características del tramo de la vía. En defecto de señalización 
 
 en los artículos 112, 113 y 114 del presente Reglamento.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('112', 'Artículo 112', 'Velocidades máximas en área urbana.  
+INSERT INTO lawartcat (artid, catid) VALUES (98, 3);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (112, 'Artículo 112', 'Velocidades máximas en área urbana.  
 En ámbitos  
 urbanos se establecen las siguientes velocidades máximas: 
 
@@ -1974,7 +2170,9 @@ de la velocidad mínima, no existan otras vías, carreteras o
 caminos paralelos y se vean obligados a utilizar una autopista o 
  
 vía rápida.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('115', 'Artículo 115', 'Reducción de velocidad. 
+INSERT INTO lawartcat (artid, catid) VALUES (99, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (115, 'Artículo 115', 'Reducción de velocidad. 
  Salvo en caso de 
 inminente peligro, todo conductor, para reducir considerablemente la 
 velocidad de su vehículo, deberá cerciorarse que puede hacerlo sin 
@@ -1982,7 +2180,9 @@ riesgo para otros conductores y está obligado a advertirlo según el
 artículo17 de este Reglamento, no debiendo realizarlo de forma 
 brusca, para que no produzca riesgo de colisión con los vehículos que 
 circulan detrás del suyo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('116', 'Artículo 116', 'Distancia entre vehículos.
+INSERT INTO lawartcat (artid, catid) VALUES (100, 1);
+
+INSERT INTO lawarticle (artnum, title, descr) VALUES (116, 'Artículo 116', 'Distancia entre vehículos.
  Todo conductor de un 
 vehículo que circule detrás de otro deberá dejar entre ambos un 
 espacio libre que le permita detenerse en caso de frenado brusco, sin 
@@ -1998,1907 +2198,5 @@ casos:
 a.
  
 En áreas urbanas.
-b.
- 
-Donde estuviera prohibido el rebase. 
-c.
- 
-Donde hubiera más de un carril destinado a la circulación en el 
- 
-mismo sentido; y   
-d.
- 
-Cuando la circulación estuviera tan saturada que no permita 
- 
-el rebase.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('117', 'Artículo 117', 'Medios permitidos para la reducción de la 
-velocidad.
-  La autoridad correspondiente puede permitir, tomando 
- especialmente en cuenta la geometría de la vía o de la intersección y  
- 
-siguientes medios para la reducción de velocidad, especialmente en 
-áreas residenciales. 
-a.
- 
-Angostamiento físico o psicológico de la vía. 
-b.
- 
-Vibradores con cizas grabadas en el pavimento. 
-c.
- 
-Cambios de textura
-. 
-d.
- 
-Elevaciones del pavimento al nivel de la acera, con rampas de 
- 
-pendientes de entre diez y veinte por ciento y anchos en 
- 
-dirección al tránsito no menores de tres metros.
-
-68
-
- 
-pasos peatonales, intersecciones y lugares similares.  
-g.
- 
-Inclusión de glorietas en intersecciones con prioridad de paso
- 
- 
-para el tránsito circular. 
-h.
- 
-Plantación de árboles de copa ancha, especialmente en los  
-
-i.
- 
-Calzada sinuosa, con cambios de dirección por lo menos a cada
- 
- 
-cuarenta metros, por medio de macetones, bordillos, franjas de 
- 
-estacionamiento, árboles, pilones, bardas u otros elementos  
- 
-similares. 
-j.
- 
-Pasos de peatones en intersecciones semaforizadas con función
- 
-
-k.
- 
-Inclusión de refugios para peatones. 
-l.
- 
-Pintura de líneas logarítmicas perpendiculares al sentido de la
- 
- 
-circulación; y  
-m.
- 
-Readecuación y relocalización del área de aparcamiento. 
-Sin embargo, queda prohibida la inclusión de estos medios en 
-autopistas, vías rápidas, arterias principales y secundarias y carreteras  
-principales, a excepción de los incisos b., y  l.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('118', 'Artículo 118', 'Autorización de los medios para el control de la 
-velocidad. 
-Toda persona o entidad que desee incluir en un tramo de la 
-vía pública uno o varios medios para la reducción de la velocidad, 
-deberá hacer la solicitud respectiva ante el Departamento o, en su 
-caso, ante la Municipalidad que administre el tránsito, adjuntando la 
-constancia de pago correspondiente. El Departamento de Tránsito o la 
-Municipalidad respectiva, hará los estudios y propuestas necesarias, 
-autorizando la que mejor convenga al tránsito y al interesado. 
-El interesado podrá realizar únicamente los cambios consignados en 
-
-tránsito, podrá demoler todo o parte de los trabajos realizados que no 
-se ajusten a lo autorizado o que no cuenten con autorización alguna, si 
-lo considera necesario en relación al bien común y la circulación de 
-vehículos y peatones.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('119', 'Artículo 119', 'Carreras, concursos y otros eventos deportivos 
-en la vía. 
-Se prohibe entablar y realizar carreras, concursos, 
-certámenes, competiciones de velocidad u otras pruebas deportivas en 
-la vía pública,  salvo que, excepcionalmente, se cuente con el permiso 
-correspondiente. 
-e.
- 
-Pasos peatonales seguidos, a distancias no mayores de sesenta 
- 
-metros entre sí. 
-
-69
-CAPITULO III
-Prioridad de paso');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('120', 'Artículo 120', '- 
- Normas Generales.
- El conductor de un vehículo que 
-deba ceder el paso, no iniciará ni continuará su marcha o maniobra, o
-la reiniciará, hasta estar seguro de que no fuerza al vehículo que tiene 
- 
-mismo. Por su forma de circular, mostrará con antelación la reducción 
-paulatina de la velocidad que efectivamente evidencie que cede el
-paso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('121', 'Artículo 121', '- 
-Prohibicion De Bloqueo De Interseccion. 
- Aún
-cuando goce de prioridad de paso, ningún conductor deberá penetrar  
-con su vehículo en una intersección o en un paso de peatones, si la 
-situación de la circulación es tal que, previsiblemente, pueda quedar  
-detenido en tal forma que impida u obstruya la circulación transversal, 
-tanto vehicular como peatonal.
-Esto no aplica al franqueo de intersecciones en donde la vía 
-transversal esta dividida por uno o más camellones. Se permite en
-estos casos, atravesar la intersección calzada por calzada, aún cuando
-el vehículo que lo haga sobresalga en planta de la proyección del
-camellón.
-Sin embargo, para los efectos de este Reglamento, si se considerará 
-bloqueo de intersección cuando otro vehículo se sitúe detrás del');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('122', 'Artículo 122', '- 
- Prioridad De Intersecciones. 
-En las intersecciones, 
-
-señalización que lo regule y la que sea prevalente, según este 
-Reglamento.
-En intersecciones que no estén señalizadas, siempre llevará el 
-derecho de paso o la vía, el que se aproxime sobre la vía pública de 
-mayor jerarquía, así: autopista sobre vía rápida, sobre arteria principal, 
-sobre arteria secundaria, sobre vía local, sobre vía de circulación 
-controlada, sobre camino, sobre acceso privado, en áreas urbanas; y  
-en las extraurbanas, autopista sobre vía rápida, sobre carretera 
-principal, sobre carretera secundaria, sobre camino y sobre acceso 
-privado. 
-En caso que la intersección fuere de dos vías de igual jerarquía y, 
-siempre que no hubiera señalización ninguna, el conductor está 
-obligado a ceder el paso a los vehículos que se aproximen por su 
-derecha, salvo en los siguientes supuestos: 
-a.
- 
-Tendrán derecho de preferencia de paso los vehículos que se           
-    
- 
-aproximen por una vía pavimentada frente a los que procedan de 
- 
-otra sin pavimentar.
-
-70
-
- 
-circular, llevarán la vía sobre los que pretenden ingresar a ésta;
- 
- y, 
- 
-calle.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('123', 'Artículo 123', '- 
-Tramos Estrechos.  
-En los tramos de la vía o puente
-en que por su estrechez, sea imposible o muy difícil el paso simultáneo 
-de dos vehículos en sentido contrario, y no exista señalización para el 
-efecto, tendrá derecho de preferencia de paso el que entre primero al 
-tramo. En caso de duda, tendrá la vía el vehículo con mayores  
-
-De existir señalización en el lugar, el vehículo que llegue por el
-extremo que tiene que ceder el paso, retrocederá y dejará pasar
-cualquier otro vehículo que venga en la vía contraria. 
-Los usuarios de la vía están obligados a seguir las indicaciones del 
-personal destinado a la regulación del paso de vehículos en tramos  
-estrechos, aunque éstos no sean agentes de tránsito; sin embargo,
-éstos contarán con autorización previa del Departamento o de la
-Municipalidad respectiva.  
-El conductor de un vehículo que se acerque a un tramo estrecho y  
-encuentre esperando a otro que ha llegado con anterioridad y en el 
-mismo sentido, se colocará detrás de él, lo más cerca que sea posible 
-al borde de la derecha y pasará siguiendo al que tiene delante.
-En los tramos de gran pendiente, en los que se den las  
-circunstancias de estrechez señaladas en el primer párrafo de este 
-artículo, la preferencia de paso la tendrá el vehículo que circule en 
-sentido ascendente, salvo si este pudiera llegar antes a un espacio 
-establecido para el efecto.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('124', 'Artículo 124', '- 
- Prioridad de paso de los animales ante los 
-vehiculos. 
- Los animales tendrán prioridad de paso ante los vehículos  
-en las siguientes situaciones:  
-a.
- 
-En las cañadas o pasos debidamente señalizados.
-b.
- 
-Cuando los vehículos giren a otra vía y haya animales  
-  
-cruzándola; y,
-c.
- 
-Cuando el vehículo gire atravesando el arcén o el carril por  
-  
-donde circula.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('125', 'Artículo 125', '- 
-Prioridad de paso de los peatones ante los 
-vehiculos. 
- Los peatones gozan de prioridad de paso ante los
-vehículos en general, y estos deberán detenerse si fuera necesario, en 
-los siguientes lugares y situaciones: 
-a.
- 
-En los pasos peatonales, a excepción de las intersecciones
- 
-semaforizadas o con semáforo en verde. 
-
-71
-b.
- 
-En las aceras, refugios y pasarelas. 
-c.
- 
-En las vías y zonas peatonales. 
-d.
- 
-Cuando los vehículos giren a otra vía y haya peatones  
- 
-cruzándola, aunque no esté demarcado el paso de peatones. 
-e.
- 
-Cuando el vehículo gire atravesando el arcén o carril por donde 
- 
-circulan al no haber banquetas. 
-f.
- 
-Cuando los vehículos se encuentren con tropas de formación, 
-
-g.
- 
-En cualquier punto de las vías de circulación controlada.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('126', 'Artículo 126', '- 
-Prioridad de paso de las bicicletas ante los demás 
-vehiculos.
-  Los ciclistas gozan de prioridad de paso  ante los vehículos  
-en general, y éstos deberán detenerse si fuera necesario, en los  
-siguientes lugares y situaciones: 
-a.
- 
-Cuando los vehículos giren a otra vía y haya ciclistas cruzándola 
- 
-aunque no este demarcado el paso de bicicletas. 
-b.
- 
-Cuando el vehículo gire atravesando o traspase el arcén, el carril 
- 
-de bicicletas o la ciclovía por donde circulen los ciclistas; 
-c.
- 
-Cuando la señalización horizontal y/o vertical así lo indique.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('127', 'Artículo 127', '- 
-Prioridad de paso de los vehiculos de 
-emergencia. 
- Los vehículos de emergencia públicos y privados, 
-tendrán prioridad de paso ante todo vehículo y usuario de la vía 
-pública, siempre que estén en servicio. En tal situación están obliga
--
-dos a utilizar señales luminosas en movimiento y sirenas. Podrán cir
--
-cular sobre los límites de velocidad, circular en sentido contrario y, en 
-general, estarán exentos de cumplir con lo establecido en los Títulos  
-Cuarto y Quinto de este Reglamento. 
-Los conductores de los vehículos destinados a los referidos servicios  
-harán uso ponderado de su régimen especial, únicamente cuando 
-circulen en prestación de un servicio urgente, y cuidarán de vulnerar la 
-prioridad de paso en una intersección, sin antes adoptar extremadas  
-precauciones, hasta cerciorarse que no existe riesgo de atropello a 
-peatones y que los conductores de otros vehículos han detenido su 
-marcha o se disponen a facilitar la suya. 
-También se consideran vehículos de emergencia las comitivas  
-presidencial y vicepresidencial, comitivas de visitas de Estado y de 
-embajadores que se dirijan a presentar cartas credenciales. En 
-todo caso, las comitivas contarán con agentes de avanzada que se 
-harán cargo de las prevenciones que sean necesarias.
-Tan pronto como perciban las señales especiales que anuncien la 
-proximidad de un vehículo de emergencia o una comitiva, los demás  
-
-72
-conductores adoptarán las medidas adecuadas, cualesquiera que 
-estas fueran y según las circunstancias del momento y del lugar, para 
-facilitarles en lo posible el paso, apartándose normalmente a su 
-derecha o deteniéndose, si fuera necesario, para que pasen, por lo 
-9 
-CAPITULO IV
-Incorporacion a la circulación');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('128', 'Artículo 128', '- 
- Incorporación al tránsito desde la vía pública.
- El 
-conductor de un vehículo parado o estacionado en la vía pública o 
-procedente de las vías públicas aledañas, que pretenda incorporarse a 
-la circulación, deberá cerciorarse previamente, incluso siguiendo 
-indicaciones de otra persona en caso necesario, que puede hacerlo sin 
-peligro para los demás usuarios  de  la  vía,  cediendo  el  paso  a  otros  
-vehículos y teniendo en cuenta la posición, trayectoria y velocidad de 
-estos, y lo advertirá con las señales obligatorias para estos casos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('129', 'Artículo 129', '- 
-Incorporación al tránsito desde una propiedad 
-colindante. 
-Aparte de cumplir con lo señalado en el artículo anterior, 
-un conductor que salga de un acceso privado a la vía pública o por un 
-camino exclusivamente privado, antes de incorporarse al tránsito de la 
-vía, previamente deberá asegurarse que puede hacerlo sin peligro, 
-especialmente para con los peatones que circulen por la vía, a una 
-velocidad que le permite detenerse en el acto.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('130', 'Artículo 130', '- 
-Carriles de aceleración. 
- En vías dotadas de carriles  
-de aceleración para incorporarse al tránsito de una calzada, el 
-conductor de un vehículo que pretenda utilizarlo, deberá cerciorarse al 
-principio de dicho carril de que puede hacerlo sin peligro para los 
-demás usuarios que transiten por la calzada, teniendo en cuenta la 
-posición, trayectoria y velocidad de éstos, e incluso deteniéndose en 
-caso necesario. A continuación, acelerará hasta alcanzar la velocidad 
-promedio de los vehículos  en el carril de la calzada más próximo, para 
-incorporarse a éste una vez haya alcanzado la velocidad adecuada.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('131', 'Artículo 131', '- 
-Obligación de facilitar la incorporación. 
-Independientemente de las obligaciones previstas en los artículos  
-anteriores, los demás conductores facilitarán, en la medida de lo 
-posible, dicha maniobra, especialmente si se trata de un vehículo de 
-transporte público, que pretende incorporarse desde una parada 
-señalizada. 
-
-tienen los conductores de unidades de transporte colectivo de adoptar  
-todas las precauciones necesarias para evitar todo riesgo de 
-accidente, después de haber indicado con sus pide vías su propósito 
-de reanudar la marcha. 
-_________________________
- 
-Reformado por atículo 1 Acuerdo Gubernativo 460-2003.
-
-73
-CAPÍTULO V
-Cambios de dirección');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('132', 'Artículo 132', '- 
-Normas Generales. 
-El conductor de un vehículo que 
-pretenda girar a la derecha o a la izquierda para utilizar vía distinta por
-la que circula, cambiar de carril o sentido, tomar otra calzada de la 
-misma vía para salir de la misma o retroceder, deberá advertirlo 
- 
-vehículos que circulan atrás del suyo y cerciorarse que la distancia y la 
-velocidad de los vehículos que se acerquen en sentido contrario le 
-permitan efectuar la maniobra sin peligro, absteniéndose de realizarla 
-si no se dan estas circunstancias.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('133', 'Artículo 133', '- 
-Viraje o giro a la derecha. 
-El conductor que vaya a 
-virar o girar a la derecha, deberá posicionarse con la antelación 
- 
-indicaciones necesarias y en la intersección se comportará acorde a 
-las normas de este Reglamento, especialmente a las de prioridad, 
-incorporándose luego al carril derecho de la nueva vía.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('134', 'Artículo 134', '- 
-Viraje o giro continuo a la derecha.
- Está permitido 
-virar o girar a la derecha en intersecciones semaforizadas aunque 
-indiquen rojo solo cuando exista la señalización correspondiente. El 
-conductor de un vehículo en este caso deberá posicionarse en el carril 
-junto al borde derecho de la calzada, hacer las señales  
-correspondientes, y, antes de proseguir, ceder el paso a todo vehículo 
-que circule por la vía a la cual se está virando o girando, completando 
-el viraje o giro sobre el carril derecho de esta vía.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('135', 'Artículo 135', '- 
-Viraje o giro a la izquierda. 
-El conductor que vaya a 
-virar o girar a la izquierda, deberá posicionarse con la anticipación
-debida en el carril junto al borde izquierdo de la calzada por la que
-circula, si ésta es de una vía, o al carril a la derecha de la línea 
-divisoria o del camellón, si es de dos sentidos. Después de indicar su 
-movimiento mediante las señales correspondientes y cumpliendo con 
-las normas de conducción, especialmente las de prioridad, entrará en
-la intersección, posicionandose, en la nueva vía, en el carril izquierdo 
-pegado al borde, si ésta es de una vía, o en el carril del lado derecho 
-de la línea divisoria o el camellón, si es de doble vía. Queda 
-terminantemente prohibido por hacer un viraje a la izquierda con un 
-radio más amplio, pasar por los carriles exclusivos para el otro sentido, 
-lo que comúnmente se conoce como cortar la esquina.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('136', 'Artículo 136', '- 
-Caso especial de vehículos de grandes
-dimensiones.  
-Por excepción, si por las dimensiones del vehículo, sus  
-radios de giro o viraje, la geometría de la intersección o por otras
-
-giro con estricta sujeción a lo dispuesto en los tres artículos anteriores, 
-el conductor deberá adoptar las precauciones necesarias para evitar  
-todo peligro. 
-
-74');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('137', 'Artículo 137', '- 
-Carriles de desaceleracion. 
- Para abandonar una 
-autopista, vía rápida u otra vía, deberán utilizarse los carriles de
-desaceleración, si existen. Se ingresará al carril en mención, una vez  
-éste comience y a la velocidad promedio de la vía de donde se venga 
-circulando, a lo largo de la cual, se podrá frenar para adecuar la
-velocidad a la nueva vía en que se ingresa. Se prohibe desacelerar o 
-disminuir bruscamente la velocidad antes de ingresar al respectivo 
-carril.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('138', 'Artículo 138', '- 
-Cambio de carril.
-  Todo cambio de carril deberá lle
--
-varse a cabo respetando la prioridad del que circule por el carril que 
-se pretende transitar. En el cambio de carril, el conductor del vehículo, 
-adoptará todas las medidas necesarias para evitar cualquier peligro. 
-Es prohibido cambiar de carril en y justo antes de una intersección.
-El conductor que se introduzca en un carril equivocado, estará
-obligado a seguir la dirección indicada en el carril que transita.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('139', 'Artículo 139', '- 
-Cambio de sentido (Vuelta en U).
-  El conductor del 
-
-elegirá con antelación un lugar adecuado y permitido por la
-señalización horizontal y vertical, evitando causar peligro y obstaculizar  
-a otros usuarios. En caso contrario, se abstendrá de realizar toda
-maniobra de cambio, esperando el momento oportuno para hacer el 
- 
-autopistas y vías rápidas, salvo en los lugares habilitados al efecto, y,
-en general, en todos los tramos de la vía en que está prohibido el
-rebase.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('140', 'Artículo 140', '- 
- Retroceso.  
-Se prohibe retroceder más de 20 metros  
-en cualquier vía pública, excepto en casos de fuerza mayor o
-necesidad.
-Al efectuarse la maniobra, se hará lentamente y con la máxima
-precaución posible, debiendo detenerse inmediatamente si se
-producen avisos indicadores o se percibe la proximidad de otro
-vehículo o persona, desistiendo de la maniobra si fuera necesario. 
-CAPITULO VI
-Adelantar o rebasar');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('141', 'Artículo 141', '- 
-Norma general. 
- En todas las vías públicas, como
-norma general, se podrá rebasar o adelantar el vehículo, siempre que 
-el movimiento se efectúe por el lado izquierdo del vehículo que se
-pretenda rebasar o adelantar. El conductor deberá utilizar las
-correspondientes señales de tránsito. 
-
-75');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('142', 'Artículo 142', '- 
-Excepciones por la derecha. 
- Por excepción y  
- 
-por la derecha en las siguientes situaciones:
-a.
- 
-Cuando el conductor del vehículo al que se pretenda adelantar o 
- 
-rebasar indique claramente que va a virar o parar a la izquierda. 
-b.
- 
-En áreas urbanas y vías con dos carriles en un sentido, a
- 
-excepción de autopistas y vías rápidas, siempre y cuando el
- 
-conductor del vehículo que lo efectúe se cerciore previamente de 
- 
-que puede hacerlo sin peligro para los demás usuarios. 
-c.
- 
-Cuando la densidad de tránsito en una vía sea tal que los
- 
-vehículos ocupen todo el ancho de la calzada y sólo puedan
- 
-circular a una velocidad que dependa del que precede en el
- 
-carril; y, 
-d.
- 
-En los carriles de aceleración o desaceleración');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('143', 'Artículo 143', '- 
-Rebasar o adelantar repetidas veces.
- En las vías
-que tengan dos carriles en la misma dirección o en el sentido de su 
-marcha, el conductor que vaya a rebasar o adelantar repetidas veces, 
-podrá permanecer en el carril que haya utilizado para el anterior, a
-condición de cerciorarse que puede hacerlo sin obstaculizar a los
-conductores que circulen más rápido detrás del suyo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('144', 'Artículo 144', '- 
- Obligaciones previas. 
-El conductor que decida
-
-utilizar las señales de tránsito y comprobar que en el carril que
-
-peligro o entorpecer la circulación de los vehículos que transitan en 
-sentido contrario. Asimismo, es prohibido rebasar a ciegas, es decir, 
-detrás de otro vehículo sin haberse asegurado de que puede rebasar o
-adelantar sin peligro alguno. 
-En calzadas de dos sentidos de circulación y tres carriles, siendo el 
-central exclusivo para adelantar o rebasar en los dos sentidos o virajes  
-a la izquierda. El conductor que pretenda adelantar o rebasar deberá 
-comprobar que el carril central se encuentre libre de vehículos en
-cualquiera de los dos sentidos antes de efectuar la maniobra.
-Ningún conductor deberá adelantar o rebasar varios vehículos a la
-vez si no tiene la total seguridad de que, al presentarse otro en sentido 
-contrario, podrá desviarse hacia el lado derecho sin causar perjuicios o 
-poner en peligro a otros vehículos adelantados. 
-La presente norma se aplicará a las vías con dos carriles con sentido 
-de circulación.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('145', 'Artículo 145', '- 
-Derecho preferente.
- Antes de efectuar un rebase, el 
-conductor de un vehículo deberá cerciorarse que el conductor de otro 
-vehículo que esté frente a él no ha indicado su propósito de
-
-76
-desplazamiento hacia el mismo lado, en cuyo caso deberá respetar la 
-preferencia que le asiste. No obstante, si después de un tiempo
-prudencial, el conductor del citado vehículo no ejerciera su derecho 
-prioritario, se podrá iniciar la maniobra de adelantar o rebasar,
-advirtiéndolo previamente con las señales reglamentarias.  
-Asimismo, cada conductor, antes de comenzar  su maniobra de 
- 
-misma maniobra por vehículo que le siga en el mismo carril.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('146', 'Artículo 146', '- 
-La ejecución.
- Durante la ejecución de adelantar o
-rebasar, el conductor que lo efectúe deberá llevar su vehículo a una 
-velocidad notoriamente superior a la del que pretende adelantar o
-rebasar, especialmente cuando un vehículo pesado rebase o adelante 
-a otro vehículo similar. También deberá dejar entre ambos una
-
-máxime si el vehículo rebasado fuera una bicicleta o motobicicleta. 
-Si después de iniciar la maniobra, advierte que se producen
-
-provocar riesgos, reducirá inmediatamente su marcha y regresará de 
-nuevo a su posición anterior, esta maniobra la complementará con las  
-señales de rigor. 
-Si el hecho de adelantar o rebasar se efectúa sin contratiempos, el
-conductor del vehículo deberá reintegrarse a su carril tan pronto como 
-le sea posible y de modo gradual, sin obligar a otros usuarios a
-
-respectiva.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('147', 'Artículo 147', '- 
-. Obligaciones del conductor. 
- El conductor que
-advierta que otro vehículo que le sigue tiene el propósito de adelantar
-o rebasar, estará obligado a: 
-a.
- 
-Ceñirse al borde derecho de la calzada o al  izquierdo, si va a 
- 
-ejecutar un cambio de dirección hacia la izquierda.
- 
-b.
- 
-No aumentar la velocidad para permitir que el otro vehículo
- 
-rebase o se adelante. 
-c.
- 
-Disminuir la velocidad cuando se produzca alguna situación que 
- 
-implique peligro para su propio vehículo u otros usuarios de la vía; 
- 
-y, 
-d.
- 
-En caso de vehículos que circulen a velocidades iguales o
- 
-inferiores a 40 kilómetros por hora, utilizar el arcén derecho, si 
- 
-existiera y fuera transitable, para facilitar el que los demás
- 
-vehículos puedan adelantar o rebasar, especialmente cuando la 
- 
-densidad del tránsito lo demande.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('148', 'Artículo 148', '- 
-Prohibiciones.
- Se prohibe en lugares señalizados, 
-rebasar o adelantar, en los siguientes casos: 
-
-77
-
- 
-reducida y, en general, en todo lugar o circunstancia en que la 
-
- 
-Esta norma no se aplicará si existen dos carriles en el mismo
- 
-sentido y otro carril en sentido contrario. 
-
-
- 
-dos carriles o más para cada sentido de circulación; y, 
-
-CAPITULO VII
-Parada y estacionamiento');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('149', 'Artículo 149', '- 
-Forma y lugares.
- En áreas extraurbanas, la parada o 
-el estacionamiento de un vehículo deberá efectuarse, dentro de lo
-posible, fuera de la calzada, y en el mismo sentido como el carril más  
-próximo. 
-En áreas urbanas, donde por naturaleza casi siempre hay que parar  
-en el arcén y/o el borde derecho de la calzada, también es obligatorio 
-quedar con el vehículo orientado en la misma dirección que el carril 
-más próximo. De existir bordillo, no debe haber entre éste y el vehículo 
-una distancia superior a 25 centímetros. 
-La parada y el estacionamiento deberán efectuarse de tal manera
-que el vehículo no obstaculice la circulación ni constituya un riesgo
-para los usuarios de la vía, cuidando especialmente la colocación del 
-mismo, evitando que pueda ponerse en movimiento en ausencia del 
-conductor.
-La parada y el estacionamiento se efectuarán, de no existir
-marcaciones, situando el vehículo paralelamente al borde de la
-calzada, y, si las hubiera, posicionándolo según la señalización
-horizontal. 
-Todo conductor que pare o estacione su vehículo, deberá hacerlo de 
-manera que permita el aprovechamiento óptimo del espacio disponible 
-restante.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('150', 'Artículo 150', '- 
-Normas al dejar el vehiculo automotor. 
-Cuando se 
-trate de un  vehículo automotor, y el conductor tenga que abandonar su 
-puesto mientras el vehículo queda  inmovilizado, deberá observar las  
-siguientes reglas: 
-a.
- 
-Parar el motor y desconectar el sistema de arranque. 
-b.
- 
-Dejar accionado el freno de estacionamiento o de mano. 
-c.
- 
-En un vehículo provisto de caja de cambios, dejar colocada la 
-
-78
- 
-primera velocidad o la reversa, o en su caso, la posición de
-d.
- 
-Cuando se trate de un vehículo pesado parado o estacionado en 
- 
-un tramo con pendiente considerable, su conductor deberá
- 
-dejarlo, además, debidamente calzado con cuñas en las llantas  
- 
-posteriores o bien acuñada una de las ruedas delanteras contra el 
- 
-bordillo de acuerdo a la pendiente ascendiente o 
- 
-descendiente. Las cuñas una vez utilizadas deberán ser
- 
-retiradas de la vía al reanudar la marcha.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('151', 'Artículo 151', '- 
-Regimen municipal.  
-El régimen de parada y
-estacionamiento, será regulado por las municipalidades en las áreas  
-urbanas. Las autoridades municipales adoptarán  las medidas
-necesarias, evitando el entorpecimiento del tránsito. En ningún caso, 
-las  disposiciones municipales podrán oponerse, alterar, desvirtuar o
-incluir a confusión en  relación con las normas del presente
-Reglamento.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('152', 'Artículo 152', '- 
-Lugares prohibidos para estacionar y parar.
- Sin 
-perjuicio de las  áreas autorizadas, se prohibe parar y estacionarse en 
-los siguientes lugares: 
-a.
- 
-Curvas y cambios de rasante de visibilidad reducida y a 
- 
-cincuenta metros antes y después de estos. 
-b.
- 
-Túneles, puentes, pasos a desnivel y antes de cien metros en 
- 
-sus accesos y salidas. 
-c.
- 
-Cruces de ferrocarril, antes de ochenta metros. 
-d.
- 
-Carriles o partes de la vía reservados exclusivamente para otro 
- 
-medio de transporte o que tengan otro uso, tales como vías
- 
-exclusivas para buses, espacios peatonales, espacios para
- 
-bicicletas, áreas verdes, zonas de juego de niños y otras
- 
-similares. 
-e.
- 
-Intersecciones y a cinco metros de donde terminan los radios de 
- 
-las esquinas de las mismas. 
-f.
- 
-Paradas de transporte público y sus proximidades. 
-g.
- 
-Lugares reservados para el acceso y salida de servicios de
- 
-emergencia y sus proximidades. 
-h.
- 
-Lugares donde se obstruya la visibilidad de señales de tránsito
- 
-a los demás usuarios de la vía. 
-i.
- 
-Áreas de carga y descarga, sin efectuar esta actividad. 
-j.
- 
-Calzadas principales de autopistas y vías rápidas. 
-
-79
-k.
- 
-Aparcamientos para minusválidos, si el vehículo en cuestión no 
- 
-transportara ninguno; y  
-l.
- 
-Cruces de peatones y cruces de bicicletas señalizados, antes de 
- 
-diez metros.
-
-tránsito deberá señalizar la respectiva prohibición.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('153', 'Artículo 153', '- 
-Lugares prohibidos para Estacionamiento. 
-También es prohibido el estacionamiento:
- 
-b.
- 
-En una entrada de vehículos, excepto la entrada a la residencia
- 
-particular. Sin embargo, deberá quedar para el paso de peatones. 
-c.
- 
-A menos de 30 metros de un vehículo estacionado en el lado
- 
-contrario en una vía de dos carriles y dos sentidos de circulación. 
-d.
- 
-En las zonas en que el estacionamiento se encuentre bajo el
- 
-régimen de pago de parquímetros, sin haber efectuado el
- 
-pago correspondiente. 
-e.
- 
-Frente a hidrantes de abastecimiento a bomberos. 
-f.
- 
-Frente a rampas especiales de acceso a la acera para 
- 
-minusválidos. 
-g.
- 
-Cuando al estacionarse no quede espacio para que pase otro
- 
-vehículo, cualquiera que este sea. 
-h.
- 
-Cuando por el estacionamiento se impida la incorporación a la
- 
-circulación de otro vehículo. 
-i.
- 
-Cuando se efectúe en plazuelas, plazas, camellones, isletas de
- 
-canalización, glorietas, redondeles u otros lugares similares; y  
-j.
- 
-Cuando se trate de vehículos pesados y se sobrepasen 
- 
-más de 20  minutos de inmovilización en un mismo tramo de 
- 
-aquellas vías establecidas por la autoridad. Esta norma se aplica 
- 
-especialmente a remolques y buses. 
-CAPITULO VIII
-Cruce de ferrocarril');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('154', 'Artículo 154', '- 
-Normas Generales. 
-Todos los conductores de
-vehículos deben extremar la prudencia y reducir la velocidad  por
-debajo de la máxima permitida, al aproximarse a un cruce de
-ferrocarril. 
-
-80
-Los usuarios de la vía pública que, al llegar al lugar citado, lo
-encuentren cerrado o con la barrera o semibarrera en movimiento o
-con semáforos u otras señales prohibiendo el paso, deberán detenerse 
-uno detrás de otro en el carril correspondiente hasta que se habilite el 
-paso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('155', 'Artículo 155', '- 
-Falta de barreras y semáforos.
- En casos donde
-exista un cruce de ferrocarril sin barreras, semibarreras, semáforos u 
-otro tipo de señales, ningún usuario de la vía pública lo atravesará sin 
-antes haberse cerciorado que no viene un tren u otro vehículo sobre 
-rieles.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('156', 'Artículo 156', '- 
-Forma de cruzar una vía férrea.
- El cruce de una vía 
-férrea deberá realizarse sin demora y después de haberse cerciorado 
-de que, por lascircunstancias de la circulación o por otras causas, no 
-existe riesgo de quedar inmovilizado dentro del paso.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('157', 'Artículo 157', '- 
-Detención de un vehículo en un cruce de 
-ferrocarril. 
-Cuando por razones de fuerza mayor quede un vehículo 
-detenido en un cruce de ferrocarril, o se produzca la caída de su carga 
-dentro del mismo, el conductor estará obligado a adoptar las medidas  
-adecuadas para el rápido desalojo de los ocupantes del vehículo y  
-para dejar el paso expedito en el menor tiempo posible. Si no lo
-consiguiere, adoptará inmediatamente todas las medidas a su alcance 
-para que, en su caso, los maquinistas de los vehículos que circulen por  
-rieles así como los conductores del resto de vehículos que se 
-aproximen, sean advertidos de la existencia del peligro con la 
-
-CAPITULO IX
-Utilización de las luces');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('158', 'Artículo 158', '- 
-Norma General. 
- Todos los vehículos que circulen
-entre la puesta y la salida del sol llevarán encendidas las luces
-correspondientes.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('159', 'Artículo 159', '- 
- Luces de posición y de gálibo. 
-Todo vehícu
--
-lo que circule en túneles o en condiciones atmosféricas o físicas que 
-disminuyan la visibilidad, deberá llevar encendidas las luces de 
-posición y las de gálibo, si las tuviera. 
-Todo vehículo automotor, especialmente si se trata de un remolque, 
-deberá llevar adicionalmente, iluminada la placa de circulación 
-posterior.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('160', 'Artículo 160', '- 
-Luces de carretera o luz alta. 
-Todo vehículo 
-automotor que circule más de 40 kilómetros por hora, por vías  
-
-cuando deba utilizar la luz baja.  La luz alta podrá utilizarse 
-
-81
-aisladamente o combinada con la luz baja. 
-Se prohibe la utilización de la luz alta siempre que el vehículo circule
-a menos de 40 kilómetros por hora o se encuentre parado o
-estacionado, así como el empleo alternativo de luz alta y baja (aviso 
-
-
-con vista normal y en cualquier punto de su calzada, no pueda leerse 
-la placa de circulación de un vehículo situado a una distancia de 10 
-metros.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('161', 'Artículo 161', '- 
-Luces de población o luz baja. 
-Todo vehículo
-automotor que circule por túneles y por vías urbanas o extraurbanas
-
-posición y la luz baja o de población, en las circunstancias siguientes: 
-a.
- 
-No disponer de luces altas. 
-b.
- 
-Circular a menos de 40 kilómetros por hora; y  
-c.
- 
-Posibilidad de producir deslumbramiento a otros usuarios de la 
- 
-vía pública.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('162', 'Artículo 162', '- 
-Deslumbramiento. 
-Las luces de carretera o luz alta 
-deberán ser sustituidas por las luces de población o bajas, tan pronto 
-como se aprecie la posibilidad de producir deslumbramiento a otros  
-usuarios de la misma vía, y muy especialmente a los vehículos que 
-circulan en sentido contrario, Igual precaución se guardará en relación 
-con los vehículos que circulen en el mismo sentido, a menos de 150 
-metros, y cuyos conductores puedan ser deslumbrados por el espejo 
-retrovisor. 
-Asimismo, la autoridad respectiva puede ordenar el retiro o nueva 
-orientación de fuentes de luz en propiedades privadas o públicas, si 
-estas  causaran molestias de deslumbramiento a los usuarios de la vía,');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('163', 'Artículo 163', '- 
-Uso de luces durante el día. 
-Deberán llevar  
-encendida durante el día la luz de población o baja: 
-a.
- 
-Las motocicletas que circulen sobre la vía pública. 
-b.
- 
-Todos los vehículos automotores que circulen por un carril
- 
-reversible o por un carril habilitado para circular en sentido
- 
-contrario al habitualmente utilizado, bien sea un carril que le esté 
- 
-exclusivamente reservado a un medio de transporte o bien
- 
-abierto excepcionalmente a la circulación mixta en ese sentido.
-c.
- 
-Todos los vehículos que formen parte de un cortejo, caravana o 
- 
-convoy. 
-
-82');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('164', 'Artículo 164', '- 
-Iluminación de vehículos inmovilizados.
- Todo
-vehículo automotor detenido, parado o estacionado durante el día o la 
-
-deberá tener encendidas las luces de posición. Cuando el vehículo 
-automotor esté inmovilizado en línea, podrá utilizar exclusivamente, las
-luces de posición del lado de la calzada.  
-
-de posición.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('165', 'Artículo 165', '- 
-Uso de luces en condiciones especiales.
- Tam
--
-bién será obligatorio el uso de luces en condiciones metereológicas o 
-ambientales que  disminuyan sensiblemente la visibilidad, como en los  
-casos de niebla, lluvia intensa, nubes de humo o de polvo y cualquier  
-otra circunstancia parecida. En estos casos, deberá utilizarse la luz  
-delantera neblinera o, en sustitución, la luz baja. Las luces neblineras  
-podrán utilizarse aisladas o simultáneamente con las bajas; incluyendo 
-las luces de posición. 
-La luz posterior de niebla solamente podrá llevarse encendida
-cuando las condiciones metereológicas o ambientales sean
-desfavorables, como en los casos de niebla espesa, caída de lluvia
-intensa o nubes densas de polvo y de humo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('166', 'Artículo 166', '- 
-Prohibición de circular sin luces. 
- Se prohibe, la
-circulación de vehículos automotores sin luces de posición, altas y/o
-bajas.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('167', 'Artículo 167', '- 
- Inutilización o avería de las luces. 
-Si por 
-inutilización o avería del sistema de iluminación, se hubiere de circular 
-con luces de intensidad inferior, se deberá reducir la velocidad hasta la 
-que permite la detención del vehículo dentro de la zona iluminada; sin 
-perjuicio de la multa a la que se hiciere acreedor. 
-También se prohibe la circulación de vehículos automotores con
-luces apagadas total o parcialmente, por cualquier motivo adelante o 
-atrás del mismo. 
-CAPITULO X
-Advertencia de las maniobras del conductor');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('168', 'Artículo 168', '- 
-Obligación de advertir las maniobras.
-  El conductor  
-obligatoriamente advertirá al resto de los usuarios de la vía, de las  
-maniobras que efectuará con su vehículo. La advertencia se hará 
-utilizando la señalización luminosa del vehículo, el brazo o la bocina,
-
- 
-adecuada hasta que terminen las maniobras. 
-
-83');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('169', 'Artículo 169', '- 
-Desplazamiento lateral.  
-Todo movimiento de 
-desplazamiento lateral, sea giro o viraje o cambio de sentido y cam
--
-bio de carril, será advertido utilizando la luz direccional o pidevías  
-correspondiente al lado hacia el cual se efectuará la maniobra y/o con 
-el brazo en posición horizontal, con el antebrazo hacia abajo si va a 
-ser hacia la izquierda o hacia arriba si va a ser hacia la derecha. 
-La advertencia deberá concluir tan pronto como el vehículo haya 
-adoptado su nueva trayectoria.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('170', 'Artículo 170', '- 
-Marcha atrás o retroceso
-. Se advertirá con la luz  
-correspondiente a marcha atrás, en su defecto, con el brazo 
-horizontalmente extendido con la palma de la mano hacia atrás.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('171', 'Artículo 171', '- 
-Parada o frenada.
- La intención de inmovilizar el 
-vehículo o de frenar su marcha de forma considerable, aún cuando 
-tales hechos vengan impuestos por las circunstancias del tránsito, 
-deberá advertirse, siempre que sea posible, por el reiterado empleo de 
-las luces de freno y/o movimiento la mano alternativamente de arriba a 
-abajo con movimientos cortos y rápidos y con el brazo en posición 
-horizontal. 
-Cuando la inmovilización tenga lugar en una autopista o vía rápida, 
-o en lugares o circunstancias que disminuyan sensiblemente la 
-visibilidad, se deberá señalizar la presencia del vehículo mediante la
- utilización de las luces de emergencia, si se dispone de ellas. 
-Las luces de emergencia deben ser utilizadas también por vehículos  
-que se encuentren parados o detenidos en la vía pública.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('172', 'Artículo 172', '-  
-Aviso luminoso.
-  Para los mismos casos que se
-enumeran en el artículo siguiente, o para sustituir el uso de la bocina, 
-podrán efectuarse advertencias luminosas, aún en áreas urbanas, 
-utilizando en forma intermitente la luz alta o la luz baja, o ambas  
-alternativamente, a intervalos muy cortos y de modo que se evite el 
-deslumbramiento.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('173', 'Artículo 173', '- 
-Advertencias auditivas.
- Excepcionalmente, o 
-cuando así lo prescriba la señalización, podrán emplearse señales  
-acústicas no estridentes, quedando prohibido su uso inmotivado o 
-exagerado. Estas advertencias se harán solo en los siguientes casos:
-a.
- 
-Para evitar un posible accidente, de modo  especial, en vías
- 
-extraurbanas estrechas con muchas curvas; y  
-b.
- 
-Para advertir, en vías extraurbanas al conductor de otro vehículo, 
- 
-el propósito de adelantar o rebasar.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('174', 'Artículo 174', '- 
-Advertencias de los vehiculos de emergencia y 
-de mantenimiento vial y urbano. 
- Los vehículos de emergencia, 
-advertirán que prestan servicios de urgencia, utilizando las sirenas y las
-
-84
-
-sólo se quiere advertir la posición del vehículo, se utilizará únicamente 
-las señales luminosas. Los vehículos de mantenimiento vial y urbano, 
-tales como transporte de materiales, pintura en pavimento, barredoras  
-y otros similares, no podrán estar dotados de sirenas. 
-Los colores exclusivos para la señalización luminosa de estos  
-vehículos son los siguientes: 
-a.
- 
-Rojo: Bomberos y vehículos de rescate. 
-b.
- 
-Rojo y azul o sólo azul: Policía y otras instituciones de seguridad 
- 
-civil. 
-c.
- 
-Verde: Ambulancias; y  
-d.
- 
-Naranja: Mantenimiento vial y urbano. 
-CAPITULO XI
-Retencion y consignación del conductor, vehiculo, licencia de 
-conducir y tarjeta de circulacion');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('175', 'Artículo 175', '- 
- Retención y consignación de la licencia de 
-conducir.  
-La autoridad deberá retener y consignar la licencia de 
-conducir en los casos siguientes: 
-a.
- 
-Mientras se llevan a cabo las pruebas de alcoholemia y/o 
-
- 
-psicotrópicas. Si estas pruebas resultaran negativas, sin más
- 
-trámite, se devolverá los documentos, el vehículo y el conductor  
- 
-podrá circular libremente.  En caso resulten positivas las pruebas, 
- 
-la autoridad de tránsito, pondrá a disposición de la Policía
- 
-Nacional Civil al conductor, el vehículo y sus documentos. 
-
- 
-alterada. 
-c.
- 
-Al conductor implicado en un hecho de tránsito en el cual
- 
-resulten lesionados o fallecidos. 
-d.
- 
-Al conductor implicado en un hecho de tránsito en el cual se
- 
-ocasione daños a la propiedad  ajena, salvo que mediante
- 
-acuerdo ofrezca la reparación inmediata. En todo caso, este 
- 
-acuerdo deberá celebrarse ante Notario. 
-e.
- 
-Al conductor que circule un vehículo sin portar tarjeta de
- 
-circulación o fotocopia autenticada de la misma.
-
-85
-f.
- 
-Al conductor del vehículo que circule sin placas de circulación. 
-g.
- 
-Al conductor de licencia suspendida o cancelada por la autoridad 
- 
-competente. 
-h.
- 
-ﬁAl conductor que no respete u ofenda a los policías de tránsito, 
- 
-inspectores ad honorem o inspectores escolares en el ejercicio
- 
-de sus funciones o a los particulares que en situaciones de
- 
-emergencia o calamidad pública, asuman temporalmente y en
- 
-forma excepcional la administración del tránsito. Asímismo
- 
-serán retenida y consignada la licencia de los conductores  
- 
-que violen lo preceptuado en el artículo 127 de este reglamento, 
- 
-relacionado con el paso de vehículos de emergencia y  
- 
-comitivas. ﬁ
-10');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('176', 'Artículo 176', '- 
-Retención y consignación del vehículo y tarjeta de 
-circulación.
- La autoridad deberá retener y consignar el vehículo y la 
-tarjeta de circulación en los casos siguientes:
- 
-a.
- 
-Mientras se llevan a cabo las pruebas de alcoholemia y/o 
- 
- 
-psicotrópias. Si estas pruebas resultaran negativas, sin más  
- 
-trámite, se devolverán los documentos, el vehículo y el conductor  
- 
-podrá circular libremente. En caso resulten positivas las pruebas, 
- 
-la autoridad de tránsito pondrá a disposición de la Policía
- 
-Nacional Civil al conductor, el vehículo y sus documentos. 
-b.
- 
-Vehículos estacionados en lugares prohibidos fuera de la
- 
-calzada, hasta que se haga el pago de la multa respectiva. 
-c.
- 
-Vehículos involucrados en un hecho de tránsito en el
- 
-cual resulten lesionados o fallecidos. 
-d.
- 
-Vehículos involucrados en un hecho de tránsito, en el cual 
- 
-se causen daños a la propiedad ajena, salvo que mediante acuerdo, 
- 
-ofrezca la reparación inmediata. En todo caso, este acuerdo 
- 
-deberá celebrarse ante Notario. 
-e.
- 
-Vehículos que circulen sin portar las placas de circulación; y  
-f. 
- 
-Vehículos que transiten sin tarjetas de circulación o con datos  
- 
-distintos a los consignados en la misma.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('177', 'Artículo 177', '- 
-Detención y  consignacion del conductor.
-  La au
--
-toridad deberá detener y consignar al conductor de un vehículo, en los  
-casos siguientes: 
-a.
- 
-Mientras se llevan a cabo las pruebas de alcoholemia y/o 
- 
- 
-psicotrópias. Si estas pruebas resultaran negativas, sin más
- 
-trámite, se devolverán los documentos, el vehículo y el conductor  
-_________________________
- 
-10 
-Reformado inciso h por Artículo 2 Acuerdo Gubernativo 460-2003.
-
-86
- 
-podrá circular libremente. En caso resulten positivas las pruebas, 
- 
-la autoridad de tránsito pondrá a disposición de la Policía 
- 
-Nacional Civil al conductor, el vehículo y sus documentos. 
-b.
- 
-Al conductor implicado en un hecho de tránsito en el 
- 
-cual resulten lesionados o fallecidos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('178', 'Artículo 178', '- 
-Procedimiento para el  traslado de vehiculos al
-deposito.
- Para efectuar el traslado de vehículos infractores, del lugar  
-de la infracción al depósito correspondiente, la autoridad de tránsito 
-usará grúas y otros medios adecuados, asumiendo la responsabilidad 
-por los daños que se causen durante el trayecto. 
-Al  llegar  al  depósito  el  administrador del mismo procederá a sellarlo
-con los medios que considere adecuados, para prevenir el robo 
-de cualquier objeto o equipo del vehículo, pero sin dañar el mismo. 
-Además, llenará un formulario autorizado por el Departamento de 
-Tránsito o el Juzgado de Asuntos Municipales correspondiente; 
-consignando en el mismo, el estado, equipos, golpes y otros defec
--
-tos y datos concernientes al vehículo. Este formulario servirá de
-comprobante para cualquier reclamo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('179', 'Artículo 179', '- 
-Daños al vehículo en el predio.
- Si el propietario de
-un vehículo o su representante, establece que el vehículo depositado 
-fue objeto de sustracciones, golpes, robos, daños u otras alteraciones  
-con respecto a su estado original al momento de cometerse la 
-infracción, presentará la denuncia correspondiente ante el Ministerio 
-Público. 
-TITULO VI
-Infracciones y sanciones
-CAPITULO UNICO');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('180', 'Artículo 180', 'Multa de cien quetzales.
- Se aplicará multa de 
-cien quetzales, en los casos que siguen:
-1.
- 
-Por no tener las bicicletas y motobicicletas, el equipamiento 
-básico en óptimas condiciones de funcionamiento, según el 
-presente Reglamento.
-2. Por no respetar las señales de tránsito siguientes:
-a. No vehículos; 
-b. Silencio;
-c. Ceder el paso;
-d. No virar o girar a la derecha;
-e. Virar a la derecha o izquierda;
-f. Velocidad mínima; y
-g. Siga de frente.
-
-87
-4. Por no facilitar la incorporación al tránsito a otros vehículos.
-5. Por no utilizar las señales de tránsito correspondientes al vi
--
-rar o girar, cambiar de sentido, cambiar de carril, desacelerar 
-y retroceder.
-6. Por no respetar el derecho preferente a rebasar.
-7. Por utilizar en casos no previstos en el presente reglamento, 
-advertencias auditivas o avisos luminosos.
-8. Por conducir utilizando auriculares conectados y aparatos 
-receptores o reproductores de sonido, o utilizando teléfonos, 
-radios comunicadores u otros aparatos similares.
-11');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('181', 'Artículo 181', '- 
-Multa de doscientos quetzales
-. Se aplicará multa 
-de doscientos quetzales, en los casos que siguen: 
-1.
- 
-Por circular sin portar la tarjeta de circulación o fotocopia
- 
-autenticada de la misma. 
-2.
- 
-Por portar las placas de circulación en lugares no autorizados. 
-3.
- 
-Por no portar licencia de conducir. 
-4.
- 
-Por no tener los vehículos automotores, con excepción de las
- 
-motobicicletas, el equipamiento básico según el presente
- 
-Reglamento. 
-5.
- 
-Por utilizar un vehículo para aprendizaje o pruebas prácticas, sin
-
-6.
- 
-Por producir sonidos o ruidos estridentes exagerados o 
- 
-innecesarios, por medio de los propios vehículos, escapes,
- 
-bocinas u otros aditamentos.
-7.
- 
-Por transportar carga en forma inadecuada y peligrosa, o por  
- 
-transportarla constituyendo obstáculo para los demás usuarios
- 
-de la vía pública. 
-8.
- 
-Por no señalizar la carga que se transporta y que sobresale, de 
- 
-día y de noche. 
- 
- 
-de transporte colectivo. 
-10.
- 
-Por circular en carriles no permitidos para el transporte público. 
-11.
- 
-Por parar un vehículo de transporte colectivo, no paralelo a la
- 
-acera, o a más de treinta centímetros de la misma. 
-12.
- 
-Por parar un vehículo de transporte de pasajeros, a más distancia 
- 
-del punto de parada autorizada. 
-13.
- 
-Por circular un vehículo de transporte de carga, por  la izquierda o 
- 
-carriles no permitidos. 
-_________________________
- 
-11  
-
-
-88
-14.
- 
-Por no respetar las señales de tránsito siguientes: 
- 
- 
-a. 
- 
-Alto. 
- 
-b. 
- 
-Alto del semáforo. 
- 
-c. 
- 
-No hay paso. 
- 
-d. 
- 
-Del Agente, Inspector ad honorem o Inspector Escolar. 
- 
- 
-e. 
- 
-Altura máxima; y  
- 
- 
-f. 
- 
-Ancho máximo. 
-15.
- 
-Por circular en contra de la vía señalizada o autorizada.
-16.
- 
-Por iniciar o comenzar la marcha o maniobra o reemprenderla, 
- 
- 
-bruscamente su trayectoria o velocidad. 
-17.
- 
-Por no observar las normas de prioridad de paso. 
-
-19.
- 
-Por incorporarse a la circulación sin observar las normas respec
--
-tivas.
-20.Por virar o girar sin observar las normas de posicionamiento y ma
--
-niobra reglamentarias. 
-21.
- 
-Por cambiar de un carril a otro carril, sin respetar la prioridad  del 
-vehículo  que  ya  circula  en  uno de los carriles. 
-22.
- 
-Por retroceder en cualquier vía pública, excepto los casos de fuer
--
-za mayor o por evidente necesidad. 
-23.
- 
-Por rebasar por la derecha, salvo en casos permitidos.
-24.
- 
-Por rebasar e integrarse a su carril, obligando a otros usuarios a 
-
-25.
- 
-Por estacionarse en contra de la vía del carril más próximo. 
-26.
- 
-Por estacionarse a más de veinticinco centímetros del bordillo o 
-banqueta correspondiente. 
-27.
- 
-Por estacionar o parar un vehículo, obstaculizando la circulación o 
-constituyendo cierto peligro para los usuarios de la vía. 
-28.
- 
-Por circular sin luz baja durante el día en los casos previstos de 
-este Reglamento.
-29.
- 
-Por no utilizar las luces de posición para iluminar vehículos auto
--
-
-30.
- 
-Por no utilizar luces de emergencia, en casos previstos en el pre
--
-sente Reglamento. 
-31.
- 
-Por no utilizar las luces de posición y bajas en los túneles o en 
- 
-condiciones atmosféricas o físicas que disminuya la visibilidad. Si 
-
-89
- 
-se trata de un vehículo pesado o de remolque, en los lugares  
- 
-indicados, además llevará las luces de gálibo. 
-32.
- 
-Nota al pie.
-12
-33. Por no respetar el orden jerárquico prevaleciente entre señales y
- 
- normas de tránsito.
-34. Por circular sin cinturones de seguridad, salvo los casos
- 
- de
- 
-excepción previstos en el presente Reglamento. 
-35.
- 
-Por remolcar a otro vehículo por medios o en lugares prohibidos.
-36.
- 
-Por circular en vehículos que tengan el silenciador o escape in
--
-adecuado, incompleto, deteriorado o con tubos resonadores. 
-37.
- 
-Por circular con llantas lisas o con rotura. 
-38.
- 
-Por permanecer en la vía pública, efectuando reparaciones técni
--
-cas, más de dos horas en áreas urbanas y doce en áreas extraur
--
-banas. 
-39.
- 
-Por circular sin poseer permiso de aprendizaje o con permiso de 
-aprendizaje vencido. 
-40.
- 
-Por efectuar reparaciones de emergencia en vías urbanas impor
--
-tantes, cuando la autoridad lo prohiba. 
-41.
- 
-Por negarse a recibir la boleta de aviso, requerimiento de pago y  
-de citación.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('182', 'Artículo 182', '- 
-Multa de trescientos quetzales.
-  Se aplicará multa 
-de trescientos quetzales en los casos que siguen: 
-1. 
- 
-Por conducir con licencia vencida. 
-
-conductor. 
-3. 
- 
-Por tirar o lanzar basura u otros objetos en la vía pública, des
--
-de un vehículo estacionado o en marcha. El conductor pagará el 
-monto de esta multa. 
-4. 
- 
-Por circular con vehículo sin escape o sin silenciador. 
-5. 
- 
-Por producir sonidos o ruidos estridentes exagerados o innece
--
-sarios por medio de los propios vehículos, bocinas, altavoces u 
-otros aditamentos, en áreas residenciales, hospitales y sanatorios  
-o en horas de la noche. 
-6. 
- 
-Por utilizar bocinas o sirenas propias de los vehículos de emer
--
-gencia.
-7. 
- 
-Por rebasar a un vehículo que se detuvo ante un paso peatonal. 
-8. 
- 
-Por circular por espacios peatonales con cualquier vehículo
-_________________________
- 
-12 
-
-90
- 
-automotor, si no está autorizado por la señalización del lugar. 
-9. 
- 
-Por ubicar ventas callejeras u otros objetos o elementos no
- 
-autorizados, sobre los espacios peatonales, pasarelas o la vía
- 
-pública. 
-10. Por arrojar, depositar o abandonar sobre la vía pública, materia 
- 
-que puede entorpecer la circulación. 
-11. Por realizar operaciones de carga y descarga, sin contar con
- 
-autorización de la autoridad de tránsito correspondiente,
- 
-de acuerdo con las normas del presente Reglamento. 
-12. Por no cumplir los límites de velocidad máxima. 
-13. Por bloquear una intersección, salvo en los casos permitidos. 
-14. Por no respetar las señales en los cruces de ferrocarril. 
-15. Por efectuar un viraje o giro continúo a la derecha donde no
- 
-esté permitido o hacerlo en un lugar permitido sin ceder el paso
- 
-al tránsito transversal. 
-16. Por cambiar de carril, en o justo antes de una intersección, o no 
- 
-seguir la dirección indicada para el carril que ocupa. 
-17. Por efectuar cambios de sentido en lugares prohibidos. 
-18. Por rebasar en lugares prohibidos. 
-19. Por no ceder el paso a los peatones cuando tengan la prioridad; y  
-20. Por no ceder el paso a los ciclistas cuando tengan la 
- 
-prioridad.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('183', 'Artículo 183', '- 
-Multas de cuatrocientos quetzales. 
- Se aplicará 
-multa de cuatrocientos quetzales, en los casos que siguen: 
-1.
- 
-Por conducir sin tener licencia. 
-2. 
- 
-Por circular utilizando luces exclusivas para los vehículos de 
- 
-emergencia y de mantenimiento vial y urbano. 
-3. 
- 
-Por rebasar a otras unidades del transporte público para efectuar  
-una parada justo frente a éstas. 
-4. 
- 
-Por conducir un vehículo automotor con licencia que no corres
--
-ponda al mismo. 
-5. 
- 
-Por utilizar carriles especiales diseñados para la circulación de 
-otro medio de transporte.
- 
-6. 
- 
-Por no ceder el paso a escolares dentro de la zona escolar y los  
-horarios establecidos. 
-
-91
-7. 
- 
-Por circular vehículos automotores con un lado frontal completa
--
-mente no iluminado.  
-8. 
- 
-Por no señalizar un obstáculo sobre la vía pública. 
-9. 
- 
-Por instalar objetos o cosas similares, que sean o parezcan seña
--
-les de tránsito; confundan o inciten a comportamientos antirregla
--
-mentarios. 
-10. Por no comportarse en la forma que establece el presente
- 
-Reglamento, al detener un vehículo por accidentes, emergencias  
- 
-o averías. 
-11.
- 
-Por estacionarse en determinado lugar, simulando una falla me
--
-cánica. 
-12.
- 
-Por retroceder en autopistas y vías rápidas. 
-13.
- 
-Por tirar, lanzar o abandonar en la vía pública basura y objetos  
-que pueden entorpecer la circulación. 
-14.
- 
-Por efectuar en la vía pública, reparaciones del vehículo que no 
-sean de emergencia.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('184', 'Artículo 184', 'Multas de quinientos quetzales. 
-Se aplicará multa 
-de quinientos quetzales en los casos que siguen:
-1. 
- 
-Por circular sin placas de circulación.
-2. 
- 
-Por no tener tarjeta de circulación.
-3. 
- 
-Por circular en la vía pública cuando exista restricción dispues
--
-ta por la autoridad.
-4. 
- 
-Por circular con vehículo de carga en horarios o rutas prohibi
--
-das.
-5. 
- 
-A los propietarios de talleres que reparen vehículos en la vía 
-pública, por cada vehículo.
-6. 
- 
-Por estacionar en lugar señalizado con prohibición y los espe
--
-7. 
- 
-Por transportar a más personas que las plazas correspondien
--
-tes a cada vehículo.
-8. 
- 
-Por transportar personas en lugares exteriores de las unidades  
-de transporte público.
-9. 
- 
-Por recoger o dejar pasajeros o acompañantes, efectuando 
-parada en lugar no autorizado para el efecto.
-10. Cuando los conductores de motocicletas o motobicicletas y sus  
-acompañantes, no cumplan con la obligación de portar el cas
--
-
-de éste Reglamento.
-
-92
-11.  A los conductores de motocicletas y motobicicletas que transi
--
-ten en las aceras o banquetas, pasos peatonales, ciclo vías, 
-vías exclusivas para transporte colectivo u otras señaladas por  
-la Ley y el presente Reglamento.
-12.  A los conductores de motocicletas y motobicicletas que circulen 
-entre carriles o hagan paradas entre carriles y zigzaguear en 
-la vía pública.
-13');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('185', 'Artículo 185', 'Multas de mayor cuantía:
- Se aplicará multa de:
-1. 
- 
-Retirar, dañar, alterar o cubrir señales de tránsito.
-2. 
- 
-Faltar el respeto, ofender, agredir o insultar a la autoridad de 
-tránsito. En caso que el hecho pudiera ser constitutivo de 
-
--
-cional correspondiente.
-
-mediante la colocación de obstáculos imprevisibles o por cual
--
-quier otro medio en la vía pública para facilitar carreras, concur
--
-sos o actividades similares, sin el permiso correspondiente.
-
--
-rreras, concursos o actividades similares, sin el permiso co
--
-rrespondiente por cada conductor que participe. También se 
-impondrá esta multa a quienes no atiendan los requerimientos  
-de los vehículos de emergencia, según se establece el artículo 
-127 del presente Reglamento.
- 
-En estos casos la autoridad de tránsito obligadamente dará 
-aviso inmediato al Ministerio Público para que éste determine 
-si hay conexión con algún delito que perseguir.
-14');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('186', 'Artículo 186', '- 
-Procedimiento de la infracción.
- La autoridad de 
- 
-una boleta de aviso, requerimiento de pago y citación, la cual indicará 
-la infracción cometida, el monto de la multa y el lugar donde se hará 
-efectivo el pago o la gestión administra iva pertenente, según el caso.
-El pago efectuado, dará por agotado el trámite administrativo.
-Como gestión o trámite administrativo se entiende el derecho del in
--
-fractor, de manifestar por escrito su desacuerdo, ofreciendo prueba en 
-un plazo no mayor de cinco días, contados a partir de la fecha en que 
-se cometió la infracción. En tal caso, el interesado presentará el alegato 
-_________________________
-13 
-
-14 
-
-
-93
-correspondiente ante el Departamento de Tránsito o ante el Juzgado de 
-Asuntos Municipales de Tránsito, en su caso. 
-El Departamento deTránsito o el Juzgado de Asuntos Municipales  
-de Tránsito en su caso, resolverá en un plazo no mayor de treinta días. 
-
--
-ción que admite prueba en contrario de que los hechos imputados son 
-
--
-ta en la boleta o la razón del agente de policía de tránsito en que se 
- 
-cualquier motivo.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('187', 'Artículo 187', '- 
-Casos en que el conductor no se encuentre.
- El po
--
-licía de tránsito, en lugar visible del vehículo, colocará la boleta cuando 
-el infractor no esté presente en el momento de cometerse
-
-personalmente.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('188', 'Artículo 188', '- 
-Fondos privativos.
- Se faculta a la Dirección General 
-de Rentas Internas para llevar a cabo la recaudación, contabilización y  
-apertura de las cuentas contables que se utilizaran para el registro de 
-los ingresos que se perciban por concepto de multas de tránsito, así 
-cualquier otro ingreso establecido por la Ley de Tránsito y el 
-presente Reglamento, en concepto de fondos privativos del
-Departamento de Tránsito de la Dirección General de la Policía
-Nacional Civil. Para efectuar el pago correspodiente, se adjuntará a la 
-boleta de infracción el formulario DRI-1. 
-La administración de las multas, en cuanto a su imposición, control, 
-descuentos e intereses, corresponde al Departamento de Tránsito, o
-en su caso, al Juzgado de Asuntos Municipales de Tránsito. 
-Los fondos provenientes de multas por infracciones de tránsito que 
-se hayan percibido hasta la fecha de emisión del presente Acuerdo 
-Gubernativo que se ingresaron al fondo común, se transferirán a una 
-
-
-destine para el diseño, mantenimiento y mejoramiento de las
-actividades de tránsito, incluyendo obras de infraestructura vial. 
-Cuando el Ministro de Gobernación traslade la administración del
-tránsito a una o varias municipalidades, los ingresos provenientes de la 
-aplicación de sanciones, multas, recargos y gastos de administración, 
-serán recaudados  por las municipalidades y en este caso, los ingresos
-recaudados tendrán el carácter de fondos privativos del municipio, el 
-cual los destinará exclusivamente para el diseño, mantenimiento y
-
-94
-mejoramiento de las actividades de tránsito, incluyendo obras de
-infraestructura vial. Cada municipalidad se regirá por sus propias
-normas y procedimientos.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('189', 'Artículo 189', '- 
-Descuentos e intereses.
-  Si una multa impuesta por  
-un policía de tránsito nacional o municipal, se cancela dentro de los
-cinco días hábiles siguientes a su imposición, el infractor tendrá
-derecho a un descuento del veinticinco por ciento deducido del monto 
-total de la multa. A partir del sexto día hábil, posterior a la imposición
-de la multa, el infractor pagará el monto completo de la multa más
-intereses por mora calculados al veinte por ciento anual.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('190', 'Artículo 190', '- 
-Traslado de vehículos infractores al depósito. 
-Treinta días después de impuesta la multa sin que la misma se haya 
-cancelado, la autoridad de tránsito solicitará el traslado del vehículo
-infractor al depósito correspondiente, salvo que el hecho se encuentre 
-en gestión administrativa.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('191', 'Artículo 191', '- 
-Disminución de aptitudes del conductor.
- Si duran
--
-te la vigencia de la licencia de conducir, sobreviene al titular de la misma, 
-alguna disminución de sus aptitudes físicas y mentales, necesarias  
-para conducir determinado vehículo automotor, la licencia será
-suspendida mientras dure dicha incapacidad.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('192', 'Artículo 192', '- 
- Cancelación de la licencia
-.  Sin perjuicio de otras  
-sanciones, el Departamento de Tránsito podrá cancelar la licencia de 
-conducir en los casos siguientes: 
-a. 
- 
-Cuando a su titular se le haya suspendido administra
- 
-tivamente dos años calendario consecutivos o tres veces en 
- 
-años calendario no sucesivos. 
-b. 
- 
-Por orden judicial. 
-c. 
- 
-Cuando se compruebe que la información proporcionada 
- 
-para su expedición sea falsa, o bien que algunos de los  
- 
-documentos o constancias exhibidas sean falsas o apócrifos. 
- 
-Estos hechos serán puestos del conocimiento de la autoridad 
- 
-competente, en su caso. 
-Transcurrido el plazo administrativo o judicial de la cancelación de 
-una licencia, el infractor podrá solicitar nueva licencia, para lo cual 
-deberá cumplir con los requisitos de toda primera licencia y con
-tratará un seguro especial conforme el Reglamento de la materia.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('193', 'Artículo 193', '- 
-. Reglamentación del seguro.
- Lo relacionado con el 
-seguro obligatorio de vehículos automotores contra daños a terceros y  
-ocupantes y su puesta en vigor se regirá por la reglamentación espe
--
-
-
-95');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('194', 'Artículo 194', '- 
-
-Para
-obtener la tarjeta anual de circulación, entre otros requisitos, se
-cumplirá con lo previsto en el Acuerdo Gubernativo 14-97. 
-La presente disposición entrará en vigor, para los vehículos
-mercantiles y comerciales a partir de 1999, y para los vehículos
-particulares, a partir del año 2001.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('195', 'Artículo 195', '- 
-Casos no previstos.
- Los casos no previstos en el 
-presente Reglamento, serán resueltos por el Ministerio de Gobernación, 
-en su calidad de autoridad superior de tránsito.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('196', 'Artículo 196', '- 
- Derogatoria. 
-Se derogan: ElAcuerdo  Gubernativo 
-Número 499-97, Reglamento de Tránsito, del dos de julio de mil 
-novecientos noventa y siete; el Acuerdo Gubernativo Número 53-98 
-del 29 de enero de mil novecientos noventa y ocho; y cualquier otra 
-disposición reglamentaria que se oponga al presente Reglamento.');
-INSERT INTO lawarticle (artnum, title, descr) VALUES ('197', 'Artículo 197', '- 
-Vigencia. 
- El presente Reglamento empieza a regir el 
-
-96
-Comuníquese:
-ALVARO ENRIQUE ARZÚ IRIGOYEN
-EL MINISTRO DE GOBERNACION, RODOLFO ADRIAN MENDOZA 
-ROSALES
-LIC. MANUEL GONZALEZ RODAS, 
-SUB SECRETARIO GENERAL
-PRESIDENCIA DE LA REPUBLICA, 
-ENCARGADO DEL DESPACHO
-
-97
-
-98
-
-99
-
-100');
-
---Evitar duplicados
-ALTER TABLE lawartcat
-ADD CONSTRAINT uq_lawartcat UNIQUE (artid, catid);
-
---Asignar artículos
-INSERT INTO lawartcat (artid, catid)
-SELECT a.id, 1
-FROM lawarticle a
-ON CONFLICT (artid, catid) DO NOTHING;
-
+');
+INSERT INTO lawartcat (artid, catid) VALUES (101, 1);
